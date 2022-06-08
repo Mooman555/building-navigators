@@ -47,7 +47,7 @@ class Home extends React.Component {
         >
           {!this.state.ratingVisible && (
             <ScrollView>
-              <View style={{ paddingHorizontal: "7%" }}>
+              <View style={{ paddingHorizontal: "3%" }}>
                 <Header
                   onPressLeft={() => this.props.navigation.goBack()}
                   showLeft={true}

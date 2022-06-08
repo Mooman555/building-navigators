@@ -7,12 +7,10 @@ const windowHeight = Dimensions.get("window").height;
 export default StyleSheet.create({
   wrapper: {
     flex: 1,
-    justifyContent: "center",
     backgroundColor: Colors.white,
   },
   wrapperDark: {
     flex: 1,
-    justifyContent: "center",
     backgroundColor: Colors.darkPrimary,
   },
   imageBackground: { width: "100%", height: "100%" },

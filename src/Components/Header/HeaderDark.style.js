@@ -3,9 +3,6 @@ import Colors from "../../UI/Colors";
 
 export default StyleSheet.create({
   backbtn: {
-    position: "absolute",
-    left: -14,
-    bottom: -30,
     justifyContent: "center",
     alignItems: "center",
     zIndex: 2,

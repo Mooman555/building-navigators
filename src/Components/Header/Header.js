@@ -18,7 +18,7 @@ import HeaderDarkStyle from "./HeaderDark.style";
 class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { Enabled: false };
+    this.state = { Enabled: this.props.darkMode };
   }
   setTheme = () => {
     this.setState({ Enabled: !this.state.Enabled }, () =>
@@ -27,7 +27,6 @@ class Header extends React.Component {
   };
   render() {
     console.log(this.props.darkMode);
-    // this.props.dispatch(setDarkMode(true));
     return (
       <View style={[styles.topBar, this.props.styleProp]}>
         {!this.props.showLeft ? null : (
@@ -54,7 +53,13 @@ class Header extends React.Component {
           {this.props.Title}
         </Text>
         {!this.props.textButton && (
-          <View style={styles.toggleView}>
+          <Pressable
+            // hitSlop={180}
+            onPress={() => {
+              this.setTheme();
+            }}
+            style={styles.toggleView}
+          >
             <Text
               style={[
                 this.props.darkMode
@@ -65,10 +70,7 @@ class Header extends React.Component {
             >
               {this.state.Enabled ? "Dark  Mode" : "Light  Mode"}
             </Text>
-            <TouchableOpacity
-              onPress={() => {
-                this.setTheme();
-              }}
+            <View
               style={[
                 this.props.darkMode
                   ? HeaderDarkStyle.toggleBtn
@@ -82,8 +84,8 @@ class Header extends React.Component {
               <View style={[styles.toggleON]}>
                 <Text style={styles.OnOffText}>on</Text>
               </View>
-            </TouchableOpacity>
-          </View>
+            </View>
+          </Pressable>
         )}
         {this.props.textButton && (
           <TouchableOpacity

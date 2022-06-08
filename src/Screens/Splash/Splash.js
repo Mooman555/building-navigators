@@ -16,8 +16,15 @@ class Splash extends React.Component {
     super(props);
     this.state = {};
   }
+
   componentDidMount() {
-    setTimeout(() => this.props.navigation.navigate("OnBoarding"), 3000);
+    this.unsubscribe = this.props.navigation.addListener("focus", () => {
+      console.log("componentDidMount");
+      setTimeout(() => this.props.navigation.navigate("OnBoarding"), 2000);
+    });
+  }
+  componentWillUnmount() {
+    this.unsubscribe();
   }
   render() {
     return (
