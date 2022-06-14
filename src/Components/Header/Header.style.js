@@ -11,6 +11,12 @@ export default StyleSheet.create({
     marginTop: "10%",
     zIndex: 1,
   },
+  titleText: {
+    fontFamily: "AktivRegular",
+    fontSize: 20,
+    fontWeight: "600",
+    textAlign: "center",
+  },
   mb: { marginTop: "20%", marginBottom: "-20%" },
   backbtn: {
     justifyContent: "center",

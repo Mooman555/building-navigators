@@ -22,6 +22,7 @@ import {
 import Splash from "../Screens/Splash/Splash";
 import OnBoarding from "../Screens/OnBoarding/OnBoarding";
 import Home from "../Screens/Home/Home";
+import Buildings from "../Screens/Buildings/Buildings";
 
 const windowWidth = Dimensions.get("window").width;
 
@@ -61,6 +62,14 @@ export const MainStack = () => {
         }}
         name="OnBoarding"
         component={OnBoarding}
+      />
+      <Stack.Screen
+        options={{
+          headerShown: false,
+          headerTransparent: true,
+        }}
+        name="Buildings"
+        component={Buildings}
       />
       <Stack.Screen
         options={{

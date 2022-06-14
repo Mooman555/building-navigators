@@ -61,7 +61,7 @@ class OnBoarding extends React.Component {
       <MainButton
         styleProp={{ marginBottom: "5%" }}
         btnText={"Lets go"}
-        onPress={() => this.props.navigation.navigate("Home")}
+        onPress={() => this.props.navigation.navigate("Buildings")}
       />
     );
   };

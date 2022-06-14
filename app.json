@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "MCC",
-    "slug": "MCC",
+    "name": "Procuriot",
+    "slug": "procuriot",
     "version": "1.0.0",
     "orientation": "default",
     "icon": "./assets/icon.png",
@@ -9,19 +9,17 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.mcc.main"
+      "bundleIdentifier": "com.procuriot.main"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.mcc.main"
+      "package": "com.procuriot.main"
     },
     "web": {
       "favicon": "./assets/favicon.png"

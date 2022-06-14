@@ -46,8 +46,10 @@ class Header extends React.Component {
         )}
         <Text
           style={[
-            baseStyle.h2,
-            this.props.boldTitle && [styles.mb, baseStyle.h1Bold],
+            styles.titleText,
+            {
+              color: this.props.darkMode ? Colors.white : Colors.darkPrimary,
+            },
           ]}
         >
           {this.props.Title}

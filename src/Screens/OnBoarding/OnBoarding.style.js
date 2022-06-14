@@ -7,8 +7,8 @@ const windowHeight = Dimensions.get("window").height;
 export default StyleSheet.create({
   introVector: {
     resizeMode: "contain",
-    width: 251,
-    height: 367,
+    width: 250,
+    height: 360,
   },
   introText: {
     fontFamily: "AktivRegular",
@@ -47,7 +47,7 @@ export default StyleSheet.create({
     // marginTop: "-20%",
   },
   slider: {
-    height: "90%",
+    height: "80%",
     width: "100%",
     justifyContent: "center",
     alignItems: "center",
