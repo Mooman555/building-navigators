@@ -10,6 +10,7 @@ export default StyleSheet.create({
     height: 60,
     marginTop: "10%",
     zIndex: 1,
+    paddingHorizontal: "3%",
   },
   titleText: {
     fontFamily: "AktivRegular",

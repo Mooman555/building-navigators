@@ -8,11 +8,14 @@ import {
 } from "react-native";
 import * as React from "react";
 import Wrapper from "../../Components/Wrapper/Wrapper";
-import introStyle from "./OnBoarding.style";
+import styles from "./OnBoarding.style";
 import AppIntroSlider from "react-native-app-intro-slider";
 import MainButton from "../../Components/Button/MainButton";
 import Header from "../../Components/Header/Header";
 import { connect } from "react-redux";
+import Assets from "../../UI/Assets";
+import Colors from "../../UI/Colors";
+import baseStyles from "../../UI/Styles";
 
 class OnBoarding extends React.Component {
   constructor(props) {
@@ -22,19 +25,19 @@ class OnBoarding extends React.Component {
         {
           index: 0,
           text: "This App will help you reach your destination inside the building.",
-          image: require("../../../assets/images/intro1.png"),
+          image: Assets.intro1,
         },
         {
           index: 1,
           heading: "Invite your friends",
           text: "This App will help you reach your destination inside the building.",
-          image: require("../../../assets/images/intro1.png"),
+          image: Assets.intro1,
         },
         {
           index: 2,
           heading: "Do you own diligence before Investing:",
           text: "This App will help you reach your destination inside the building.",
-          image: require("../../../assets/images/intro1.png"),
+          image: Assets.intro1,
         },
       ],
     };
@@ -42,15 +45,9 @@ class OnBoarding extends React.Component {
 
   renderItem = ({ item, index }) => {
     return (
-      <View style={introStyle.slider} key={index}>
-        <Image style={introStyle.introVector} source={item.image} />
-        <Text
-          style={
-            this.props.darkMode
-              ? introStyle.introTextDark
-              : introStyle.introText
-          }
-        >
+      <View style={styles.slider} key={index}>
+        <Image style={styles.introVector} source={item.image} />
+        <Text style={[styles.introText, baseStyles.blackText]}>
           {item.text}
         </Text>
       </View>
@@ -61,32 +58,34 @@ class OnBoarding extends React.Component {
       <MainButton
         styleProp={{ marginBottom: "5%" }}
         btnText={"Lets go"}
-        onPress={() => this.props.navigation.navigate("Buildings")}
+        onPress={() => this.props.navigation.navigate("Home")}
       />
     );
   };
   render() {
     return (
-      <Wrapper>
+      <Wrapper wrapperNP={true}>
         <Header
           onPressLeft={() => this.props.navigation.goBack()}
-          showLeft={true}
-          textButton={true}
-          nextText={"Skip"}
+          showLeft={false}
+          textButton={false}
           onPressRightText={() => this.props.navigation.navigate("Home")}
         />
+
         <AppIntroSlider
+          style={{ backgroundColor: "transparent" }}
           data={this.state.swiperData}
           renderItem={this.renderItem}
           showSkipButton={false}
           showNextButton={true}
           showDoneButton={true}
-          dotStyle={introStyle.dotStyle}
-          activeDotStyle={introStyle.activeDotStyle}
+          dotStyle={styles.dotStyle}
+          activeDotStyle={styles.activeDotStyle}
           bottomButton={true}
           renderNextButton={this.renderDoneButton}
           renderDoneButton={this.renderDoneButton}
         />
+        <View style={styles.whiteBack} />
       </Wrapper>
     );
   }

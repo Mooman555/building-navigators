@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import { connect } from "react-redux";
 import Colors from "../../UI/Colors";
-import baseStyle from "../../UI/Style";
+import baseStyles from "../../UI/Styles";
 import styles from "./Header.style";
 import { setDarkMode } from "../../Redux/action";
 import HeaderDarkStyle from "./HeaderDark.style";
@@ -21,12 +21,13 @@ class Header extends React.Component {
     this.state = { Enabled: this.props.darkMode };
   }
   setTheme = () => {
-    this.setState({ Enabled: !this.state.Enabled }, () =>
-      this.props.dispatch(setDarkMode(this.state.Enabled))
-    );
+    this.setState({ Enabled: !this.state.Enabled }, () => {
+      console.log("Enabled:", this.state.Enabled);
+      this.props.dispatch(setDarkMode(this.state.Enabled));
+      console.log("darkMode:", this.props.darkMode);
+    });
   };
   render() {
-    console.log(this.props.darkMode);
     return (
       <View style={[styles.topBar, this.props.styleProp]}>
         {!this.props.showLeft ? null : (
@@ -70,7 +71,7 @@ class Header extends React.Component {
                 { marginRight: 10 },
               ]}
             >
-              {this.state.Enabled ? "Dark  Mode" : "Light  Mode"}
+              {this.props.darkMode ? "Dark  Mode" : "Light  Mode"}
             </Text>
             <View
               style={[
@@ -78,7 +79,7 @@ class Header extends React.Component {
                   ? HeaderDarkStyle.toggleBtn
                   : styles.toggleBtn,
                 {
-                  flexDirection: this.state.Enabled ? "row" : "row-reverse",
+                  flexDirection: this.props.darkMode ? "row" : "row-reverse",
                 },
               ]}
             >

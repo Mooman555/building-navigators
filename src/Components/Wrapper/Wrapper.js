@@ -1,5 +1,5 @@
 import * as React from "react";
-import baseStyle from "../../UI/Style";
+import baseStyles from "../../UI/Styles";
 import { View } from "react-native";
 import { connect } from "react-redux";
 
@@ -11,7 +11,12 @@ class Wrapper extends React.Component {
   render() {
     return (
       <View
-        style={this.props.darkMode ? baseStyle.wrapperDark : baseStyle.wrapper}
+        style={[
+          this.props.darkMode ? baseStyles.wrapperDark : baseStyles.wrapper,
+          this.props.wrapperNP
+            ? { paddingHorizontal: 0 }
+            : { paddingHorizontal: "3%" },
+        ]}
       >
         {this.props.children}
       </View>

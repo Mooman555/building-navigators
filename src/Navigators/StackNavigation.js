@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { useFonts } from "expo-font";
 // import Svg, { Circle, Path } from "react-native-svg";
-// import baseStyle from "../UI/Style";
+// import baseStyles from "../UI/Styles";
 // import Colors from "../UI/Colors";
 // import { MaterialIcons } from "@expo/vector-icons";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -46,15 +46,15 @@ export const MainStack = () => {
   navTheme.colors.background = "#F1F2F8";
 
   return (
-    <Stack.Navigator initialRouteName="Splash" backBehavior="initialRoute">
-      <Stack.Screen
+    <Stack.Navigator initialRouteName="OnBoarding" backBehavior="initialRoute">
+      {/* <Stack.Screen
         options={{
           headerShown: false,
           headerTransparent: true,
         }}
         name="Splash"
         component={Splash}
-      />
+      /> */}
       <Stack.Screen
         options={{
           headerShown: false,

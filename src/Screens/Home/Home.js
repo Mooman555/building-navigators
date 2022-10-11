@@ -8,111 +8,104 @@ import {
   TextInput,
   ScrollView,
 } from "react-native";
-import * as React from "react";
+import React, { useState } from "react";
 import { MaterialIcons, Ionicons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
+import { connect, useSelector } from "react-redux";
+
 import Wrapper from "../../Components/Wrapper/Wrapper";
 import Header from "../../Components/Header/Header";
-import HomeStyle from "./Home.style";
-import { connect } from "react-redux";
+import styles from "./Home.style";
 import Card from "./Card";
 import RatingModal from "../../Components/Modal/RatingModal";
+import Assets from "../../UI/Assets";
+import Colors from "../../UI/Colors";
+import InputField from "../../Components/InputField/InputField";
 
-class Home extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      ratingVisible: false,
-      dataArr: [
-        { id: 0, text: "Coffee", places: 530 },
-        { id: 1, text: "Theater", places: 56 },
-        { id: 2, text: "Cinema", places: 130 },
-        { id: 3, text: "Coffee", places: 340 },
-      ],
-    };
-  }
-
+export default function Home() {
+  const navigation = useNavigation();
+  const darkMode = useSelector((state) => state.darkMode);
+  const [ratingVisible, setRatingVisible] = useState(false);
+  const [dataArr, setDataArr] = useState([
+    { id: 0, text: "Coffee", places: 530 },
+    { id: 1, text: "Theater", places: 56 },
+    { id: 2, text: "Cinema", places: 130 },
+    { id: 3, text: "Coffee", places: 340 },
+  ]);
   // Modal Visibility
-  setModalVisible = (visible) => {
-    this.setState({ ratingVisible: visible });
+  const setModalVisible = (visible) => {
+    setRatingVisible(visible);
   };
-  render() {
-    return (
-      <View
-        style={this.props.darkMode ? HomeStyle.wrapperDark : HomeStyle.wrapper}
+  return (
+    <Wrapper wrapperNP={true}>
+      <ImageBackground
+        style={styles.imageBackground}
+        resizeMode="cover"
+        source={Assets.back}
       >
-        <ImageBackground
-          style={HomeStyle.imageBackground}
-          resizeMode="cover"
-          source={require("../../../assets/images/back.png")}
-        >
-          {!this.state.ratingVisible && (
-            <ScrollView>
-              <View style={{ paddingHorizontal: "3%" }}>
-                <Header
-                  onPressLeft={() => this.props.navigation.goBack()}
-                  showLeft={true}
-                  textButton={false}
-                  nextText={"Skip"}
-                />
-              </View>
-              <View style={HomeStyle.container}>
-                <Image
-                  style={HomeStyle.imageVector}
-                  source={require("../../../assets/images/logo.png")}
-                />
-                <Text
-                  style={
-                    this.props.darkMode
-                      ? HomeStyle.homeTextDark
-                      : HomeStyle.homeText
-                  }
-                >
-                  Meydenbauer Convention Center
-                </Text>
+        <Header
+          onPressLeft={() => navigation.goBack()}
+          showLeft={true}
+          textButton={false}
+          nextText={"Skip"}
+        />
+        {!ratingVisible && (
+          <View>
+            <View style={[styles.imageContainer]}>
+              <Image style={styles.imageVector} source={Assets.logo} />
+            </View>
+            <Text style={darkMode ? styles.homeTextDark : styles.homeText}>
+              Meydenbauer Convention Center
+            </Text>
 
-                <View style={HomeStyle.backContainer}>
-                  <View style={HomeStyle.cardContainer}>
-                    {/* serch bar */}
-                    <View style={HomeStyle.searchView}>
-                      <Ionicons name="search" size={15} color="black" />
-                      <TextInput
-                        style={HomeStyle.searchBox}
-                        placeholder="Search by address..."
-                      />
-                    </View>
-                    {/* search bar */}
-                    {/* card View */}
-
-                    <ScrollView horizontal>
-                      <View style={HomeStyle.cardsWrapper}>
-                        {this.state.dataArr.map((item, index) => (
-                          <Card
-                            key={index}
-                            item={item}
-                            onPress={() => this.setModalVisible(true)}
-                          />
-                        ))}
-                      </View>
-                    </ScrollView>
-
-                    {/* card View */}
-                  </View>
+            <View style={styles.backContainer}>
+              <View
+                style={[
+                  styles.cardContainer,
+                  {
+                    backgroundColor: darkMode
+                      ? Colors.darkPrimary
+                      : Colors.white,
+                  },
+                ]}
+              >
+                {/* serch bar */}
+                <View style={styles.searchView}>
+                  <InputField
+                    // value={username}
+                    placeholder={"Select Destination"}
+                    // onChangeText={(value) => {
+                    //   setError({ ...error, username: "" });
+                    //   setUsername(value);
+                    // }}
+                  />
                 </View>
+                {/* search bar */}
+                {/* card View */}
+
+                <ScrollView horizontal>
+                  <View style={styles.cardsWrapper}>
+                    {dataArr.map((item, index) => (
+                      <Card
+                        key={index}
+                        item={item}
+                        onPress={() => setModalVisible(true)}
+                      />
+                    ))}
+                  </View>
+                </ScrollView>
+
+                {/* card View */}
               </View>
-            </ScrollView>
-          )}
+            </View>
+          </View>
+        )}
 
-          <RatingModal
-            setModalVisible={() => this.setModalVisible(false)}
-            modalVisible={this.state.ratingVisible}
-          />
-        </ImageBackground>
-      </View>
-    );
-  }
+        <RatingModal
+          setModalVisible={() => setModalVisible(false)}
+          modalVisible={ratingVisible}
+        />
+      </ImageBackground>
+    </Wrapper>
+  );
 }
-const mapStateToProps = (state) => ({
-  darkMode: state.darkMode,
-});
-
-export default connect(mapStateToProps, null)(Home);
