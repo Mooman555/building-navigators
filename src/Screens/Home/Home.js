@@ -89,7 +89,10 @@ export default function Home() {
                       <Card
                         key={index}
                         item={item}
-                        onPress={() => setModalVisible(true)}
+                        onPress={() => {
+                          navigation.navigate("Buildings");
+                          //  setModalVisible(true)
+                        }}
                       />
                     ))}
                   </View>

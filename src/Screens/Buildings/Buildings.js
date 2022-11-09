@@ -86,7 +86,8 @@ class Buildings extends React.Component {
               {this.state.dataArr.map((item, index) => (
                 <TouchableOpacity
                   onPress={() =>
-                    item.id == 1 && this.props.navigation.navigate("Home")
+                    // item.id == 1 && this.props.navigation.navigate("Home")
+                    item.id == 0 && this.props.navigation.navigate("MapScreen")
                   }
                   style={BuildingsStyle.cardView}
                 >

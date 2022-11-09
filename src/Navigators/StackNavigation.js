@@ -23,6 +23,7 @@ import Splash from "../Screens/Splash/Splash";
 import OnBoarding from "../Screens/OnBoarding/OnBoarding";
 import Home from "../Screens/Home/Home";
 import Buildings from "../Screens/Buildings/Buildings";
+import MapScreen from "../Screens/MapScreen/MapScreen";
 
 const windowWidth = Dimensions.get("window").width;
 
@@ -78,6 +79,14 @@ export const MainStack = () => {
         }}
         name="Home"
         component={Home}
+      />
+      <Stack.Screen
+        options={{
+          headerShown: false,
+          headerTransparent: true,
+        }}
+        name="MapScreen"
+        component={MapScreen}
       />
     </Stack.Navigator>
   );
