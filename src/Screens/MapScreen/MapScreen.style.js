@@ -122,7 +122,7 @@ export default StyleSheet.create({
     paddingRight: 90,
   },
   box: {
-    width: "180%",
+    width: "300%",
     alignSelf: "center",
     height: "100%",
   },

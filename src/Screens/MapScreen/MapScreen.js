@@ -34,16 +34,23 @@ export default function MapScreen() {
         source={require("../../../assets/images/back.png")}
       >
         <ScrollView
-          horizontal={true}
-          showsHorizontalScrollIndicator={false}
-          contentContainerStyle={[
-            styles.box,
-            {
-              transform: [{ rotateX: "0deg" }, { rotateZ: "90deg" }],
-            },
-          ]}
+          contentContainerStyle={{
+            height: "150%",
+            alignContent: "center",
+          }}
         >
-          <Level4 style={styles.imageBackground} />
+          <ScrollView
+            horizontal={true}
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={[
+              styles.box,
+              {
+                transform: [{ rotateX: "0deg" }, { rotateZ: "90deg" }],
+              },
+            ]}
+          >
+            <Level4 style={styles.imageBackground} />
+          </ScrollView>
         </ScrollView>
       </ImageBackground>
     </Wrapper>
