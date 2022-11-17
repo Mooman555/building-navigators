@@ -85,6 +85,7 @@ class Buildings extends React.Component {
             <View style={BuildingsStyle.container}>
               {this.state.dataArr.map((item, index) => (
                 <TouchableOpacity
+                  key={index}
                   onPress={() =>
                     // item.id == 1 && this.props.navigation.navigate("Home")
                     item.id == 0 && this.props.navigation.navigate("MapScreen")

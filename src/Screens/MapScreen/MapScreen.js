@@ -14,6 +14,7 @@ import Wrapper from "../../Components/Wrapper/Wrapper";
 import styles from "./MapScreen.style";
 import { Level4 } from "../../../assets";
 import ImageZoom from "react-native-image-pan-zoom";
+import Level_4 from "../../Components/SVGS/Level_4";
 
 export default function MapScreen() {
   const navigation = useNavigation();
@@ -42,14 +43,9 @@ export default function MapScreen() {
           <ScrollView
             horizontal={true}
             showsHorizontalScrollIndicator={false}
-            contentContainerStyle={[
-              styles.box,
-              {
-                transform: [{ rotateX: "0deg" }, { rotateZ: "90deg" }],
-              },
-            ]}
+            contentContainerStyle={[styles.box]}
           >
-            <Level4 style={styles.imageBackground} />
+            <Level_4 style={styles.imageBackground} />
           </ScrollView>
         </ScrollView>
       </ImageBackground>
