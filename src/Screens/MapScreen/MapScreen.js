@@ -1,31 +1,98 @@
 import {
   View,
-  Image,
-  Pressable,
+  TouchableOpacity,
   ImageBackground,
-  Dimensions,
   Text,
+  Dimensions,
+  Image,
   ScrollView,
 } from "react-native";
-import React, { useState } from "react";
-import { useNavigation } from "@react-navigation/native";
-import { connect, useSelector } from "react-redux";
+import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import Wrapper from "../../Components/Wrapper/Wrapper";
 import styles from "./MapScreen.style";
-import { Level4 } from "../../../assets";
-import ImageZoom from "react-native-image-pan-zoom";
+ import ImageZoom from "react-native-image-pan-zoom";
+import Level_1 from "../../Components/SVGS/Level_1";
 import Level_4 from "../../Components/SVGS/Level_4";
+import Level_2 from "../../Components/SVGS/Level_2";
+import Level_3 from "../../Components/SVGS/Level_3";
+import Mazanine from "../../Components/SVGS/Mazanine";
 
-export default function MapScreen() {
-  const navigation = useNavigation();
+
+
+export default function MapScreen({ route }) {
+  const { startObject,destinationObject } = route.params;
+  const  {number}  = startObject;
   const darkMode = useSelector((state) => state.darkMode);
-  const [ratingVisible, setRatingVisible] = useState(false);
-  const [dataArr, setDataArr] = useState([
-    { id: 0, text: "asim", places: 530 },
-    { id: 1, text: "asim", places: 56 },
-    { id: 2, text: "Cinema", places: 130 },
-    { id: 3, text: "Coffee", places: 340 },
-  ]);
+  const [renderSvg, setRenderSvg] = useState(number);
+  
+  var distances = []
+
+
+  //onPress
+  const onPress = (name) => {
+    setRenderSvg(name)
+  };
+  let Levels = [
+    {
+      name: "Level 5",
+      id: 5,
+      number: '4',
+    },
+    {
+      name: "Level 4",
+      id: 4,
+      number: '3',
+    },
+    {
+      name: "Level 3",
+      id: 3,
+      number: '2M',
+    },
+    {
+      name: "Level 2",
+      id: 2,
+      number: '2',
+    },
+    {
+      name: "Level 1",
+      id: 1,
+      number: '1',
+    },
+
+  ]
+
+  const RenderSvg = (svgNumber) => {
+      console.log(svgNumber,"svgNumber")
+      switch (svgNumber) {
+        case "1":
+        //  <ImageZoom cropWidth={Dimensions.get('window').width}
+        //     cropHeight={Dimensions.get('window').height}
+        //     imageWidth={200}
+        //     imageHeight={200}>
+        //     <Image style={{ width: 200, height: 200 }}
+        //       source={{uri:"E:/Karigar/REACT-NATIVE/building-navigator-app/src/Components/SVGS/Level_1.js"}} />
+        //   </ImageZoom>
+         return <Level_1 destinationObject={destinationObject} startObject={startObject}/>;
+        case "2":
+          return <Level_2 destinationObject={destinationObject} startObject={startObject} />;
+        case "2M":
+          return <Mazanine destinationObject={destinationObject} startObject={startObject} />;
+        case "3":
+          return <Level_3 destinationObject={destinationObject} startObject={startObject} />;
+        case "4":
+          return <Level_4 destinationObject={destinationObject} startObject={startObject} />;
+        // default:
+        //   console.log(distanceArray, "default")
+        //   return <Level_1 distanceArray={distanceArray} />;
+      }
+  }
+
+
+
+  console.log( destinationObject, startObject,"valuess")
+  console.log( number,"Floor Number")
+
   // Modal Visibility
   return (
     <Wrapper wrapperNP={true}>
@@ -34,6 +101,20 @@ export default function MapScreen() {
         resizeMode="cover"
         source={require("../../../assets/images/back.png")}
       >
+
+        <View style={styles.buttonView}>
+          {
+            Levels.map(element =>
+              <TouchableOpacity
+                style={styles.svgButtons}
+                key={element.id}
+                onPress={() => onPress(element.number)}
+              >
+                <Text style={styles.buttonText}>{element.number}</Text>
+              </TouchableOpacity>
+            )
+          }
+        </View>
         <ScrollView
           contentContainerStyle={{
             height: "150%",
@@ -45,9 +126,10 @@ export default function MapScreen() {
             showsHorizontalScrollIndicator={false}
             contentContainerStyle={[styles.box]}
           >
-            <Level_4 style={styles.imageBackground} />
+            {renderSvg ? RenderSvg(renderSvg) : RenderSvg(number?.toString())}
           </ScrollView>
         </ScrollView>
+
       </ImageBackground>
     </Wrapper>
   );

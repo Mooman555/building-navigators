@@ -14,7 +14,7 @@ export default function InputField(props) {
         <Text style={[Medium.h14]}>{props.label}</Text>
         <Text style={[Medium.h14]}>{props.errorMessage}</Text>
       </View>
-      <View style={[baseStyles.inputWrapper, props.customStyle]}>
+      <View style={[baseStyles.inputWrapper, props.customStyle,baseStyles.viewWrapper]}>
         <Ionicons
           name="search"
           size={15}
@@ -33,7 +33,7 @@ export default function InputField(props) {
           placeholder={props.placeholder}
           secureTextEntry={props.secureTextEntry}
           onChangeText={props.onChangeText}
-          placeholderTextColor={Colors.gray}
+        //  placeholderTextColor={Colors.gray}
           keyboardType={props.numberPad && "number-pad"}
           multiline={props.multiline}
           editable={props.editable}

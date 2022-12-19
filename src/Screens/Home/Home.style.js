@@ -69,7 +69,8 @@ export default StyleSheet.create({
     marginTop: 5,
   },
   searchView: {
-    paddingHorizontal: "6%",
+    marginTop:"5%",
+    paddingHorizontal: "8%",
   },
   searchBox: { width: "90%", height: 20 },
   cardView: {

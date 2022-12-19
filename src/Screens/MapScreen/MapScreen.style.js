@@ -126,4 +126,36 @@ export default StyleSheet.create({
     alignSelf: "center",
     height: "100%",
   },
+  svgButtons:{
+    // marginBottom:"50%",
+    // backgroundColor:"#4169E1",
+    fontSize:"18px",
+    backgroundColor:"white",
+    padding:"5%",
+    width:35,
+    height:35,
+    borderRadius:50,
+    marginBottom:"30%",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 2,
+      height: 2,
+    },
+    shadowOpacity: 0.4,
+    shadowRadius: 8,
+    elevation: 6,
+  },
+  buttonView:{
+    left:"85%",
+    top:"60%",
+    zIndex:1,
+    position:"absolute",
+    // justifyContent:"center",
+    // alignSelf:"center"
+  },
+  buttonText:{
+    textAlign:"center",
+    top:"20%",
+    fontWeight:"800"
+  }
 });

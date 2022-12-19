@@ -1,18 +1,13 @@
 import {
   View,
   Image,
-  Pressable,
   ImageBackground,
-  Dimensions,
   Text,
-  TextInput,
   ScrollView,
 } from "react-native";
-import React, { useState } from "react";
-import { MaterialIcons, Ionicons } from "@expo/vector-icons";
+import React, { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
-import { connect, useSelector } from "react-redux";
-
+import { useSelector } from "react-redux";
 import Wrapper from "../../Components/Wrapper/Wrapper";
 import Header from "../../Components/Header/Header";
 import styles from "./Home.style";
@@ -20,9 +15,13 @@ import Card from "./Card";
 import RatingModal from "../../Components/Modal/RatingModal";
 import Assets from "../../UI/Assets";
 import Colors from "../../UI/Colors";
-import InputField from "../../Components/InputField/InputField";
+import DropDown from "../../Components/SearchableDropDown/SearchableDropDown";
+import { destinations as Destinations } from "../../Components/SearchableDropDown/DropDownValues";
 
-export default function Home() {
+const Home = () => {
+
+  const [startPosition, setStartPosition] = useState(null);
+  const [destinationPoint, setDestinationPoint] = useState(null);
   const navigation = useNavigation();
   const darkMode = useSelector((state) => state.darkMode);
   const [ratingVisible, setRatingVisible] = useState(false);
@@ -32,12 +31,42 @@ export default function Home() {
     { id: 2, text: "Cinema", places: 130 },
     { id: 3, text: "Coffee", places: 340 },
   ]);
+
+  useEffect(() => {
+
+    if (startPosition !== null && destinationPoint !== null && startPosition?.value !== null && destinationPoint?.value !== null) {
+      console.log("heloo")
+      navigation.navigate('MapScreen', {
+        startObject: startPosition,
+        destinationObject: destinationPoint,
+      })
+    }
+
+  }, [startPosition, destinationPoint])
+
+  const startPositionHandler = (value) => {
+    setStartPosition(value)
+  }
+
+  const destinationHandler = (value) => {
+    setDestinationPoint(value)
+  }
+
+
+  var SearchableDropdownItems = Destinations;
   // Modal Visibility
   const setModalVisible = (visible) => {
     setRatingVisible(visible);
   };
   return (
+    // <KeyboardAvoidingView 
+    //   enableOnAndroid= {true}
+    //   enableAutomaticScroll= {true}
+    //   extraHeight={200}
+    //   nestedScrollEnabled={true}
+    // >
     <Wrapper wrapperNP={true}>
+      {/* <ScrollView style={{flex:1}}> */}
       <ImageBackground
         style={styles.imageBackground}
         resizeMode="cover"
@@ -71,18 +100,20 @@ export default function Home() {
               >
                 {/* serch bar */}
                 <View style={styles.searchView}>
-                  <InputField
-                    // value={username}
-                    placeholder={"Select Destination"}
-                    // onChangeText={(value) => {
-                    //   setError({ ...error, username: "" });
-                    //   setUsername(value);
-                    // }}
+                  <DropDown
+                    itemsDataList={SearchableDropdownItems}
+                    placeHolderText="Search Starting Position"
+                    // navigateTo="MapScreen" 
+                    setStartPosition={(value) => startPositionHandler(value)}
+                    location={true}
+                  />
+                  <DropDown
+                    itemsDataList={SearchableDropdownItems}
+                    placeHolderText="Search Location"
+                    // navigateTo="MapScreen" 
+                    setDestinationPoint={(value) => destinationHandler(value)}
                   />
                 </View>
-                {/* search bar */}
-                {/* card View */}
-
                 <ScrollView horizontal>
                   <View style={styles.cardsWrapper}>
                     {dataArr.map((item, index) => (
@@ -90,25 +121,25 @@ export default function Home() {
                         key={index}
                         item={item}
                         onPress={() => {
-                          navigation.navigate("Buildings");
+                          // navigation.navigate("Buildings");
+                          alert("Please Select Location Above")
                           //  setModalVisible(true)
                         }}
                       />
                     ))}
                   </View>
                 </ScrollView>
-
-                {/* card View */}
               </View>
             </View>
           </View>
         )}
-
         <RatingModal
           setModalVisible={() => setModalVisible(false)}
           modalVisible={ratingVisible}
         />
       </ImageBackground>
     </Wrapper>
+    //  </KeyboardAvoidingView>
   );
 }
+export default Home

@@ -1,12 +1,24 @@
-import * as React from "react";
+import React, { useState ,useEffect} from "react";
 import Svg, { G, Path, Polyline, Polygon, Rect, Line } from "react-native-svg";
-const Level_4 = (props) => (
-  <Svg
+
+const Level_4 = ({distanceArray}) => {
+
+
+useEffect(() => {
+console.log(distanceArray,"distanceArray")
+}, [])
+
+
+  const [ID, setID] = useState({
+    currentId : "Select"
+  })
+
+  return <Svg
     id="uuid-2fa43562-4b17-4907-a18b-9999aa251c4c"
     data-name="Layer 1"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 628.77419 441.6129"
-    {...props}
+    // {...props}
   >
     <G>
       <G id="uuid-17dca60b-6648-49d7-bdba-f5fc387e7d31" data-name="Pathway">
@@ -8988,7 +9000,8 @@ const Level_4 = (props) => (
       id="uuid-8beb48cc-807f-4f51-8f3b-fab556e7c6ad"
       data-name="Green - Room 401"
     >
-      {/* <Polyline
+      {/* here put the logic */}
+      <Polyline
         points="515.69355 360.77769 515.69355 369.33611 332.80645 369.33611 332.80645 360.77769"
         style={{
           fill: "none",
@@ -8997,7 +9010,7 @@ const Level_4 = (props) => (
           strokeWidth: ".25px",
         }}
       />
-      <Polyline
+      {/*<Polyline
         points="521.72581 360.77769 521.72581 368.3226 559.52878 368.32258 559.52878 272.41 562.895 272.41"
         style={{
           fill: "none",
@@ -11499,5 +11512,5 @@ const Level_4 = (props) => (
       />
     </G> */}
   </Svg>
-);
+};
 export default Level_4;

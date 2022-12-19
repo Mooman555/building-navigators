@@ -3,6 +3,11 @@ import colors from "./Colors";
 import themeFontSize from "./themeFontSizes";
 
 export default StyleSheet.create({
+  viewWrapper :{
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 50,
+  },
   wrapper: {
     flex: 1,
     justifyContent: "center",
@@ -62,7 +67,7 @@ export default StyleSheet.create({
     alignItems: "center",
   },
   inputWrapper: {
-    height: 45,
+    height: 55,
     width: "100%",
     backgroundColor: colors.white,
     borderRadius: 100,
@@ -70,9 +75,12 @@ export default StyleSheet.create({
     justifyContent: "center",
     flexDirection: "row",
     alignItems: "center",
+    marginBottom:"2%",
+    zIndex:-1
   },
   input: {
     width: "100%",
     height: "100%",
+   
   },
 });
