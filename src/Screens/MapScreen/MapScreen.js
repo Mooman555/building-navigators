@@ -21,7 +21,7 @@ import Mazanine from "../../Components/SVGS/Mazanine";
 
 
 export default function MapScreen({ route }) {
-  const { startObject,destinationObject } = route.params;
+  const { startObject,destinationObject,beaconDataSet } = route.params;
   const  {number}  = startObject;
   const darkMode = useSelector((state) => state.darkMode);
   const [renderSvg, setRenderSvg] = useState(number);
@@ -66,32 +66,20 @@ export default function MapScreen({ route }) {
       console.log(svgNumber,"svgNumber")
       switch (svgNumber) {
         case "1":
-        //  <ImageZoom cropWidth={Dimensions.get('window').width}
-        //     cropHeight={Dimensions.get('window').height}
-        //     imageWidth={200}
-        //     imageHeight={200}>
-        //     <Image style={{ width: 200, height: 200 }}
-        //       source={{uri:"E:/Karigar/REACT-NATIVE/building-navigator-app/src/Components/SVGS/Level_1.js"}} />
-        //   </ImageZoom>
-         return <Level_1 destinationObject={destinationObject} startObject={startObject}/>;
+         return <Level_1 destinationObject={destinationObject} startObject={startObject} beaconDataSet={beaconDataSet}/>;
         case "2":
-          return <Level_2 destinationObject={destinationObject} startObject={startObject} />;
+          return <Level_2 destinationObject={destinationObject} startObject={startObject} beaconDataSet={beaconDataSet}/>;
         case "2M":
-          return <Mazanine destinationObject={destinationObject} startObject={startObject} />;
+          return <Mazanine destinationObject={destinationObject} startObject={startObject} beaconDataSet={beaconDataSet} />;
         case "3":
-          return <Level_3 destinationObject={destinationObject} startObject={startObject} />;
+          return <Level_3 destinationObject={destinationObject} startObject={startObject} beaconDataSet={beaconDataSet}/>;
         case "4":
-          return <Level_4 destinationObject={destinationObject} startObject={startObject} />;
+          return <Level_4 destinationObject={destinationObject} startObject={startObject} beaconDataSet={beaconDataSet}/>;
         // default:
         //   console.log(distanceArray, "default")
         //   return <Level_1 distanceArray={distanceArray} />;
       }
   }
-
-
-
-  console.log( destinationObject, startObject,"valuess")
-  console.log( number,"Floor Number")
 
   // Modal Visibility
   return (
@@ -108,9 +96,9 @@ export default function MapScreen({ route }) {
               <TouchableOpacity
                 style={styles.svgButtons}
                 key={element.id}
-                onPress={() => onPress(element.number)}
+                onPress={() => onPress(element?.number)}
               >
-                <Text style={styles.buttonText}>{element.number}</Text>
+                <Text style={styles.buttonText}>{element?.number}</Text>
               </TouchableOpacity>
             )
           }
@@ -126,7 +114,7 @@ export default function MapScreen({ route }) {
             showsHorizontalScrollIndicator={false}
             contentContainerStyle={[styles.box]}
           >
-            {renderSvg ? RenderSvg(renderSvg) : RenderSvg(number?.toString())}
+            {renderSvg ? RenderSvg(renderSvg) : RenderSvg(number || number?.toString())}
           </ScrollView>
         </ScrollView>
 

@@ -18,7 +18,7 @@ export default function Level_1(props) {
   // const [id, setID] = useState("found")
 
   useEffect(() => {
-    initiateProcess(isScanning, setIsScanning)
+    // initiateProcess(isScanning, setIsScanning)
   }, [])
 
 

@@ -9,10 +9,8 @@ import Svg, {
   Polyline,
   Circle,
 } from "react-native-svg";
-import { initiateProcess } from "../../Functions/initiateProcess";
 
 const Mazanine = (props) => {
-  const [isScanning, setIsScanning] = useState(false);
   const [path, setPath] = useState("")
   let { startObject, destinationObject } = props
 
@@ -22,11 +20,6 @@ const Mazanine = (props) => {
       setPath(`${startObject?.id}-${destinationObject?.id}`)
     }
   }, [startObject, destinationObject])
-  // const [id, setID] = useState("found")
-
-  useEffect(() => {
-    initiateProcess(isScanning, setIsScanning)
-  }, [])
 
   return <Svg
     id="Layer_1"

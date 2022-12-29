@@ -22,6 +22,7 @@ const Home = () => {
 
   const [startPosition, setStartPosition] = useState(null);
   const [destinationPoint, setDestinationPoint] = useState(null);
+  const [beaconDataSet, setBeaconDataSet] = useState([]);
   const navigation = useNavigation();
   const darkMode = useSelector((state) => state.darkMode);
   const [ratingVisible, setRatingVisible] = useState(false);
@@ -34,11 +35,11 @@ const Home = () => {
 
   useEffect(() => {
 
-    if (startPosition !== null && destinationPoint !== null && startPosition?.value !== null && destinationPoint?.value !== null) {
-      console.log("heloo")
+    if (startPosition !== null && destinationPoint !== null && startPosition?.value !== null && destinationPoint?.value !== null  && beaconDataSet  ) {
       navigation.navigate('MapScreen', {
         startObject: startPosition,
         destinationObject: destinationPoint,
+        beaconDataSet : beaconDataSet
       })
     }
 
@@ -58,6 +59,10 @@ const Home = () => {
   const setModalVisible = (visible) => {
     setRatingVisible(visible);
   };
+
+  const handleBeaconDataSet = (array) => {
+    setBeaconDataSet(array)
+  }
   return (
     // <KeyboardAvoidingView 
     //   enableOnAndroid= {true}
@@ -106,12 +111,14 @@ const Home = () => {
                     // navigateTo="MapScreen" 
                     setStartPosition={(value) => startPositionHandler(value)}
                     location={true}
+                    setBeaconDataSet={(array) => handleBeaconDataSet(array)}
                   />
                   <DropDown
                     itemsDataList={SearchableDropdownItems}
                     placeHolderText="Search Location"
                     // navigateTo="MapScreen" 
                     setDestinationPoint={(value) => destinationHandler(value)}
+                    setBeaconDataSet={(array) => handleBeaconDataSet(array)}
                   />
                 </View>
                 <ScrollView horizontal>
