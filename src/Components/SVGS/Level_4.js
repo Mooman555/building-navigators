@@ -8257,11 +8257,11 @@ const Level_4 = (props) => {
           <Polygon
             points="301.02832 367.18848 267.48779 367.18848 267.48779 294.89307 274.22656 294.89307 274.22656 295.14307 267.73779 295.14307 267.73779 366.93848 300.77832 366.93848 300.77832 360.77734 301.02832 360.77734 301.02832 367.18848"
             style={(path === "room#404_4-restRoomDown4" || path === "restRoomDown4-room#404_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
+              fill: "none",
+              stroke: "black",
+              strokeMiterlimit: 10,
+              strokeWidth: ".25px",
+            } : {}}
           />
           <Polygon
             points="572.03223 244.6792 562.93945 244.6792 562.93945 229.47998 549.21191 229.47998 549.21191 229.22998 563.18945 229.22998 563.18945 244.4292 572.03223 244.4292 572.03223 244.6792"
@@ -8274,11 +8274,11 @@ const Level_4 = (props) => {
           <Polygon
             points="405.12695 376.58789 404.87695 376.58789 404.87695 373.79297 267.95361 373.79297 267.95361 295.44922 274.23584 295.44922 274.23584 295.69922 268.20361 295.69922 268.20361 373.54297 405.12695 373.54297 405.12695 376.58789"
             style={(path === "room#404_4-rainierVistaTerrace4" || path === "rainierVistaTerrace4-room#404_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
+              fill: "none",
+              stroke: "black",
+              strokeMiterlimit: 10,
+              strokeWidth: ".25px",
+            } : {}}
           />
           <Polygon
             points="404.52246 376.58789 404.27246 376.58789 404.27246 374.36914 268.61914 374.36914 268.61914 294.53809 267.49414 294.53857 267.49414 237.8042 274.87695 237.8042 274.87695 238.0542 267.74414 238.0542 267.74414 294.28857 268.86914 294.28809 268.86914 374.11914 404.52246 374.11914 404.52246 376.58789"
@@ -9060,2510 +9060,2519 @@ const Level_4 = (props) => {
         <Polyline
           points="515.69355 360.77769 515.69355 369.33611 332.80645 369.33611 332.80645 360.77769"
           style={(path === "restRoomDown4-room#401_4" || path === "room#401_4-restRoomDown4") ? {
-              fill: "none",
-              stroke: "black",
-              strokeMiterlimit: 10,
-              strokeWidth: ".25px",
-            } : {}}
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
         />
         <Polyline
-        points="521.72581 360.77769 521.72581 368.3226 559.52878 368.32258 559.52878 272.41 562.895 272.41"
-        style={(path === "room#401_4-restRoomRight4" || path === "restRoomRight4-room#401_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="517.19355 360.77769 517.19355 371.14763 479.75028 371.14763 479.75028 376.3629"
-        style={(path === "room#401_4-rainierVistaTerrace4" || path === "rainierVistaTerrace4-room#401_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="517.89523 361.75646 517.89523 371.92841 273.64706 371.92841 273.64706 235.52941 275.66119 235.52941"
-        style={(path === "room#401_4-room#405_4" || path === "room#405_4-room#401_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="519.35333 361.75646 519.35333 373.15483 271.88235 373.15483 271.88235 126.0121 275.66119 126.0121"
-        style={(path === "room#401_4-room#406_4" || path === "room#406_4-room#401_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="520.11694 361.75646 520.11694 375.06452 270.29412 375.06452 270.29412 57.83569 394.2856 57.83569 394.2856 63.1129"
-        style={(path === "room#401_4-room#407_4" || path === "room#407_4-room#401_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="521.2856 361.52941 521.2856 376.3629 268.87237 376.3629 268.87237 56.31452 442.68719 56.31452 442.68719 61.0229"
-        style={(path === "room#401_4-room#408_4" || path === "room#408_4-room#401_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="522.58002 361.10877 522.58002 377.40323 267.61895 377.40323 267.61895 55.02325 508.21 55.02325 508.21 59.82258"
-        style={(path === "room#401_4-room#409_4" || path === "room#409_4-room#401_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="523.27002 361.10877 523.27002 375.06452 565.33871 375.06452 565.33871 342.6838 568.45161 342.6838"
-        style={(path === "room#401_4-publicStairsDownRight4" || path === "publicStairsDownRight4-room#401_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="524.52033 361.10877 524.52033 373.66753 563.35484 373.66753 563.35484 328.82259 565.33871 328.82259"
-        style={(path === "room#401_4-storageAreaRight4" || path === "storageAreaRight4-room#401_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="525.87 362.34458 525.87 372.54641 561.895 372.54641 561.895 262.46679 578.64675 262.46679"
-        style={(path === "room#401_4-silverRoom4" || path === "silverRoom4-room#401_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="527.37037 362.46774 527.37037 371.7626 560.01926 371.7626 560.01926 214.78728 565.29438 214.78728"
-        style={(path === "room#401_4-kitchenManagementOffices4" || path === "kitchenManagementOffices4-room#401_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="528.79839 362.34458 528.79839 369.90816 558.26432 369.90816 558.26432 198.20891 565.95968 198.20891"
-        style={(path === "room#401_4-food&BeverageOffice4" || path === "food&BeverageOffice4-room#401_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="530.00187 362.34458 530.00187 368.3099 555.40726 368.3099 555.40726 247.32984 549.15 247.32984"
-        style={(path === "room#401_4-kitchen4" || path === "kitchen4-room#401_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="531.14543 362.46774 531.14543 367.20883 554.07305 367.20883 554.07305 50.47059 416.76025 50.47059 416.76025 47.26613"
-        style={(path === "room#401_4-roof4" || path === "roof4-room#401_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="514.75 361.88235 514.75 368.3099 397.27002 368.3099 397.27002 361.29412"
-        style={(path === "room#401_4-room#403_4" || path === "room#403_4-room#401_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="440.57668 362.67387 440.57668 365.99999 513.71744 365.99999 513.71744 362.28678"
-        style={(path === "room#401_4-room#402_4" || path === "room#402_4-room#401_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="520.02916 358.43625 520.02916 368.48484 427.23555 368.48484 427.23555 374.24022"
-        style={(path === "room#401_4-rainierVistaTerrace4" || path === "rainierVistaTerrace4-room#401_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="518.77702 360.48029 518.77702 367.71774 259 367.71774 259 70.17263 183.30569 70.17263"
-        style={(path === "room#401_4-storageAreaLeft4" || path === "storageAreaLeft4-room#401_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="520.47059 360.70588 520.47059 375.64706 256.82353 375.64706 256.82353 52.70588 290.70588 52.70588 290.70588 56.35294"
-        style={(path === "room#401_4-facilityStorageArea4" || path === "facilityStorageArea4-room#401_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="520.94118 359.17647 520.94118 370.47059 283.76471 370.47059 283.76471 364.82353"
-        style={(path === "room#401_4-showManagerRoom4" || path === "showManagerRoom4-room#401_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="523.52941 360.47059 523.52941 367.52941 557.41176 367.52941 557.41176 49.17647 519.20161 49.17647 519.20161 44.02823"
-        style={(path === "room#401_4-roof4" || path === "roof4-room#401_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
+          points="521.72581 360.77769 521.72581 368.3226 559.52878 368.32258 559.52878 272.41 562.895 272.41"
+          style={(path === "room#401_4-restRoomRight4" || path === "restRoomRight4-room#401_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="517.19355 360.77769 517.19355 371.14763 479.75028 371.14763 479.75028 376.3629"
+          style={(path === "room#401_4-rainierVistaTerrace4" || path === "rainierVistaTerrace4-room#401_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="517.89523 361.75646 517.89523 371.92841 273.64706 371.92841 273.64706 235.52941 275.66119 235.52941"
+          style={(path === "room#401_4-room#405_4" || path === "room#405_4-room#401_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="519.35333 361.75646 519.35333 373.15483 271.88235 373.15483 271.88235 126.0121 275.66119 126.0121"
+          style={(path === "room#401_4-room#406_4" || path === "room#406_4-room#401_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="520.11694 361.75646 520.11694 375.06452 270.29412 375.06452 270.29412 57.83569 394.2856 57.83569 394.2856 63.1129"
+          style={(path === "room#401_4-room#407_4" || path === "room#407_4-room#401_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="521.2856 361.52941 521.2856 376.3629 268.87237 376.3629 268.87237 56.31452 442.68719 56.31452 442.68719 61.0229"
+          style={(path === "room#401_4-room#408_4" || path === "room#408_4-room#401_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="522.58002 361.10877 522.58002 377.40323 267.61895 377.40323 267.61895 55.02325 508.21 55.02325 508.21 59.82258"
+          style={(path === "room#401_4-room#409_4" || path === "room#409_4-room#401_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="523.27002 361.10877 523.27002 375.06452 565.33871 375.06452 565.33871 342.6838 568.45161 342.6838"
+          style={(path === "room#401_4-publicStairsDownRight4" || path === "publicStairsDownRight4-room#401_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="524.52033 361.10877 524.52033 373.66753 563.35484 373.66753 563.35484 328.82259 565.33871 328.82259"
+          style={(path === "room#401_4-storageAreaRight4" || path === "storageAreaRight4-room#401_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="525.87 362.34458 525.87 372.54641 561.895 372.54641 561.895 262.46679 578.64675 262.46679"
+          style={(path === "room#401_4-silverRoom4" || path === "silverRoom4-room#401_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="527.37037 362.46774 527.37037 371.7626 560.01926 371.7626 560.01926 214.78728 565.29438 214.78728"
+          style={(path === "room#401_4-kitchenManagementOffices4" || path === "kitchenManagementOffices4-room#401_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="528.79839 362.34458 528.79839 369.90816 558.26432 369.90816 558.26432 198.20891 565.95968 198.20891"
+          style={(path === "room#401_4-food&BeverageOffice4" || path === "food&BeverageOffice4-room#401_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="530.00187 362.34458 530.00187 368.3099 555.40726 368.3099 555.40726 247.32984 549.15 247.32984"
+          style={(path === "room#401_4-kitchen4" || path === "kitchen4-room#401_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="531.14543 362.46774 531.14543 367.20883 554.07305 367.20883 554.07305 50.47059 416.76025 50.47059 416.76025 47.26613"
+          style={(path === "room#401_4-roof4" || path === "roof4-room#401_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="514.75 361.88235 514.75 368.3099 397.27002 368.3099 397.27002 361.29412"
+          style={(path === "room#401_4-room#403_4" || path === "room#403_4-room#401_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="440.57668 362.67387 440.57668 365.99999 513.71744 365.99999 513.71744 362.28678"
+          style={(path === "room#401_4-room#402_4" || path === "room#402_4-room#401_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="520.02916 358.43625 520.02916 368.48484 427.23555 368.48484 427.23555 374.24022"
+          style={(path === "room#401_4-rainierVistaTerrace4" || path === "rainierVistaTerrace4-room#401_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="518.77702 360.48029 518.77702 367.71774 259 367.71774 259 70.17263 183.30569 70.17263"
+          style={(path === "room#401_4-storageAreaLeft4" || path === "storageAreaLeft4-room#401_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="520.47059 360.70588 520.47059 375.64706 256.82353 375.64706 256.82353 52.70588 290.70588 52.70588 290.70588 56.35294"
+          style={(path === "room#401_4-facilityStorageArea4" || path === "facilityStorageArea4-room#401_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="520.94118 359.17647 520.94118 370.47059 283.76471 370.47059 283.76471 364.82353"
+          style={(path === "room#401_4-showManagerRoom4" || path === "showManagerRoom4-room#401_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="523.52941 360.47059 523.52941 367.52941 557.41176 367.52941 557.41176 49.17647 519.20161 49.17647 519.20161 44.02823"
+          style={(path === "room#401_4-roof4" || path === "roof4-room#401_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
         <Polyline
           points="525.29412 361.41176 556.58824 361.41176 556.58824 378.11765"
           style={(path === "room#401_4-kitchenwareStorageRoom4" || path === "kitchenwareStorageRoom4-room#401_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
         />
         <Polyline
           points="516.76471 360.75646 516.76471 369.69207 274.64516 370.69207 274.64516 301.3877 276.49746 301.3877"
           style={(path === "room#401_4-room#404_4" || path === "room#404_4-room#401_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
         />
       </G>
-       <G
-      id="uuid-68674bec-62ff-4e75-8624-f9e2f65c6453"
-      data-name="Brown - Room 402"
-    >
-      <Polyline
-        points="439.69355 360.77769 439.69355 369.33611 332.80645 369.33611 332.80645 360.77769"
-        style={(path === "room#402_4-restRoomDown4" || path === "restRoomDown4-room#402_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="441.89523 361.75646 441.89523 371.92841 273.64706 371.92841 273.64706 235.52941 275.66119 235.52941"
-        style={(path === "room#402_4-room#405_4" || path === "room#405_4-room#402_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="520.47059 360.70588 520.47059 375.64706 256.82353 375.64706 256.82353 52.70588 290.70588 52.70588 290.70588 56.35294"
-        style={(path === "room#401_4-facilityStorageArea4" || path === "facilityStorageArea4-room#401_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="443.35333 361.75646 443.35333 373.15483 271.88235 373.15483 271.88235 126.0121 275.66119 126.0121"
-        style={(path === "room#402_4-room#406_4" || path === "room#406_4-room#402_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="444.11694 361.75646 444.11694 375.06452 270.29412 375.06452 270.29412 57.83569 394.2856 57.83569 394.2856 63.1129"
-        style={(path === "room#402_4-room#407_4" || path === "room#407_4-room#402_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="445.2856 361.52941 445.2856 376.3629 268.87237 376.3629 268.87237 56.31452 442.68719 56.31452 442.68719 61.0229"
-        style={(path === "room#402_4-room#408_4" || path === "room#408_4-room#402_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="446.58002 361.10877 446.58002 377.40323 267.61895 377.40323 267.61895 55.02325 508.21 55.02325 508.21 59.82258"
-        style={(path === "room#402_4-room#409_4" || path === "room#409_4-room#402_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="447.27002 361.10877 447.27002 375.06452 565.33871 375.06452 565.33871 342.6838 568.45161 342.6838"
-        style={(path === "room#402_4-publicStairsDownRight4" || path === "publicStairsDownRight4-room#402_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="448.52033 361.10877 448.52033 373.66753 563.35484 373.66753 563.35484 328.82259 565.33871 328.82259"
-        style={(path === "room#402_4-storageAreaRight4" || path === "storageAreaRight4-room#402_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="449.87 362.34458 449.87 372.54641 561.895 372.54641 561.895 262.46679 578.64675 262.46679"
-        style={(path === "room#402_4-silverRoom4" || path === "silverRoom4-room#402_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="451.37037 362.46774 451.37037 371.7626 560.01926 371.7626 560.01926 214.78728 565.29438 214.78728"
-        style={(path === "room#402_4-kitchenManagementOffices4" || path === "kitchenManagementOffices4-room#402_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="452.79839 362.34458 452.79839 369.90816 558.26432 369.90816 558.26432 198.20891 565.95968 198.20891"
-        style={(path === "room#402_4-food&BeverageOffice4" || path === "food&BeverageOffice4-room#402_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="454.00187 362.34458 454.00187 368.3099 555.40726 368.3099 555.40726 247.32984 549.15 247.32984"
-        style={(path === "room#402_4-kitchen4" || path === "kitchen4-room#402_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="455.14543 362.46774 455.14543 367.20883 554.07305 367.20883 554.07305 50.47059 416.76025 50.47059 416.76025 47.26613"
-        style={(path === "room#402_4-roof4" || path === "roof4-room#402_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="438.75 361.88235 438.75 368.3099 397.27002 368.3099 397.27002 361.29412"
-        style={(path === "room#402_4-room#403_4" || path === "room#403_4-room#402_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="456.57668 362.67387 456.57668 365.99999 517.71744 365.99999 517.71744 362.28678"
-        style={(path === "room#402_4-room#401_4" || path === "room#401_4-room#402_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Line
-        x1={457.23529}
-        y1={353.50736}
-        x2={457.23529}
-        y2={374.37499}
-        style={(path === "room#402_4-rainierVistaTerrace4" || path === "rainierVistaTerrace4-room#402_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="442.68671 362.46774 442.68671 371.92841 259.52941 371.92841 259.52941 68.2168 182.23529 68.2168"
-        style={(path === "room#402_4-storageAreaLeft4" || path === "storageAreaLeft4-room#402_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="457.64706 361.52941 457.64706 364.82353 557.64706 364.82353 557.64706 377.76471"
-        style={(path === "room#402_4-kitchenwareStorageRoom4" || path === "kitchenwareStorageRoom4-room#402_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="449.31098 360.8993 449.31098 369.72329 286.42016 369.72329 286.42016 364.82353"
-        style={(path === "room#402_4-showManagerRoom4" || path === "showManagerRoom4-room#402_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="440.76471 361.75646 440.76471 370.69207 274.64516 370.69207 274.64516 301.3877 276.49746 301.3877"
-        style={(path === "room#402_4-room#404_4" || path === "room#404_4-room#402_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-    </G>
-    <G
-      id="uuid-d7d73a33-5027-4f4c-9b64-023a2e7424b2"
-      data-name="Maganta - Room 403"
-    >
-      <Polyline
-        points="388.69355 360.77769 388.69355 369.33611 332.80645 369.33611 332.80645 360.77769"
-        style={(path === "room#403_4-restRoomDown4" || path === "restRoomDown4-room#403_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="390.89523 361.75646 390.89523 371.92841 273.64706 371.92841 273.64706 235.52941 275.66119 235.52941"
-        style={(path === "room#403_4-room#405_4" || path === "room#405_4-room#403_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="392.35333 361.75646 392.35333 373.15483 271.88235 373.15483 271.88235 126.0121 275.66119 126.0121"
-        style={(path === "room#403_4-room#406_4" || path === "room#406_4-room#403_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="393.11694 361.75646 393.11694 375.06452 270.29412 375.06452 270.29412 57.83569 394.2856 57.83569 394.2856 63.1129"
-        style={(path === "room#403_4-room#407_4" || path === "room#407_4-room#403_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="394.2856 361.52941 394.2856 376.3629 268.87237 376.3629 268.87237 56.31452 442.68719 56.31452 442.68719 61.0229"
-        style={(path === "room#403_4-room#408_4" || path === "room#408_4-room#403_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="395.58002 361.10877 395.58002 377.40323 267.61895 377.40323 267.61895 55.02325 508.21 55.02325 508.21 59.82258"
-        style={(path === "room#403_4-room#409_4" || path === "room#409_4-room#403_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="397.27002 361.10877 397.27002 375.06452 565.33871 375.06452 565.33871 342.6838 568.45161 342.6838"
-        style={(path === "room#403_4-publicStairsDownRight4" || path === "publicStairsDownRight4-room#403_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="398.52033 361.10877 398.52033 373.66753 563.35484 373.66753 563.35484 328.82259 565.33871 328.82259"
-        style={(path === "room#403_4-storageAreaRight4" || path === "storageAreaRight4-room#403_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="399.87 362.34458 399.87 372.54641 561.895 372.54641 561.895 262.46679 578.64675 262.46679"
-        style={(path === "room#403_4-silverRoom4" || path === "silverRoom4-room#403_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="401.37037 362.46774 401.37037 371.7626 560.01926 371.7626 560.01926 214.78728 565.29438 214.78728"
-        style={(path === "room#403_4-kitchenManagementOffices4" || path === "kitchenManagementOffices4-room#403_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="402.79839 362.34458 402.79839 369.90816 558.26432 369.90816 558.26432 198.20891 565.95968 198.20891"
-        style={(path === "room#403_4-food&BeverageOffice4" || path === "food&BeverageOffice4-room#403_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="405.00187 362.34458 405.00187 368.3099 555.40726 368.3099 555.40726 247.32984 549.15 247.32984"
-        style={(path === "room#403_4-kitchen4" || path === "kitchen4-room#403_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="406.14543 362.46774 406.14543 367.20883 554.07305 367.20883 554.07305 50.47059 416.76025 50.47059 416.76025 47.26613"
-        style={(path === "room#403_4-roof4" || path === "roof4-room#403_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="407.94118 362.46774 407.94118 366.18096 444.61695 366.18096 444.61695 362.46774"
-        style={(path === "room#403_4-room#404_4" || path === "room#404_4-room#403_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="409.17647 362.46774 409.17647 364.76563 518.77702 364.76563 518.77702 361.52941"
-        style={(path === "room#403_4-room#401_4" || path === "room#401_4-room#403_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="396.35294 361.52941 396.35294 378.74194 261.76471 378.74194 261.76471 69.2621 179.36569 69.2621"
-        style={(path === "room#403_4-storageAreaLeft4" || path === "storageAreaLeft4-room#403_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="393.47059 360.70588 393.47059 375.64706 256.82353 375.64706 256.82353 52.70588 290.70588 52.70588 290.70588 56.35294"
-        style={(path === "room#403_4-facilityStorageArea4" || path === "facilityStorageArea4-room#403_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="403.35294 361.88235 403.35294 368.76471 559 368.76471 559 377.58824"
-        style={(path === "room#403_4-kitchenwareStorageRoom4" || path === "kitchenwareStorageRoom4-room#403_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="392.05882 359.94118 392.05882 374.58824 287.94118 374.58824 287.94118 364.82353"
-        style={(path === "room#403_4-showManagerRoom4" || path === "showManagerRoom4-room#403_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="389.76471 361.75646 389.76471 370.69207 274.64516 370.69207 274.64516 301.3877 276.49746 301.3877"
-        style={(path === "room#403_4-room#404_4" || path === "room#404_4-room#403_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-    </G>
-    <G
-      id="uuid-4fa46c9d-6284-4844-9ef9-59be4f8215df"
-      data-name="Royal Blue- Room 404"
-    >
-      <Polyline
-        points="300.33531 58.84245 268.18149 58.84245 268.18149 302.68542 277.08065 302.68542"
-        style={(path === "room#404_4-restRoomTop4" || path === "restRoomTop4-room#404_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="277.08065 304.36215 270.5 304.36215 270.5 317.32655 268.18149 317.3265 268.18149 326.8194 269.3527 326.81935 269.35269 374.7848 403.80873 374.78482 403.80873 376.58167"
-        style={(path === "room#404_4-rainierVistaTerrace4" || path === "rainierVistaTerrace4-room#404_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="275.66119 303.29746 269.97684 303.29746 269.97684 58.21569 442.68719 58.21569 442.68719 62.5713"
-        style={(path === "room#404_4-room#408_4" || path === "room#408_4-room#404_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="277.90516 306.20365 271.07056 306.20365 271.07056 59.65889 394.2856 59.65889 394.2856 64.22423"
-        style={(path === "room#404_4-room#407_4" || path === "room#407_4-room#404_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="274.64516 294.48965 266.10908 294.48965 266.10908 56.56855 181.64516 56.56855 181.64516 51.82258"
-        style={(path === "room#404_4-publicStairsDownTopLeft4" || path === "publicStairsDownTopLeft4-room#404_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="274.64516 293.60903 264.145 293.60903 264.145 57.83594 176.77119 57.83594"
-        style={(path === "room#404_4-elevatorTopLeft4" || path === "elevatorTopLeft4-room#404_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="274.64516 296.54829 262.89323 296.54829 262.89323 59.65889 181.64516 59.65889 181.64516 68.2168"
-        style={(path === "room#404_4-storageAreaLeft4" || path === "storageAreaLeft4-room#404_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="274.64516 182.68103 271.89639 182.68103 271.89639 289.91632 274.64516 289.91632"
-        style={(path === "room#404_4-room#405_4" || path === "room#405_4-room#404_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="274.64516 301.50456 266.10908 301.50456 266.10908 369.90816 300.90323 369.90816 300.90323 367.06352"
-        style={(path === "room#404_4-restRoomDown4" || path === "restRoomDown4-room#404_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="274.64516 300.36215 263.38852 300.36215 263.38852 371.92841 398.52033 371.92841 398.52033 363.06452"
-        style={(path === "room#404_4-room#403_4" || path === "room#403_4-room#404_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="275.66119 291.80065 268.11068 291.80065 268.11068 56.56855 509.23466 56.56855 509.23466 59.93828"
-        style={(path === "room#404_4-room#409_4" || path === "room#409_4-room#404_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="273.27078 297.37098 258.35294 297.37098 258.35294 375.14919 519.19355 375.14919 519.19355 372.54641"
-        style={(path === "room#404_4-room#401_4" || path === "room#401_4-room#404_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="273.27078 299.0121 260.60468 299.0121 260.60468 374.37958 443.35812 374.37958 443.35812 362.85484"
-        style={(path === "room#404_4-room#402_4" || path === "room#402_4-room#404_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="259.35294 295.17865 258.35294 52.50463 560.20162 52.50463 560.20162 214.78728 563.17647 214.78728"
-        style={(path === "room#404_4-kitchenManagementOffices4" || path === "kitchenManagementOffices4-room#404_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="257.47059 295.17865 256.47059 51.1099 563.17647 51.1099 563.17647 262.41248 578.64675 262.41248"
-        style={(path === "room#404_4-silverRoom4" || path === "silverRoom4-room#404_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="274.82353 299.17647 256.23529 299.17647 256.23529 370.23529 257.17647 370.23529 288.47059 370.23529 288.47059 364.82353"
-        style={(path === "room#404_4-showManagerRoom4" || path === "showManagerRoom4-room#404_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="253.88235 297.52941 253.88235 374.23529 557.88235 374.23529 557.88235 378.70588"
-        style={(path === "room#404_4-kitchenwareStorageRoom4" || path === "kitchenwareStorageRoom4-room#404_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="251.76471 298.94118 251.76471 53.76471 513.69355 53.76471 513.69355 44.02823"
-        style={(path === "room#404_4-roof4" || path === "roof4-room#404_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="250.35294 298.23529 250.35294 53.05882 371.05882 53.05882 371.05882 68.82353"
-        style={(path === "room#404_4-electricalArea4" || path === "electricalArea4-room#404_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="253.64706 293.50456 253.64706 120.48965 255.29412 120.48965"
-        style={(path === "room#404_4-room#406_4" || path === "room#406_4-room#404_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="262.14903 295.17865 261.14903 54.57258 558.85 54.57258 558.85 200.98178 563.17647 200.98178"
-        style={(path === "room#404_4-food&BeverageOffice4" || path === "food&BeverageOffice4-room#404_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-    </G>
-    <G
-      id="uuid-dfb410b0-fa37-47ce-aef4-91d477e3ca34"
-      data-name="Parrot Green- Room 405"
-    >
-      <Polyline
-        points="300.33531 58.84245 268.18149 58.84245 268.18149 179.68542 277.08065 179.68542"
-        style={(path === "room#405_4-restRoomTop4" || path === "restRoomTop4-room#405_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="277.08065 181.36215 270.5 181.36215 270.5 234.32655 268.18149 234.3265 268.18149 293.8194 269.3527 293.81935 269.35269 374.7848 403.80873 374.78482 403.80873 376.58167"
-        style={(path === "room#405_4-rainierVistaTerrace4" || path === "rainierVistaTerrace4-room#405_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="275.66119 180.29746 269.97684 180.29746 269.97684 58.21569 442.68719 58.21569 442.68719 62.5713"
-        style={(path === "room#405_4-room#408_4" || path === "room#408_4-room#405_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="277.90516 186.20365 271.07056 186.20365 271.07056 59.65889 394.2856 59.65889 394.2856 64.22423"
-        style={(path === "room#405_4-room#407_4" || path === "room#407_4-room#405_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="274.64516 184.48965 266.10908 184.48965 266.10908 56.56855 181.64516 56.56855 181.64516 51.82258"
-        style={(path === "room#405_4-publicStairsDownTopLeft4" || path === "publicStairsDownTopLeft4-room#405_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="274.64516 174.60903 264.145 174.60903 264.145 57.83594 176.77119 57.83594"
-        style={(path === "room#405_4-elevatorTopLeft4" || path === "elevatorTopLeft4-room#405_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="274.64516 175.54829 262.89323 175.54829 262.89323 59.65889 181.64516 59.65889 181.64516 68.2168"
-        style={(path === "room#405_4-storageAreaLeft4" || path === "storageAreaLeft4-room#405_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="274.64516 182.68103 271.89639 182.68103 271.89639 289.91632 274.64516 289.91632"
-        style={(path === "room#405_4-room#404_4" || path === "room#404_4-room#405_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="274.64516 179.50456 266.10908 179.50456 266.10908 369.90816 300.90323 369.90816 300.90323 367.06352"
-        style={(path === "room#405_4-restRoomDown4" || path === "restRoomDown4-room#405_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="274.64516 178.36215 263.38852 178.36215 263.38852 371.92841 398.52033 371.92841 398.52033 363.06452"
-        style={(path === "room#405_4-room#403_4" || path === "room#403_4-room#405_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="275.66119 173.80065 268.11068 173.80065 268.11068 56.56855 509.23466 56.56855 509.23466 59.93828"
-        style={(path === "room#405_4-room#409_4" || path === "room#409_4-room#405_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="273.27078 176.37098 258.35294 176.37098 258.35294 375.14919 519.19355 375.14919 519.19355 372.54641"
-        style={(path === "room#405_4-room#401_4" || path === "room#401_4-room#405_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="273.27078 177.0121 260.60468 177.0121 260.60468 374.37958 443.35812 374.37958 443.35812 362.85484"
-        style={(path === "room#405_4-room#402_4" || path === "room#402_4-room#405_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="258.35294 175.17865 258.35294 52.50463 560.20162 52.50463 560.20162 214.78728 563.17647 214.78728"
-        style={(path === "room#405_4-kitchenManagementOffices4" || path === "kitchenManagementOffices4-room#405_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        style={(path === "room#405_4-silverRoom4" || path === "silverRoom4-room#405_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="253.64706 179.50456 253.64706 120.48965 255.29412 120.48965"
-        style={(path === "room#405_4-room#406_4" || path === "room#406_4-room#405_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="254.35294 175.17647 254.35294 368.11765 288.70588 368.11765 288.70588 364.82353"
-        style={(path === "room#405_4-showManagerRoom4" || path === "showManagerRoom4-room#405_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="252.47059 175.41176 252.47059 369.29412 559.29412 369.29412 559.29412 379.64706"
-        style={(path === "room#405_4-kitchenwareStorageRoom4" || path === "kitchenwareStorageRoom4-room#405_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="250.35294 175.88235 250.35294 58 288 58 288 62.16886"
-        style={(path === "room#405_4-facilityStorageArea4" || path === "facilityStorageArea4-room#405_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="251.05882 173.52941 251.05882 54.23529 514.45968 54.23529 514.45968 44.02823"
-        style={(path === "room#405_4-roof4" || path === "roof4-room#405_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="261.14903 175.17865 261.14903 54.57258 558.85 54.57258 558.85 200.98178 563.17647 200.98178"
-        style={(path === "room#405_4-food&BeverageOffice4" || path === "food&BeverageOffice4-room#405_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-    </G>
-    <G
-      id="uuid-8696a38c-a2a8-408d-9901-398ab91bb8bf"
-      data-name="Feroze color- Room 406"
-    >
-      <Polyline
-        points="301.33531 60.48387 271.89639 60.48387 271.89639 115.19355 277.61414 115.19355"
-        style={(path === "room#406_4-restRoomTop4" || path === "restRoomTop4-room#406_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="277.08065 127.36215 270.5 127.36215 270.5 180.32655 268.18149 180.3265 268.18149 293.8194 269.3527 293.81935 269.35269 374.7848 403.80873 374.78482 403.80873 376.58167"
-        style={(path === "room#406_4-rainierVistaTerrace4" || path === "rainierVistaTerrace4-room#406_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="275.66119 117.29746 269.97684 117.29746 269.97684 58.21569 440.79032 58.21569 440.79032 65.07872"
-        style={(path === "room#406_4-room#408_4" || path === "room#408_4-room#406_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="277.90516 116.20365 271.07056 116.20365 271.07056 59.65889 394.2856 59.65889 394.2856 64.22423"
-        style={(path === "room#406_4-room#407_4" || path === "room#407_4-room#406_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="274.64516 120.48965 266.10908 120.48965 266.10908 56.56855 181.64516 56.56855 181.64516 51.82258"
-        style={(path === "room#406_4-publicStairsDownTopLeft4" || path === "publicStairsDownTopLeft4-room#406_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="274.64516 121.60903 264.145 121.60903 264.145 57.83594 176.77119 57.83594"
-        style={(path === "room#406_4-elevatorTopLeft4" || path === "elevatorTopLeft4-room#406_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="274.64516 123.54829 262.89323 123.54829 262.89323 59.65889 181.64516 59.65889 181.64516 68.2168"
-        style={(path === "room#406_4-storageAreaLeft4" || path === "storageAreaLeft4-room#406_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="274.64516 131.17339 269.97684 131.17339 269.97684 287.48641 272.311 287.48641"
-        style={(path === "room#406_4-room#404_4" || path === "room#404_4-room#406_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="274.64516 132.68103 271.89639 132.68103 271.89639 175.91632 274.64516 175.91632"
-        style={(path === "room#406_4-room#405_4" || path === "room#405_4-room#406_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="274.64516 129.50456 266.10908 129.50456 266.10908 369.90816 300.90323 369.90816 300.90323 367.06352"
-        style={(path === "room#406_4-restRoomDown4" || path === "restRoomDown4-room#406_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="274.64516 127.36215 263.38852 127.36215 263.38852 371.92841 398.52033 371.92841 398.52033 363.06452"
-        style={(path === "room#406_4-room#403_4" || path === "room#403_4-room#406_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="275.66119 118.80065 268.11068 118.80065 268.11068 56.56855 509.23466 56.56855 509.23466 59.93828"
-        style={(path === "room#406_4-room#409_4" || path === "room#409_4-room#406_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="273.27078 124.37098 258.35294 124.37098 258.35294 375.14919 519.19355 375.14919 519.19355 372.54641"
-        style={(path === "room#406_4-room#401_4" || path === "room#401_4-room#406_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="273.27078 126.0121 260.60468 126.0121 260.60468 374.37958 443.35812 374.37958 443.35812 362.85484"
-        style={(path === "room#406_4-room#402_4" || path === "room#402_4-room#406_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="258.35294 122.17865 258.35294 52.50463 560.20162 52.50463 560.20162 214.78728 563.17647 214.78728"
-        style={(path === "room#406_4-kitchenManagementOffices44" || path === "kitchenManagementOffices4-room#406_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="256.47059 122.17865 256.47059 51.1099 563.17647 51.1099 563.17647 262.41248 578.64675 262.41248"
-        style={(path === "room#406_4-silverRoom4" || path === "silverRoom4-room#406_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Path
-        d="M254.35294,122V53.05882h30.11765v5.17647"
-        style={(path === "room#406_4-facilityStorageArea4" || path === "facilityStorageArea4-room#406_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="256.47059 124.11765 256.47059 373.52941 291.52941 373.52941 291.52941 366.47059"
-        style={(path === "room#406_4-showManagerRoom4" || path === "showManagerRoom4-room#406_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="252.70588 121.76471 252.70588 53.76471 519.90323 53.76471 519.90323 44.02823"
-        style={(path === "room#406_4-roof4" || path === "roof4-room#406_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="254.82353 124.11765 254.82353 373.76471 560.47059 373.76471 560.47059 379.64706"
-        style={(path === "room#406_4-kitchenwareStorageRoom4" || path === "kitchenwareStorageRoom4-room#406_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="261.14903 122.17865 261.14903 54.57258 558.85 54.57258 558.85 200.98178 563.17647 200.98178"
-        style={(path === "room#406_4-food&BeverageOffice4" || path === "food&BeverageOffice4-room#406_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-    </G>
-    <G id="uuid-ed16a045-584c-4254-9cab-522faa4287e4" data-name="Orange 407">
-      <Polyline
-        points="243.09656 367.62902 267.16128 367.62905 267.16128 57.09275 394.89517 57.09275 394.89517 67.23881"
-        style={(path === "room#407_4-publicStairsUpLeft4" || path === "publicStairsUpLeft4-room#407_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="394.31196 69.23881 394.31196 59.64744 365.18788 59.64744 365.18788 62.54754"
-        style={(path === "room#407_4-restRoomTop4" || path === "restRoomTop4-room#407_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="395.52334 67.23881 395.52334 60.93628 555.40728 60.93628 555.40723 370.375 482.49715 370.375 482.49715 376.3629"
-        style={(path === "room#407_4-rainierVistaTerrace4" || path === "rainierVistaTerrace4-room#407_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="397.83466 65.8709 397.83466 62.47326 439.05645 62.47326 439.05645 65.07872"
-        style={(path === "room#407_4-room#408_4" || path === "room#408_4-room#407_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="398.32353 65.8709 398.32353 49.08824 509.93501 49.08824 509.93501 51.76471"
-        style={(path === "room#407_4-room#409_4" || path === "room#409_4-room#407_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="393.12408 67.51613 393.12408 60.48387 258.47059 60.48387 258.47059 114.57597 261.91176 114.57597"
-        style={(path === "room#407_4-room#406_4" || path === "room#406_4-room#407_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="275.66119 179.05882 256.17647 179.05882 256.17647 47.97174 392.27081 47.97174 392.27081 67.23881 392.27081 47.97174"
-        style={(path === "room#407_4-room#405_4" || path === "room#405_4-room#407_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="391.42889 66.39113 391.42889 48.58607 256.82267 48.58607 256.82267 236.19224 261.91176 236.19224"
-        style={(path === "room#407_4-room#405_4" || path === "room#405_4-room#407_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="390.32643 65.30399 390.32643 47.04839 256.17647 47.04839 256.17647 293.17434 261.24727 293.17434"
-        style={(path === "room#407_4-room#404_4" || path === "room#404_4-room#407_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="398.89843 65.50806 398.89843 47.97174 558.85 47.97174 558.85 179.05882 549.97021 179.05882"
-        style={(path === "room#407_4-kitchen4" || path === "kitchen4-room#407_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="400.74917 65.50806 400.74917 50.35484 557.06356 50.35484 557.06356 139.98102 564.68866 139.98102"
-        style={(path === "room#407_4-linenRoom4" || path === "linenRoom4-room#407_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="401.63558 65.50806 401.63558 51.47059 555 51.47059 555 202.49492 567.47177 202.49492"
-        style={(path === "room#407_4-food&BeverageOffice4" || path === "food&BeverageOffice4-room#407_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="402.79839 65.87097 402.79839 52.50463 553.04032 52.50463 554.3871 215.58824 568.06279 215.58824"
-        style={(path === "room#407_4-kitchenManagementOffices4" || path === "kitchenManagementOffices4-room#407_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="403.80873 65.8709 403.80873 53.89919 552.35294 53.89919 553.04032 245.7243 571.93548 245.7243"
-        style={(path === "room#407_4-elevatorBottomRight4" || path === "elevatorBottomRight4-room#407_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="404.86345 65.50806 404.86345 55.39516 551.22182 55.39516 552.16 265.08871 577.47402 265.08871"
-        style={(path === "room#407_4-silverRoom4" || path === "silverRoom4-room#407_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="405.8357 65.8709 405.8357 57.09275 562.22581 56.31452 562.22581 274.375"
-        style={(path === "room#407_4-restRoomRight4" || path === "restRoomRight4-room#407_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="406.70588 65.50806 406.70588 58.14516 559.38555 58.52435 560.8761 328.82259 564.32258 328.82259"
-        style={(path === "room#407_4-storageAreaRight4" || path === "storageAreaRight4-room#407_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="399.88235 66.30399 399.88235 48.04839 568.50121 48.04839"
-        style={(path === "room#407_4-publicStairsDownTopRight4" || path === "publicStairsDownTopRight4-room#407_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="408.37427 64.44313 408.37427 59.64744 558.85 59.64744 557.12604 343.29956 566.68749 343.29956"
-        style={(path === "room#407_4-publicStairsDownRight4" || path === "publicStairsDownRight4-room#407_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="389.41176 64.82353 389.41176 51.64706 286.58824 51.64706 286.58824 57.52941"
-        style={(path === "room#407_4-facilityStorageArea4" || path === "facilityStorageArea4-room#407_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="402.11765 67.64706 402.11765 49.29412 258.82353 49.29412 258.82353 373.29412 288.23529 373.29412 288.23529 366.47059"
-        style={(path === "room#407_4-showManagerRoom4" || path === "showManagerRoom4-room#407_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="393.64706 55.17647 261.64706 55.17647 261.64706 372.35294 559.52941 372.35294 559.52941 378.94118"
-        style={(path === "room#407_4-kitchenwareStorageRoom4" || path === "kitchenwareStorageRoom4-room#407_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="405.57968 376.58167 405.57968 370.82628 396.12903 370.82628 396.12903 360.77769 395.5 373.61765 557.67647 373.61765 557.67647 49.7389 396.30143 49.7389 396.30143 65.8709"
-        style={(path === "room#407_4-room#403_4" || path === "room#403_4-room#407_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="396.93663 65.8709 396.93663 47.04839 562.22581 47.04839 562.22581 373.02421 438.48999 372.54641 438.48999 362.34458"
-        style={(path === "room#407_4-room#402_4" || path === "room#402_4-room#407_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="403.05882 66.94118 403.05882 52.50463 518.45159 52.50463 518.45161 44.02823"
-        style={(path === "room#407_4-roof4" || path === "roof4-room#407_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="394.89517 55.39516 394.89517 45.1371 564.32258 45.1371 564.88917 361.10876 523.63843 361.10877"
-        style={(path === "room#407_4-room#401_4" || path === "room#401_4-room#407_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-    </G>
-    <G id="uuid-57adedfe-ae4b-451b-9d36-b29b528b1c8a" data-name="Black 409">
-      <Polyline
-        points="483.31062 376.28097 483.31062 368.85241 559.15142 368.85241 559.15142 64.56862 512.99127 64.56862 512.99127 66.28496"
-        style={(path === "room#409_4-rainierVistaTerrace4" || path === "rainierVistaTerrace4-room#409_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="508.55645 66.28496 508.55645 58.96645 365.18788 58.96645"
-        style={(path === "room#409_4-restRoomTop4" || path === "restRoomTop4-room#409_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="243.09657 366.38306 265.82259 366.38306 265.82258 55.12857 507.90323 55.12857 507.90323 66.28496"
-        style={(path === "room#409_4-publicStairsUpLeft4" || path === "publicStairsUpLeft4-room#409_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="507.11765 66.28496 507.11765 56.01164 445.93329 56.01164 445.93329 65.99678"
-        style={(path === "room#409_4-room#408_4" || path === "room#408_4-room#409_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="506.55701 66.28496 506.55701 57.01082 396.30143 57.01082 396.30143 66.69038"
-        style={(path === "room#409_4-room#407_4" || path === "room#407_4-room#409_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="506 66.28496 506 57.91806 262.77696 56.91806 262.77696 117.75097 276.10177 117.75097"
-        style={(path === "room#409_4-room#406_4" || path === "room#406_4-room#409_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="505.43548 66.28496 505.43548 58.96645 262.0028 58.96645 262.0028 178.97689 277.26471 178.97689"
-        style={(path === "room#409_4-room#405_4" || path === "room#405_4-room#409_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="504.83065 66.28496 504.83065 60.59815 261.14903 60.59815 261.14903 236.11031 274.64516 236.11031"
-        style={(path === "room#409_4-room#405_4" || path === "room#405_4-room#409_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="509.65769 66.30919 509.65769 52.55806 257.76471 52.55806 257.76471 293.0924 272.87903 293.0924"
-        style={(path === "room#409_4-room#404_4" || path === "room#404_4-room#409_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="512.53201 66.28496 512.53201 53.55806 563.52941 53.55806 563.52941 199.12698"
-        style={(path === "room#409_4-food&BeverageOffice4" || path === "food&BeverageOffice4-room#409_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="511.313 66.28496 511.313 49.97689 569.41176 49.97689"
-        style={(path === "room#409_4-publicStairsDownTopRight4" || path === "publicStairsDownTopRight4-room#409_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="515.00806 66.285 515.00806 58.09425 562.22581 58.09425 562.22581 253.03571 571.29832 253.03571"
-        style={(path === "room#409_4-elevatorBottomRight4" || path === "elevatorBottomRight4-room#409_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="503.43548 66.28496 503.43549 53.55806 177.64706 53.55806 177.64706 63.33336"
-        style={(path === "room#409_4-storageAreaLeft4" || path === "storageAreaLeft4-room#409_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="515.64706 66.28496 515.64706 59.06323 564.53226 59.06323 564.53226 263.38485 579.46533 263.38485"
-        style={(path === "room#409_4-silverRoom4" || path === "silverRoom4-room#409_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="513.47059 66.28496 513.47059 54.5063 556.44607 54.5063 556.44607 363.26265 521.45323 363.26265 521.45323 361.29976"
-        style={(path === "room#409_4-room#401_4" || path === "room#401_4-room#409_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="511.85351 66.28496 511.85351 51.2729 559.15142 51.2729 559.15142 363.7729 441.00755 363.7729 441.00755 362.02683"
-        style={(path === "room#409_4-room#402_4" || path === "room#402_4-room#409_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="514.19355 66.28496 514.19355 60.85635 553.25102 60.85635 553.25102 361.47251 397.27002 361.47251 397.27002 360.03953"
-        style={(path === "room#409_4-room#403_4" || path === "room#403_4-room#409_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="509.17647 66.28496 509.17647 47.10478 511.313 47.10478 511.313 44.94629"
-        style={(path === "room#409_4-roof4" || path === "roof4-room#409_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="510.11765 66.28496 510.11765 49.5063 285.64706 49.5063 285.64706 60.56512"
-        style={(path === "room#409_4-facilityStorageArea4" || path === "facilityStorageArea4-room#409_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="510.66129 66.28496 510.66129 49.5063 560.70588 49.5063 560.70588 376.56512"
-        style={(path === "room#409_4-kitchenwareStorageRoom4" || path === "kitchenwareStorageRoom4-room#409_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="507.29412 51.15336 262.82353 51.15336 262.82353 366.44748 289.64706 366.44748 289.64706 364.7968"
-        style={(path === "room#409_4-showManagerRoom4" || path === "showManagerRoom4-room#409_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="504.21371 66.28496 504.21369 48.77694 365.18788 48.77694 365.18788 64.49065"
-        style={(path === "room#409_4-restRoomTop4" || path === "restRoomTop4-room#409_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="507.90323 47.96645 559.38555 47.96645 559.38555 333.41805"
-        style={(path === "room#409_4-storageAreaRight4" || path === "storageAreaRight4-room#409_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-    </G>
-    <G
-      id="uuid-b93db027-5adf-49c1-9046-13bc5c81bad9"
-      data-name="Facilty Storage Area"
-    >
-      <Polyline
-        points="289.17647 49.17647 512.87097 49.17647 512.87097 44.02823"
-        style={(path === "facilityStorageArea4-roof4" || path === "facilityStorageArea4-roof4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Line
-        x1={282.18382}
-        y1={62.21324}
-        x2={293.63235}
-        y2={62.05882}
-        style={{
-          fill: "#fff",
-          stroke: "#000",
-          strokeMiterlimit: 10,
-          strokeWidth: ".15px",
-        }}
-      />
-      <Polyline
-        points="287.05882 51.76471 180.23529 52.47059 180.23529 50"
-        style={(path === "facilityStorageArea4-publicStairsDownTopLeft4" || path === "publicStairsDownTopLeft4-facilityStorageArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Line
-        x1={287.05882}
-        y1={52.70588}
-        x2={180.11765}
-        y2={53.52941}
-        style={(path === "facilityStorageArea4-elevatorTopLeft4" || path === "elevatorTopLeft4-facilityStorageArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="287.17647 53.52941 180.94118 54.70588 180.94118 69.05882"
-        style={(path === "facilityStorageArea4-storageAreaLeft4" || path === "storageAreaLeft4-facilityStorageArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Line
-        x1={289}
-        y1={61.29412}
-        x2={301.17647}
-        y2={61.29412}
-        style={(path === "facilityStorageArea4-restRoomTop4" || path === "restRoomTop4-facilityStorageArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="285.82353 61.11765 270.64706 61.11765 270.64706 120.64706 273.47059 120.64706"
-        style={(path === "facilityStorageArea4-room#406_4" || path === "room#406_4-facilityStorageArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="286.17647 60.35294 268.88235 60.35294 268.88235 181.88235 272.41176 181.88235"
-        style={(path === "facilityStorageArea4-room#405_4" || path === "room#405_4-facilityStorageArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="288.23529 59.52941 264.94118 59.52941 264.94118 293.05882 270.58824 293.05882"
-        style={(path === "facilityStorageArea4-room#404_4" || path === "room#404_4-facilityStorageArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="288.11765 58.17647 262.88235 58.17647 262.88235 369.64706 394.17647 369.64706 394.17647 363.47059"
-        style={(path === "facilityStorageArea4-restRoomDown4" || path === "restRoomDown4-facilityStorageArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="442.88235 362.94118 442.88235 371.05882 260.41176 371.05882 260.41176 57.11765 288.47059 57.11765"
-        style={(path === "facilityStorageArea4-room#402_4" || path === "room#402_4-facilityStorageArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="289 60.29412 375.47059 60.29412 375.47059 75.29412"
-        style={(path === "facilityStorageArea4-electricalArea4" || path === "electricalArea4-facilityStorageArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="288.58824 59.41176 394.11765 59.41176 394.11765 66.11765"
-        style={(path === "facilityStorageArea4-room#407_4" || path === "room#407_4-facilityStorageArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="289.05882 58.35294 443.41176 58.35294 443.41176 62.23529"
-        style={(path === "facilityStorageArea4-room#408_4" || path === "room#408_4-facilityStorageArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="289.41176 56.58824 508.35294 56.58824 508.35294 64.94118"
-        style={(path === "facilityStorageArea4-room#409_4" || path === "room#409_4-facilityStorageArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="289.29412 55.17647 553.76471 55.17647 553.76471 174.82353 549.29412 174.82353"
-        style={(path === "facilityStorageArea4-kitchen4" || path === "kitchen4-facilityStorageArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="289.41176 53.76471 554.82353 53.76471 554.82353 363.41176 519.52941 363.41176 519.52941 360.58824"
-        style={(path === "facilityStorageArea4-room#401_4" || path === "room#401_4-facilityStorageArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="289.35294 52 556 52 556 377.05882"
-        style={(path === "facilityStorageArea4-kitchenwareStorageRoom4" || path === "kitchenwareStorageRoom4-facilityStorageArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="289.17647 50.41176 557.05882 50.41176 557.05882 332.76471 562.35294 332.76471"
-        style={(path === "facilityStorageArea4-storageAreaRight4" || path === "storageAreaRight4-facilityStorageArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="289.52941 52.88235 557.94118 52.88235 557.94118 262.52941 579.64706 262.52941"
-        style={(path === "facilityStorageArea4-silverRoom4" || path === "silverRoom4-facilityStorageArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="289.29412 51.11765 559.52941 51.11765 559.52941 215.23529 567.58824 215.23529"
-        style={(path === "facilityStorageArea4-kitchenManagementOffices4" || path === "kitchenManagementOffices4-facilityStorageArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="289.35294 54.47059 561 54.47059 561 202.94118 567.41176 202.94118"
-        style={(path === "facilityStorageArea4-food&BeverageOffice4" || path === "food&BeverageOffice4-facilityStorageArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="289.17647 55.64706 562.47059 55.64706 562.47059 141.76471 566.35294 141.76471"
-        style={(path === "facilityStorageArea4-linenRoom4" || path === "linenRoom4-facilityStorageArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="289.17647 57.41176 562.94118 57.41176 562.94118 50.94118 568.58824 50.94118"
-        style={(path === "facilityStorageArea4-publicStairsDownTopRight4" || path === "publicStairsDownTopRight4-facilityStorageArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="289.88235 58.70588 255.64706 58.70588 255.64706 374.58824 290.41176 374.58824 290.41176 365.23529"
-        style={(path === "facilityStorageArea4-showManagerRoom4" || path === "showManagerRoom4-facilityStorageArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="287.29412 55.64706 258.11765 55.64706 258.11765 372.82353 405.88235 372.82353 405.88235 375.17647"
-        style={(path === "facilityStorageArea4-rainierVistaTerrace4" || path === "rainierVistaTerrace4-facilityStorageArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-    </G>
-    <G
-      id="uuid-c374f58c-8144-42e5-b468-483b4b1d0980"
-      data-name="Electrical Area"
-    >
-      <Polyline
-        points="512.10725 44.02823 512.10725 49.17647 374 49.17647 374 71.23529"
-        style={(path === "electricalArea4-roof4" || path === "roof4-electricalArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Line
-        x1={282.18382}
-        y1={62.21324}
-        x2={293.63235}
-        y2={62.05882}
-        style={{
-          fill: "#fff",
-          stroke: "#000",
-          strokeMiterlimit: 10,
-          strokeWidth: ".15px",
-        }}
-      />
-      <Polyline
-        points="180.23529 50 180.23529 52.47059 373.05882 51.76471 373.05882 70.05882"
-        style={(path === "electricalArea4-publicStairsDownTopLeft4" || path === "publicStairsDownTopLeft4-electricalArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="180.11765 53.52941 373.05882 52.70588 373.05882 69.52941"
-        style={(path === "electricalArea4-elevatorTopLeft4" || path === "elevatorTopLeft4-electricalArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="180.94118 69.05882 180.94118 54.70588 373.17647 53.52941 373.17647 70.70588"
-        style={(path === "electricalArea4-storageAreaLeft4" || path === "storageAreaLeft4-electricalArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="289 56.29412 301.17647 56.29412 370.79412 56.29412 370.29032 68.05882"
-        style={(path === "electricalArea4-facilityStorageArea4" || path === "facilityStorageArea4-electricalArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="273.47059 120.64706 270.64706 120.64706 270.64706 61.11765 371.82353 61.11765 371.82353 69.88235"
-        style={(path === "electricalArea4-room#406_4" || path === "room#406_4-electricalArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="372.17647 60.35294 268.88235 60.35294 268.88235 181.88235 272.41176 181.88235"
-        style={(path === "electricalArea4-room#405_4" || path === "room#405_4-electricalArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="270.58824 293.05882 264.94118 293.05882 264.94118 59.52941 374.23529 59.52941 374.23529 69.76471"
-        style={(path === "electricalArea4-room#404_4" || path === "room#404_4-electricalArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="394.17647 363.47059 394.17647 369.64706 262.88235 369.64706 262.88235 58.17647 374.11765 58.17647 374.11765 70.76471"
-        style={(path === "electricalArea4-restRoomDown4" || path === "restRoomDown4-electricalArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="442.88235 362.94118 442.88235 371.05882 260.41176 371.05882 260.41176 57.11765 374.47059 57.11765 374.47059 70.88235"
-        style={(path === "electricalArea4-room#402_4" || path === "room#402_4-electricalArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="289 60.29412 375.47059 60.29412 375.47059 75.29412"
-        style={(path === "electricalArea4-facilityStorageArea4" || path === "facilityStorageArea4-electricalArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="374.58824 59.41176 394.11765 59.41176 394.11765 66.11765"
-        style={(path === "electricalArea4-room#407_4" || path === "room#407_4-electricalArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="375.05882 58.35294 443.41176 58.35294 443.41176 65.07872"
-        style={(path === "electricalArea4-room#408_4" || path === "room#408_4-electricalArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="375.41176 56.58824 508.35294 56.58824 508.35294 65.36691"
-        style={(path === "electricalArea4-room#409_4" || path === "room#409_4-electricalArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="375.29412 55.17647 553.76471 55.17647 553.76471 174.82353 549.29412 174.82353"
-        style={(path === "electricalArea4-kitchen4" || path === "kitchen4-electricalArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="375.41176 53.76471 554.82353 53.76471 554.82353 363.41176 519.52941 363.41176 519.52941 360.58824"
-        style={(path === "electricalArea4-room#401_4" || path === "room#401_4-electricalArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="375.35294 52 556 52 556 377.05882"
-        style={(path === "electricalArea4-kitchenwareStorageRoom4" || path === "kitchenwareStorageRoom4-electricalArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="562.35294 332.76471 557.05882 332.76471 557.05882 50.41176 375.17647 50.41176 375.17647 73.29412"
-        style={(path === "electricalArea4-storageAreaRight4" || path === "storageAreaRight4-electricalArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="579.64706 262.52941 557.94118 262.52941 557.94118 52.88235 375.52941 52.88235 375.52941 71.70588"
-        style={(path === "electricalArea4-silverRoom4" || path === "silverRoom4-electricalArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="567.58824 215.23529 559.52941 215.23529 559.52941 51.11765 375.29412 51.11765 375.29412 52 375.29412 72.94118"
-        style={(path === "electricalArea4-kitchenManagementOffices4" || path === "kitchenManagementOffices4-electricalArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="375.35294 54.47059 561 54.47059 561 202.94118 567.41176 202.94118"
-        style={(path === "electricalArea4-food&BeverageOffice4" || path === "food&BeverageOffice4-electricalArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="375.17647 55.64706 562.47059 55.64706 562.47059 141.76471 566.35294 141.76471"
-        style={(path === "electricalArea4-linenRoom4" || path === "linenRoom4-electricalArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="568.58824 50.94118 562.94118 50.94118 562.94118 57.41176 375.17647 57.41176 375.17647 71.70588"
-        style={(path === "electricalArea4-publicStairsDownTopLeft4" || path === "publicStairsDownTopLeft4-electricalArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="289.88235 58.70588 255.64706 58.70588 255.64706 374.58824 290.41176 374.58824 290.41176 365.23529"
-        style={(path === "facilityStorageArea4-showManagerRoom4" || path === "showManagerRoom4-facilityStorageArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="405.88235 375.17647 405.88235 372.82353 258.11765 372.82353 258.11765 55.64706 373.29412 55.64706 373.29412 71.41176"
-        style={(path === "electricalArea4-rainierVistaTerrace4" || path === "rainierVistaTerrace4-electricalArea4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-    </G>
-    <G id="uuid-e476a740-9db9-41e4-b140-9dfa04b4bbf7" data-name="Red Room 408">
-      <Polyline
-        points="243.09657 367.06352 266.54839 367.06352 266.54839 56.09357 444.03226 56.09357 444.03226 65.07872"
-        style={(path === "room#408_4-publicStairsUpLeft4" || path === "publicStairsUpLeft4-room#408_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="444.84485 65.07872 444.84485 58.33468 365.18788 58.33468 365.18788 61.76471"
-        style={(path === "room#408_4-restRoomTop4" || path === "restRoomTop4-room#408_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="445.46774 65.07872 445.46774 59.93548 559.9315 59.93548 559.93145 369.68548 484.03226 369.68548 484.03226 376.3629"
-        style={(path === "room#408_4-rainierVistaTerrace4" || path === "rainierVistaTerrace4-room#408_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="446.49974 65.07872 446.49974 61.76471 502.69962 61.76471 502.69962 65.36691"
-        style={(path === "room#408_4-room#409_4" || path === "room#409_4-room#408_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="442.68719 65.07872 442.68719 61.76471 396.93663 61.76471 396.93663 66.39113"
-        style={(path === "room#408_4-room#407_4" || path === "room#407_4-room#408_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="441.62649 65.07872 441.62649 53.41176 264.145 53.41176 264.145 115.9232 276.14516 115.9232"
-        style={(path === "room#408_4-room#406_4" || path === "room#406_4-room#408_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="439.99819 65.07872 439.84687 51.76471 260.14903 51.76471 260.14903 179.68542 260.14903 237.92339 274.64516 237.92339"
-        style={(path === "room#408_4-room#405_4" || path === "room#405_4-room#408_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="447 65.07872 446.97319 49.7389 259.14903 50.35484 258.27823 293.17434 271.87903 293.17434"
-        style={(path === "room#408_4-room#404_4" || path === "room#404_4-room#408_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="448.73559 65.07872 448.73559 49.7389 557.91557 49.7389 557.91557 177.3261 551.22582 177.3261"
-        style={(path === "room#408_4-kitchen4" || path === "kitchen4-room#408_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="450.31229 65.07872 450.31229 51.76471 556.44606 51.76471 556.44606 200.98177 564.32258 200.98177"
-        style={(path === "room#408_4-food&BeverageOffice4" || path === "food&BeverageOffice4-room#408_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="451.01166 65.07872 451.01166 52.95965 555 52.95965 555 213.59274 567.96774 213.59274"
-        style={(path === "room#408_4-kitchenManagementOffices4" || path === "kitchenManagementOffices4-room#408_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="452.15872 65.07872 452.15872 54.01868 553.72003 54.01868 553.72003 250.54488 568.45161 250.54488"
-        style={(path === "room#408_4-elevatorBottomRight4" || path === "elevatorBottomRight4-room#408_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="452.95282 65.07872 452.95282 55.39516 552.57283 55.39516 552.57283 262.41248 579.46533 262.41248"
-        style={(path === "room#408_4-silverRoom4" || path === "silverRoom4-room#408_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="453.65872 65.07872 453.65872 56.56855 551.16073 56.56855 551.16073 277.23272 563.55893 277.23272"
-        style={(path === "room#408_4-restRoomRight4" || path === "restRoomRight4-room#408_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="454.80572 65.07872 454.80572 57.31468 549.92519 57.31468 549.92519 331.09666 564.72581 331.09666"
-        style={(path === "room#408_4-storageAreaRight4" || path === "storageAreaRight4-room#408_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="564.88917 344.1074 558.85 344.1074 558.85 48.11765 447 48.11765"
-        style={(path === "room#408_4-publicStairsDownRight4" || path === "publicStairsDownRight4-room#408_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="449.41176 65.07872 449.41176 51.05882 570.04839 51.05882"
-        style={(path === "room#408_4-publicStairsDownTopRight4" || path === "publicStairsDownTopRight4-room#408_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      {/* pouchnaa hyy double Line*/}
-      <Polyline
-        points="456 65.07872 456 58.52156 564.53226 58.52156 564.53226 373.02421 395.5 373.02421 394.89517 360.77769 394.89517 370.90896 332.22137 370.90896 332.22137 360.77769"
-        style={{
-          fill: "none",
-          stroke: "#fc0000",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
-      />
-      <Polyline
-        points="447.76471 65.07872 447.76471 49.05882 289.64706 49.05882 289.64706 58.23529"
-        style={(path === "room#408_4-facilityStorageArea4" || path === "facilityStorageArea4-room#408_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="442.07258 65.07872 442.07259 54.70588 261.41176 54.70588 261.41176 370 288.94118 370 288.94118 364.82353"
-        style={(path === "room#408_4-showManagerRoom4" || path === "showManagerRoom4-room#408_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="457.16015 65.07872 457.16015 60.95161 562.88235 60.95161 562.88235 371.14763 445.98041 371.14763 445.98041 360.3817"
-        style={(path === "room#408_4-room#402_4" || path === "room#402_4-room#408_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-    </G>
-    <G id="uuid-750f85ae-a2af-4f57-942b-8a29a921dd07" data-name="Stairs - Pink">
-      <Polyline
-        points="181.21143 49.74194 181.21143 57.40726 187.42742 57.40726 187.42742 68.63624 264.29839 68.63624 264.29839 365.28226 179.09657 365.28226"
-        style={(path === "publicStairsDownTopLeft4-guestElevators4" || path === "guestElevators4-publicStairsDownTopLeft4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="394.27783 360.77769 394.27783 365.0569 304.29032 365.05691 304.29032 368.16129 179.09657 368.16129"
-        style={(path === "room#403_4-guestElevators4" || path === "guestElevators4-room#403_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="442.55787 360.77769 442.55787 366.12907 304.78197 366.12903 304.78197 368.81591 179.09657 368.81591"
-        style={(path === "room#402_4-guestElevators4" || path === "guestElevators4-room#402_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="519.96371 360.77769 519.96371 365.6089 305.3871 365.6089 305.3871 369.3361 179.09657 369.33611"
-        style={(path === "room#401_4-guestElevators4" || path === "guestElevators4-room#401_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="179.09657 370.55561 306.68239 370.5556 306.68236 367.43548 444.3795 367.50436 444.37951 366.66591 556.82267 366.6659 556.79705 341.80207 566.68749 341.80207"
-        style={(path === "publicStairsDownRight4-guestElevators4" || path === "guestElevators4-publicStairsDownRight4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="567.74274 50.35484 560.53629 50.35484 560.53629 92.49172 556.1822 92.49172 556.18216 366.06431 443.76613 366.06432 443.7661 366.8871 306.08059 366.8871 306.08059 370.00607 179.09657 370.00611"
-        style={(path === "publicStairsDownTopRight4-guestElevators4" || path === "guestElevators4-publicStairsDownTopRight4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="568.06279 212.9981 557.3548 212.9981 557.35484 367.1583 444.96243 367.1583 444.96239 368.02821 307.27438 368.02823 307.27438 371.14763 179.09657 371.14761"
-        style={(path === "kitchenManagementOffices4-guestElevators4" || path === "guestElevators4-kitchenManagementOffices4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="179.09657 371.67591 307.90588 371.6759 307.90588 368.65199 445.5666 368.652 445.55445 367.72904 557.93093 367.729 557.9309 196.26596 569.09202 196.26596"
-        style={(path === "food&BeverageOffice4-guestElevators4" || path === "guestElevators4-food&BeverageOffice4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="179.09657 365.8871 265.05982 365.8871 265.05979 54.29115 559.91935 54.29115 559.91935 49.7389 567.74274 49.7389"
-        style={(path === "publicStairsDownTopRight4-guestElevators4" || path === "guestElevators4-publicStairsDownTopRight4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="564.32258 141.80645 553.33869 141.80645 553.33871 363.302 395.5 363.302 395.5 371.67591 331.36165 371.67591 331.36165 369.33611 308.53226 369.33611 308.53226 372.43548 179.09657 372.43551"
-        style={(path === "linenRoom4-guestElevators4" || path === "guestElevators4-linenRoom4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="549.21178 228.34444 554.3871 228.34444 554.3871 373.02421 179.09657 373.02419"
-        style={(path === "kitchen4-guestElevators4" || path === "guestElevators4-kitchen4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="179.09657 373.76471 407.76471 374.23125 407.76471 375.64762"
-        style={(path === "rainierVistaTerrace4-guestElevators4" || path === "guestElevators4-rainierVistaTerrace4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="179.09657 366.78227 266.10908 366.78227 266.10908 299.88235 270.94118 299.88235"
-        style={(path === "room#404_4-guestElevators4" || path === "guestElevators4-room#404_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="179.09657 364.16744 262.94118 364.16744 263.05882 236.96903 269.05882 236.96903"
-        style={(path === "room#405_4-guestElevators4" || path === "guestElevators4-room#405_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="179.09657 362.9519 261.76471 363.06452 261.76471 177.41176 272.35294 177.41176"
-        style={(path === "room#405_4-guestElevators4" || path === "guestElevators4-room#405_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="179.09657 361.75646 260.70588 361.75646 260.70588 121.60903 272.35294 121.60903"
-        style={(path === "room#406_4-guestElevators4" || path === "guestElevators4-room#406_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="396.61243 62.04151 396.61243 53.29412 261.41176 53.29412 261.41176 360.35294 179.09657 360.35294"
-        style={(path === "room#407_4-guestElevators4" || path === "guestElevators4-room#407_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="182.09657 358.03776 259.17647 358.03776 259.35294 51.82258 506.55701 51.82258 506.55701 58.14516"
-        style={(path === "room#409_4-guestElevators4" || path === "guestElevators4-room#409_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="189.09657 356.63764 257.43472 356.63764 257.43472 56.31452 442.68719 56.31452 442.68719 63.11181"
-        style={(path === "room#408_4-guestElevators4" || path === "guestElevators4-room#408_4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="179.09657 374.70616 318.90382 374.70616 318.90382 371.14763"
-        style={(path === "restRoomDown4-guestElevators4" || path === "guestElevators4-restRoomDown4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="196.09657 354.991 256.0777 354.991 256.0777 71.35516 183.3057 71.35516"
-        style={(path === "storageAreaLeft4-guestElevators4" || path === "guestElevators4-storageAreaLeft4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-      <Polyline
-        points="178.44118 367.34946 564.32258 367.34946 564.32258 328.70588"
-        style={(path === "storageAreaRight4-guestElevators4" || path === "guestElevators4-storageAreaRight4") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-      />
-    </G>
+      <G
+        id="uuid-68674bec-62ff-4e75-8624-f9e2f65c6453"
+        data-name="Brown - Room 402"
+      >
+        <Polyline
+          points="439.69355 360.77769 439.69355 369.33611 332.80645 369.33611 332.80645 360.77769"
+          style={(path === "room#402_4-restRoomDown4" || path === "restRoomDown4-room#402_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="441.89523 361.75646 441.89523 371.92841 273.64706 371.92841 273.64706 235.52941 275.66119 235.52941"
+          style={(path === "room#402_4-room#405_4" || path === "room#405_4-room#402_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="520.47059 360.70588 520.47059 375.64706 256.82353 375.64706 256.82353 52.70588 290.70588 52.70588 290.70588 56.35294"
+          style={(path === "room#401_4-facilityStorageArea4" || path === "facilityStorageArea4-room#401_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="443.35333 361.75646 443.35333 373.15483 271.88235 373.15483 271.88235 126.0121 275.66119 126.0121"
+          style={(path === "room#402_4-room#406_4" || path === "room#406_4-room#402_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="444.11694 361.75646 444.11694 375.06452 270.29412 375.06452 270.29412 57.83569 394.2856 57.83569 394.2856 63.1129"
+          style={(path === "room#402_4-room#407_4" || path === "room#407_4-room#402_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="445.2856 361.52941 445.2856 376.3629 268.87237 376.3629 268.87237 56.31452 442.68719 56.31452 442.68719 61.0229"
+          style={(path === "room#402_4-room#408_4" || path === "room#408_4-room#402_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="446.58002 361.10877 446.58002 377.40323 267.61895 377.40323 267.61895 55.02325 508.21 55.02325 508.21 59.82258"
+          style={(path === "room#402_4-room#409_4" || path === "room#409_4-room#402_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="447.27002 361.10877 447.27002 375.06452 565.33871 375.06452 565.33871 342.6838 568.45161 342.6838"
+          style={(path === "room#402_4-publicStairsDownRight4" || path === "publicStairsDownRight4-room#402_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="448.52033 361.10877 448.52033 373.66753 563.35484 373.66753 563.35484 328.82259 565.33871 328.82259"
+          style={(path === "room#402_4-storageAreaRight4" || path === "storageAreaRight4-room#402_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="449.87 362.34458 449.87 372.54641 561.895 372.54641 561.895 262.46679 578.64675 262.46679"
+          style={(path === "room#402_4-silverRoom4" || path === "silverRoom4-room#402_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="451.37037 362.46774 451.37037 371.7626 560.01926 371.7626 560.01926 214.78728 565.29438 214.78728"
+          style={(path === "room#402_4-kitchenManagementOffices4" || path === "kitchenManagementOffices4-room#402_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="452.79839 362.34458 452.79839 369.90816 558.26432 369.90816 558.26432 198.20891 565.95968 198.20891"
+          style={(path === "room#402_4-food&BeverageOffice4" || path === "food&BeverageOffice4-room#402_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="454.00187 362.34458 454.00187 368.3099 555.40726 368.3099 555.40726 247.32984 549.15 247.32984"
+          style={(path === "room#402_4-kitchen4" || path === "kitchen4-room#402_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="455.14543 362.46774 455.14543 367.20883 554.07305 367.20883 554.07305 50.47059 416.76025 50.47059 416.76025 47.26613"
+          style={(path === "room#402_4-roof4" || path === "roof4-room#402_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="438.75 361.88235 438.75 368.3099 397.27002 368.3099 397.27002 361.29412"
+          style={(path === "room#402_4-room#403_4" || path === "room#403_4-room#402_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="456.57668 362.67387 456.57668 365.99999 517.71744 365.99999 517.71744 362.28678"
+          style={(path === "room#402_4-room#401_4" || path === "room#401_4-room#402_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Line
+          x1={457.23529}
+          y1={353.50736}
+          x2={457.23529}
+          y2={374.37499}
+          style={(path === "room#402_4-rainierVistaTerrace4" || path === "rainierVistaTerrace4-room#402_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="442.68671 362.46774 442.68671 371.92841 259.52941 371.92841 259.52941 68.2168 182.23529 68.2168"
+          style={(path === "room#402_4-storageAreaLeft4" || path === "storageAreaLeft4-room#402_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="457.64706 361.52941 457.64706 364.82353 557.64706 364.82353 557.64706 377.76471"
+          style={(path === "room#402_4-kitchenwareStorageRoom4" || path === "kitchenwareStorageRoom4-room#402_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="449.31098 360.8993 449.31098 369.72329 286.42016 369.72329 286.42016 364.82353"
+          style={(path === "room#402_4-showManagerRoom4" || path === "showManagerRoom4-room#402_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="440.76471 361.75646 440.76471 370.69207 274.64516 370.69207 274.64516 301.3877 276.49746 301.3877"
+          style={(path === "room#402_4-room#404_4" || path === "room#404_4-room#402_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+      </G>
+      <G
+        id="uuid-d7d73a33-5027-4f4c-9b64-023a2e7424b2"
+        data-name="Maganta - Room 403"
+      >
+        <Polyline
+          points="388.69355 360.77769 388.69355 369.33611 332.80645 369.33611 332.80645 360.77769"
+          style={(path === "room#403_4-restRoomDown4" || path === "restRoomDown4-room#403_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="390.89523 361.75646 390.89523 371.92841 273.64706 371.92841 273.64706 235.52941 275.66119 235.52941"
+          style={(path === "room#403_4-room#405_4" || path === "room#405_4-room#403_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="392.35333 361.75646 392.35333 373.15483 271.88235 373.15483 271.88235 126.0121 275.66119 126.0121"
+          style={(path === "room#403_4-room#406_4" || path === "room#406_4-room#403_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="393.11694 361.75646 393.11694 375.06452 270.29412 375.06452 270.29412 57.83569 394.2856 57.83569 394.2856 63.1129"
+          style={(path === "room#403_4-room#407_4" || path === "room#407_4-room#403_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="394.2856 361.52941 394.2856 376.3629 268.87237 376.3629 268.87237 56.31452 442.68719 56.31452 442.68719 61.0229"
+          style={(path === "room#403_4-room#408_4" || path === "room#408_4-room#403_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="395.58002 361.10877 395.58002 377.40323 267.61895 377.40323 267.61895 55.02325 508.21 55.02325 508.21 59.82258"
+          style={(path === "room#403_4-room#409_4" || path === "room#409_4-room#403_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="397.27002 361.10877 397.27002 375.06452 565.33871 375.06452 565.33871 342.6838 568.45161 342.6838"
+          style={(path === "room#403_4-publicStairsDownRight4" || path === "publicStairsDownRight4-room#403_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="398.52033 361.10877 398.52033 373.66753 563.35484 373.66753 563.35484 328.82259 565.33871 328.82259"
+          style={(path === "room#403_4-storageAreaRight4" || path === "storageAreaRight4-room#403_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="399.87 362.34458 399.87 372.54641 561.895 372.54641 561.895 262.46679 578.64675 262.46679"
+          style={(path === "room#403_4-silverRoom4" || path === "silverRoom4-room#403_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="401.37037 362.46774 401.37037 371.7626 560.01926 371.7626 560.01926 214.78728 565.29438 214.78728"
+          style={(path === "room#403_4-kitchenManagementOffices4" || path === "kitchenManagementOffices4-room#403_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="402.79839 362.34458 402.79839 369.90816 558.26432 369.90816 558.26432 198.20891 565.95968 198.20891"
+          style={(path === "room#403_4-food&BeverageOffice4" || path === "food&BeverageOffice4-room#403_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="405.00187 362.34458 405.00187 368.3099 555.40726 368.3099 555.40726 247.32984 549.15 247.32984"
+          style={(path === "room#403_4-kitchen4" || path === "kitchen4-room#403_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="406.14543 362.46774 406.14543 367.20883 554.07305 367.20883 554.07305 50.47059 416.76025 50.47059 416.76025 47.26613"
+          style={(path === "room#403_4-roof4" || path === "roof4-room#403_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="407.94118 362.46774 407.94118 366.18096 444.61695 366.18096 444.61695 362.46774"
+          style={(path === "room#403_4-room#404_4" || path === "room#404_4-room#403_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="409.17647 362.46774 409.17647 364.76563 518.77702 364.76563 518.77702 361.52941"
+          style={(path === "room#403_4-room#401_4" || path === "room#401_4-room#403_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="396.35294 361.52941 396.35294 378.74194 261.76471 378.74194 261.76471 69.2621 179.36569 69.2621"
+          style={(path === "room#403_4-storageAreaLeft4" || path === "storageAreaLeft4-room#403_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="393.47059 360.70588 393.47059 375.64706 256.82353 375.64706 256.82353 52.70588 290.70588 52.70588 290.70588 56.35294"
+          style={(path === "room#403_4-facilityStorageArea4" || path === "facilityStorageArea4-room#403_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="403.35294 361.88235 403.35294 368.76471 559 368.76471 559 377.58824"
+          style={(path === "room#403_4-kitchenwareStorageRoom4" || path === "kitchenwareStorageRoom4-room#403_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="392.05882 359.94118 392.05882 374.58824 287.94118 374.58824 287.94118 364.82353"
+          style={(path === "room#403_4-showManagerRoom4" || path === "showManagerRoom4-room#403_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="389.76471 361.75646 389.76471 370.69207 274.64516 370.69207 274.64516 301.3877 276.49746 301.3877"
+          style={(path === "room#403_4-room#404_4" || path === "room#404_4-room#403_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+      </G>
+      <G
+        id="uuid-4fa46c9d-6284-4844-9ef9-59be4f8215df"
+        data-name="Royal Blue- Room 404"
+      >
+        <Polyline
+          points="300.33531 58.84245 268.18149 58.84245 268.18149 302.68542 277.08065 302.68542"
+          style={(path === "room#404_4-restRoomTop4" || path === "restRoomTop4-room#404_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="277.08065 304.36215 270.5 304.36215 270.5 317.32655 268.18149 317.3265 268.18149 326.8194 269.3527 326.81935 269.35269 374.7848 403.80873 374.78482 403.80873 376.58167"
+          style={(path === "room#404_4-rainierVistaTerrace4" || path === "rainierVistaTerrace4-room#404_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="275.66119 303.29746 269.97684 303.29746 269.97684 58.21569 442.68719 58.21569 442.68719 62.5713"
+          style={(path === "room#404_4-room#408_4" || path === "room#408_4-room#404_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="277.90516 306.20365 271.07056 306.20365 271.07056 59.65889 394.2856 59.65889 394.2856 64.22423"
+          style={(path === "room#404_4-room#407_4" || path === "room#407_4-room#404_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="274.64516 294.48965 266.10908 294.48965 266.10908 56.56855 181.64516 56.56855 181.64516 51.82258"
+          style={(path === "room#404_4-publicStairsDownTopLeft4" || path === "publicStairsDownTopLeft4-room#404_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="274.64516 293.60903 264.145 293.60903 264.145 57.83594 176.77119 57.83594"
+          style={(path === "room#404_4-elevatorTopLeft4" || path === "elevatorTopLeft4-room#404_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="274.64516 296.54829 262.89323 296.54829 262.89323 59.65889 181.64516 59.65889 181.64516 68.2168"
+          style={(path === "room#404_4-storageAreaLeft4" || path === "storageAreaLeft4-room#404_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="274.64516 182.68103 271.89639 182.68103 271.89639 289.91632 274.64516 289.91632"
+          style={(path === "room#404_4-room#405_4" || path === "room#405_4-room#404_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="274.64516 301.50456 266.10908 301.50456 266.10908 369.90816 300.90323 369.90816 300.90323 367.06352"
+          style={(path === "room#404_4-restRoomDown4" || path === "restRoomDown4-room#404_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="274.64516 300.36215 263.38852 300.36215 263.38852 371.92841 398.52033 371.92841 398.52033 363.06452"
+          style={(path === "room#404_4-room#403_4" || path === "room#403_4-room#404_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="275.66119 291.80065 268.11068 291.80065 268.11068 56.56855 509.23466 56.56855 509.23466 59.93828"
+          style={(path === "room#404_4-room#409_4" || path === "room#409_4-room#404_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="273.27078 297.37098 258.35294 297.37098 258.35294 375.14919 519.19355 375.14919 519.19355 372.54641"
+          style={(path === "room#404_4-room#401_4" || path === "room#401_4-room#404_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="273.27078 299.0121 260.60468 299.0121 260.60468 374.37958 443.35812 374.37958 443.35812 362.85484"
+          style={(path === "room#404_4-room#402_4" || path === "room#402_4-room#404_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="259.35294 295.17865 258.35294 52.50463 560.20162 52.50463 560.20162 214.78728 563.17647 214.78728"
+          style={(path === "room#404_4-kitchenManagementOffices4" || path === "kitchenManagementOffices4-room#404_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="257.47059 295.17865 256.47059 51.1099 563.17647 51.1099 563.17647 262.41248 578.64675 262.41248"
+          style={(path === "room#404_4-silverRoom4" || path === "silverRoom4-room#404_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="274.82353 299.17647 256.23529 299.17647 256.23529 370.23529 257.17647 370.23529 288.47059 370.23529 288.47059 364.82353"
+          style={(path === "room#404_4-showManagerRoom4" || path === "showManagerRoom4-room#404_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="253.88235 297.52941 253.88235 374.23529 557.88235 374.23529 557.88235 378.70588"
+          style={(path === "room#404_4-kitchenwareStorageRoom4" || path === "kitchenwareStorageRoom4-room#404_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="251.76471 298.94118 251.76471 53.76471 513.69355 53.76471 513.69355 44.02823"
+          style={(path === "room#404_4-roof4" || path === "roof4-room#404_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="250.35294 298.23529 250.35294 53.05882 371.05882 53.05882 371.05882 68.82353"
+          style={(path === "room#404_4-electricalArea4" || path === "electricalArea4-room#404_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="253.64706 293.50456 253.64706 120.48965 255.29412 120.48965"
+          style={(path === "room#404_4-room#406_4" || path === "room#406_4-room#404_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="262.14903 295.17865 261.14903 54.57258 558.85 54.57258 558.85 200.98178 563.17647 200.98178"
+          style={(path === "room#404_4-food&BeverageOffice4" || path === "food&BeverageOffice4-room#404_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+      </G>
+      <G
+        id="uuid-dfb410b0-fa37-47ce-aef4-91d477e3ca34"
+        data-name="Parrot Green- Room 405"
+      >
+        <Polyline
+          points="300.33531 58.84245 268.18149 58.84245 268.18149 179.68542 277.08065 179.68542"
+          style={(path === "room#405_4-restRoomTop4" || path === "restRoomTop4-room#405_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="277.08065 181.36215 270.5 181.36215 270.5 234.32655 268.18149 234.3265 268.18149 293.8194 269.3527 293.81935 269.35269 374.7848 403.80873 374.78482 403.80873 376.58167"
+          style={(path === "room#405_4-rainierVistaTerrace4" || path === "rainierVistaTerrace4-room#405_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="275.66119 180.29746 269.97684 180.29746 269.97684 58.21569 442.68719 58.21569 442.68719 62.5713"
+          style={(path === "room#405_4-room#408_4" || path === "room#408_4-room#405_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="277.90516 186.20365 271.07056 186.20365 271.07056 59.65889 394.2856 59.65889 394.2856 64.22423"
+          style={(path === "room#405_4-room#407_4" || path === "room#407_4-room#405_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="274.64516 184.48965 266.10908 184.48965 266.10908 56.56855 181.64516 56.56855 181.64516 51.82258"
+          style={(path === "room#405_4-publicStairsDownTopLeft4" || path === "publicStairsDownTopLeft4-room#405_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="274.64516 174.60903 264.145 174.60903 264.145 57.83594 176.77119 57.83594"
+          style={(path === "room#405_4-elevatorTopLeft4" || path === "elevatorTopLeft4-room#405_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="274.64516 175.54829 262.89323 175.54829 262.89323 59.65889 181.64516 59.65889 181.64516 68.2168"
+          style={(path === "room#405_4-storageAreaLeft4" || path === "storageAreaLeft4-room#405_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="274.64516 182.68103 271.89639 182.68103 271.89639 289.91632 274.64516 289.91632"
+          style={(path === "room#405_4-room#404_4" || path === "room#404_4-room#405_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="274.64516 179.50456 266.10908 179.50456 266.10908 369.90816 300.90323 369.90816 300.90323 367.06352"
+          style={(path === "room#405_4-restRoomDown4" || path === "restRoomDown4-room#405_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="274.64516 178.36215 263.38852 178.36215 263.38852 371.92841 398.52033 371.92841 398.52033 363.06452"
+          style={(path === "room#405_4-room#403_4" || path === "room#403_4-room#405_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="275.66119 173.80065 268.11068 173.80065 268.11068 56.56855 509.23466 56.56855 509.23466 59.93828"
+          style={(path === "room#405_4-room#409_4" || path === "room#409_4-room#405_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="273.27078 176.37098 258.35294 176.37098 258.35294 375.14919 519.19355 375.14919 519.19355 372.54641"
+          style={(path === "room#405_4-room#401_4" || path === "room#401_4-room#405_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="273.27078 177.0121 260.60468 177.0121 260.60468 374.37958 443.35812 374.37958 443.35812 362.85484"
+          style={(path === "room#405_4-room#402_4" || path === "room#402_4-room#405_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="258.35294 175.17865 258.35294 52.50463 560.20162 52.50463 560.20162 214.78728 563.17647 214.78728"
+          style={(path === "room#405_4-kitchenManagementOffices4" || path === "kitchenManagementOffices4-room#405_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          style={(path === "room#405_4-silverRoom4" || path === "silverRoom4-room#405_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="253.64706 179.50456 253.64706 120.48965 255.29412 120.48965"
+          style={(path === "room#405_4-room#406_4" || path === "room#406_4-room#405_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="254.35294 175.17647 254.35294 368.11765 288.70588 368.11765 288.70588 364.82353"
+          style={(path === "room#405_4-showManagerRoom4" || path === "showManagerRoom4-room#405_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="252.47059 175.41176 252.47059 369.29412 559.29412 369.29412 559.29412 379.64706"
+          style={(path === "room#405_4-kitchenwareStorageRoom4" || path === "kitchenwareStorageRoom4-room#405_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="250.35294 175.88235 250.35294 58 288 58 288 62.16886"
+          style={(path === "room#405_4-facilityStorageArea4" || path === "facilityStorageArea4-room#405_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="251.05882 173.52941 251.05882 54.23529 514.45968 54.23529 514.45968 44.02823"
+          style={(path === "room#405_4-roof4" || path === "roof4-room#405_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="261.14903 175.17865 261.14903 54.57258 558.85 54.57258 558.85 200.98178 563.17647 200.98178"
+          style={(path === "room#405_4-food&BeverageOffice4" || path === "food&BeverageOffice4-room#405_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+      </G>
+      <G
+        id="uuid-8696a38c-a2a8-408d-9901-398ab91bb8bf"
+        data-name="Feroze color- Room 406"
+      >
+        <Polyline
+          points="301.33531 60.48387 271.89639 60.48387 271.89639 115.19355 277.61414 115.19355"
+          style={(path === "room#406_4-restRoomTop4" || path === "restRoomTop4-room#406_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="277.08065 127.36215 270.5 127.36215 270.5 180.32655 268.18149 180.3265 268.18149 293.8194 269.3527 293.81935 269.35269 374.7848 403.80873 374.78482 403.80873 376.58167"
+          style={(path === "room#406_4-rainierVistaTerrace4" || path === "rainierVistaTerrace4-room#406_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="275.66119 117.29746 269.97684 117.29746 269.97684 58.21569 440.79032 58.21569 440.79032 65.07872"
+          style={(path === "room#406_4-room#408_4" || path === "room#408_4-room#406_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="277.90516 116.20365 271.07056 116.20365 271.07056 59.65889 394.2856 59.65889 394.2856 64.22423"
+          style={(path === "room#406_4-room#407_4" || path === "room#407_4-room#406_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="274.64516 120.48965 266.10908 120.48965 266.10908 56.56855 181.64516 56.56855 181.64516 51.82258"
+          style={(path === "room#406_4-publicStairsDownTopLeft4" || path === "publicStairsDownTopLeft4-room#406_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="274.64516 121.60903 264.145 121.60903 264.145 57.83594 176.77119 57.83594"
+          style={(path === "room#406_4-elevatorTopLeft4" || path === "elevatorTopLeft4-room#406_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="274.64516 123.54829 262.89323 123.54829 262.89323 59.65889 181.64516 59.65889 181.64516 68.2168"
+          style={(path === "room#406_4-storageAreaLeft4" || path === "storageAreaLeft4-room#406_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="274.64516 131.17339 269.97684 131.17339 269.97684 287.48641 272.311 287.48641"
+          style={(path === "room#406_4-room#404_4" || path === "room#404_4-room#406_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="274.64516 132.68103 271.89639 132.68103 271.89639 175.91632 274.64516 175.91632"
+          style={(path === "room#406_4-room#405_4" || path === "room#405_4-room#406_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="274.64516 129.50456 266.10908 129.50456 266.10908 369.90816 300.90323 369.90816 300.90323 367.06352"
+          style={(path === "room#406_4-restRoomDown4" || path === "restRoomDown4-room#406_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="274.64516 127.36215 263.38852 127.36215 263.38852 371.92841 398.52033 371.92841 398.52033 363.06452"
+          style={(path === "room#406_4-room#403_4" || path === "room#403_4-room#406_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="275.66119 118.80065 268.11068 118.80065 268.11068 56.56855 509.23466 56.56855 509.23466 59.93828"
+          style={(path === "room#406_4-room#409_4" || path === "room#409_4-room#406_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="273.27078 124.37098 258.35294 124.37098 258.35294 375.14919 519.19355 375.14919 519.19355 372.54641"
+          style={(path === "room#406_4-room#401_4" || path === "room#401_4-room#406_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="273.27078 126.0121 260.60468 126.0121 260.60468 374.37958 443.35812 374.37958 443.35812 362.85484"
+          style={(path === "room#406_4-room#402_4" || path === "room#402_4-room#406_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="258.35294 122.17865 258.35294 52.50463 560.20162 52.50463 560.20162 214.78728 563.17647 214.78728"
+          style={(path === "room#406_4-kitchenManagementOffices44" || path === "kitchenManagementOffices4-room#406_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="256.47059 122.17865 256.47059 51.1099 563.17647 51.1099 563.17647 262.41248 578.64675 262.41248"
+          style={(path === "room#406_4-silverRoom4" || path === "silverRoom4-room#406_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Path
+          d="M254.35294,122V53.05882h30.11765v5.17647"
+          style={(path === "room#406_4-facilityStorageArea4" || path === "facilityStorageArea4-room#406_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="256.47059 124.11765 256.47059 373.52941 291.52941 373.52941 291.52941 366.47059"
+          style={(path === "room#406_4-showManagerRoom4" || path === "showManagerRoom4-room#406_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="252.70588 121.76471 252.70588 53.76471 519.90323 53.76471 519.90323 44.02823"
+          style={(path === "room#406_4-roof4" || path === "roof4-room#406_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="254.82353 124.11765 254.82353 373.76471 560.47059 373.76471 560.47059 379.64706"
+          style={(path === "room#406_4-kitchenwareStorageRoom4" || path === "kitchenwareStorageRoom4-room#406_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="261.14903 122.17865 261.14903 54.57258 558.85 54.57258 558.85 200.98178 563.17647 200.98178"
+          style={(path === "room#406_4-food&BeverageOffice4" || path === "food&BeverageOffice4-room#406_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+      </G>
+      <G id="uuid-ed16a045-584c-4254-9cab-522faa4287e4" data-name="Orange 407">
+        <Polyline
+          points="243.09656 367.62902 267.16128 367.62905 267.16128 57.09275 394.89517 57.09275 394.89517 67.23881"
+          style={(path === "room#407_4-publicStairsUpLeft4" || path === "publicStairsUpLeft4-room#407_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="394.31196 69.23881 394.31196 59.64744 365.18788 59.64744 365.18788 62.54754"
+          style={(path === "room#407_4-restRoomTop4" || path === "restRoomTop4-room#407_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="395.52334 67.23881 395.52334 60.93628 555.40728 60.93628 555.40723 370.375 482.49715 370.375 482.49715 376.3629"
+          style={(path === "room#407_4-rainierVistaTerrace4" || path === "rainierVistaTerrace4-room#407_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="397.83466 65.8709 397.83466 62.47326 439.05645 62.47326 439.05645 65.07872"
+          style={(path === "room#407_4-room#408_4" || path === "room#408_4-room#407_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="398.32353 65.8709 398.32353 49.08824 509.93501 49.08824 509.93501 51.76471"
+          style={(path === "room#407_4-room#409_4" || path === "room#409_4-room#407_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="393.12408 67.51613 393.12408 60.48387 258.47059 60.48387 258.47059 114.57597 261.91176 114.57597"
+          style={(path === "room#407_4-room#406_4" || path === "room#406_4-room#407_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="275.66119 179.05882 256.17647 179.05882 256.17647 47.97174 392.27081 47.97174 392.27081 67.23881 392.27081 47.97174"
+          style={(path === "room#407_4-room#405_4" || path === "room#405_4-room#407_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="391.42889 66.39113 391.42889 48.58607 256.82267 48.58607 256.82267 236.19224 261.91176 236.19224"
+          style={(path === "room#407_4-room#405_4" || path === "room#405_4-room#407_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="390.32643 65.30399 390.32643 47.04839 256.17647 47.04839 256.17647 293.17434 261.24727 293.17434"
+          style={(path === "room#407_4-room#404_4" || path === "room#404_4-room#407_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="398.89843 65.50806 398.89843 47.97174 558.85 47.97174 558.85 179.05882 549.97021 179.05882"
+          style={(path === "room#407_4-kitchen4" || path === "kitchen4-room#407_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="400.74917 65.50806 400.74917 50.35484 557.06356 50.35484 557.06356 139.98102 564.68866 139.98102"
+          style={(path === "room#407_4-linenRoom4" || path === "linenRoom4-room#407_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="401.63558 65.50806 401.63558 51.47059 555 51.47059 555 202.49492 567.47177 202.49492"
+          style={(path === "room#407_4-food&BeverageOffice4" || path === "food&BeverageOffice4-room#407_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="402.79839 65.87097 402.79839 52.50463 553.04032 52.50463 554.3871 215.58824 568.06279 215.58824"
+          style={(path === "room#407_4-kitchenManagementOffices4" || path === "kitchenManagementOffices4-room#407_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="403.80873 65.8709 403.80873 53.89919 552.35294 53.89919 553.04032 245.7243 571.93548 245.7243"
+          style={(path === "room#407_4-elevatorBottomRight4" || path === "elevatorBottomRight4-room#407_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="404.86345 65.50806 404.86345 55.39516 551.22182 55.39516 552.16 265.08871 577.47402 265.08871"
+          style={(path === "room#407_4-silverRoom4" || path === "silverRoom4-room#407_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="405.8357 65.8709 405.8357 57.09275 562.22581 56.31452 562.22581 274.375"
+          style={(path === "room#407_4-restRoomRight4" || path === "restRoomRight4-room#407_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="406.70588 65.50806 406.70588 58.14516 559.38555 58.52435 560.8761 328.82259 564.32258 328.82259"
+          style={(path === "room#407_4-storageAreaRight4" || path === "storageAreaRight4-room#407_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="399.88235 66.30399 399.88235 48.04839 568.50121 48.04839"
+          style={(path === "room#407_4-publicStairsDownTopRight4" || path === "publicStairsDownTopRight4-room#407_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="408.37427 64.44313 408.37427 59.64744 558.85 59.64744 557.12604 343.29956 566.68749 343.29956"
+          style={(path === "room#407_4-publicStairsDownRight4" || path === "publicStairsDownRight4-room#407_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="389.41176 64.82353 389.41176 51.64706 286.58824 51.64706 286.58824 57.52941"
+          style={(path === "room#407_4-facilityStorageArea4" || path === "facilityStorageArea4-room#407_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="402.11765 67.64706 402.11765 49.29412 258.82353 49.29412 258.82353 373.29412 288.23529 373.29412 288.23529 366.47059"
+          style={(path === "room#407_4-showManagerRoom4" || path === "showManagerRoom4-room#407_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="393.64706 55.17647 261.64706 55.17647 261.64706 372.35294 559.52941 372.35294 559.52941 378.94118"
+          style={(path === "room#407_4-kitchenwareStorageRoom4" || path === "kitchenwareStorageRoom4-room#407_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="405.57968 376.58167 405.57968 370.82628 396.12903 370.82628 396.12903 360.77769 395.5 373.61765 557.67647 373.61765 557.67647 49.7389 396.30143 49.7389 396.30143 65.8709"
+          style={(path === "room#407_4-room#403_4" || path === "room#403_4-room#407_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="396.93663 65.8709 396.93663 47.04839 562.22581 47.04839 562.22581 373.02421 438.48999 372.54641 438.48999 362.34458"
+          style={(path === "room#407_4-room#402_4" || path === "room#402_4-room#407_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="403.05882 66.94118 403.05882 52.50463 518.45159 52.50463 518.45161 44.02823"
+          style={(path === "room#407_4-roof4" || path === "roof4-room#407_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="394.89517 55.39516 394.89517 45.1371 564.32258 45.1371 564.88917 361.10876 523.63843 361.10877"
+          style={(path === "room#407_4-room#401_4" || path === "room#401_4-room#407_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+      </G>
+      <G id="uuid-57adedfe-ae4b-451b-9d36-b29b528b1c8a" data-name="Black 409">
+        <Polyline
+          points="483.31062 376.28097 483.31062 368.85241 559.15142 368.85241 559.15142 64.56862 512.99127 64.56862 512.99127 66.28496"
+          style={(path === "room#409_4-rainierVistaTerrace4" || path === "rainierVistaTerrace4-room#409_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="508.55645 66.28496 508.55645 58.96645 365.18788 58.96645"
+          style={(path === "room#409_4-restRoomTop4" || path === "restRoomTop4-room#409_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="243.09657 366.38306 265.82259 366.38306 265.82258 55.12857 507.90323 55.12857 507.90323 66.28496"
+          style={(path === "room#409_4-publicStairsUpLeft4" || path === "publicStairsUpLeft4-room#409_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="507.11765 66.28496 507.11765 56.01164 445.93329 56.01164 445.93329 65.99678"
+          style={(path === "room#409_4-room#408_4" || path === "room#408_4-room#409_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="506.55701 66.28496 506.55701 57.01082 396.30143 57.01082 396.30143 66.69038"
+          style={(path === "room#409_4-room#407_4" || path === "room#407_4-room#409_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="506 66.28496 506 57.91806 262.77696 56.91806 262.77696 117.75097 276.10177 117.75097"
+          style={(path === "room#409_4-room#406_4" || path === "room#406_4-room#409_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="505.43548 66.28496 505.43548 58.96645 262.0028 58.96645 262.0028 178.97689 277.26471 178.97689"
+          style={(path === "room#409_4-room#405_4" || path === "room#405_4-room#409_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="504.83065 66.28496 504.83065 60.59815 261.14903 60.59815 261.14903 236.11031 274.64516 236.11031"
+          style={(path === "room#409_4-room#405_4" || path === "room#405_4-room#409_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="509.65769 66.30919 509.65769 52.55806 257.76471 52.55806 257.76471 293.0924 272.87903 293.0924"
+          style={(path === "room#409_4-room#404_4" || path === "room#404_4-room#409_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="512.53201 66.28496 512.53201 53.55806 563.52941 53.55806 563.52941 199.12698"
+          style={(path === "room#409_4-food&BeverageOffice4" || path === "food&BeverageOffice4-room#409_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="511.313 66.28496 511.313 49.97689 569.41176 49.97689"
+          style={(path === "room#409_4-publicStairsDownTopRight4" || path === "publicStairsDownTopRight4-room#409_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="515.00806 66.285 515.00806 58.09425 562.22581 58.09425 562.22581 253.03571 571.29832 253.03571"
+          style={(path === "room#409_4-elevatorBottomRight4" || path === "elevatorBottomRight4-room#409_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="503.43548 66.28496 503.43549 53.55806 177.64706 53.55806 177.64706 63.33336"
+          style={(path === "room#409_4-storageAreaLeft4" || path === "storageAreaLeft4-room#409_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="515.64706 66.28496 515.64706 59.06323 564.53226 59.06323 564.53226 263.38485 579.46533 263.38485"
+          style={(path === "room#409_4-silverRoom4" || path === "silverRoom4-room#409_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="513.47059 66.28496 513.47059 54.5063 556.44607 54.5063 556.44607 363.26265 521.45323 363.26265 521.45323 361.29976"
+          style={(path === "room#409_4-room#401_4" || path === "room#401_4-room#409_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="511.85351 66.28496 511.85351 51.2729 559.15142 51.2729 559.15142 363.7729 441.00755 363.7729 441.00755 362.02683"
+          style={(path === "room#409_4-room#402_4" || path === "room#402_4-room#409_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="514.19355 66.28496 514.19355 60.85635 553.25102 60.85635 553.25102 361.47251 397.27002 361.47251 397.27002 360.03953"
+          style={(path === "room#409_4-room#403_4" || path === "room#403_4-room#409_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="509.17647 66.28496 509.17647 47.10478 511.313 47.10478 511.313 44.94629"
+          style={(path === "room#409_4-roof4" || path === "roof4-room#409_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="510.11765 66.28496 510.11765 49.5063 285.64706 49.5063 285.64706 60.56512"
+          style={(path === "room#409_4-facilityStorageArea4" || path === "facilityStorageArea4-room#409_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="510.66129 66.28496 510.66129 49.5063 560.70588 49.5063 560.70588 376.56512"
+          style={(path === "room#409_4-kitchenwareStorageRoom4" || path === "kitchenwareStorageRoom4-room#409_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="507.29412 51.15336 262.82353 51.15336 262.82353 366.44748 289.64706 366.44748 289.64706 364.7968"
+          style={(path === "room#409_4-showManagerRoom4" || path === "showManagerRoom4-room#409_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="504.21371 66.28496 504.21369 48.77694 365.18788 48.77694 365.18788 64.49065"
+          style={(path === "room#409_4-restRoomTop4" || path === "restRoomTop4-room#409_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="507.90323 47.96645 559.38555 47.96645 559.38555 333.41805"
+          style={(path === "room#409_4-storageAreaRight4" || path === "storageAreaRight4-room#409_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+      </G>
+      <G
+        id="uuid-b93db027-5adf-49c1-9046-13bc5c81bad9"
+        data-name="Facilty Storage Area"
+      >
+        <Polyline
+          points="289.17647 49.17647 512.87097 49.17647 512.87097 44.02823"
+          style={(path === "facilityStorageArea4-roof4" || path === "facilityStorageArea4-roof4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Line
+          x1={282.18382}
+          y1={62.21324}
+          x2={293.63235}
+          y2={62.05882}
+          style={{
+            fill: "#fff",
+            stroke: "#000",
+            strokeMiterlimit: 10,
+            strokeWidth: ".15px",
+          }}
+        />
+        <Polyline
+          points="287.05882 51.76471 180.23529 52.47059 180.23529 50"
+          style={(path === "facilityStorageArea4-publicStairsDownTopLeft4" || path === "publicStairsDownTopLeft4-facilityStorageArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Line
+          x1={287.05882}
+          y1={52.70588}
+          x2={180.11765}
+          y2={53.52941}
+          style={(path === "facilityStorageArea4-elevatorTopLeft4" || path === "elevatorTopLeft4-facilityStorageArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="287.17647 53.52941 180.94118 54.70588 180.94118 69.05882"
+          style={(path === "facilityStorageArea4-storageAreaLeft4" || path === "storageAreaLeft4-facilityStorageArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Line
+          x1={289}
+          y1={61.29412}
+          x2={301.17647}
+          y2={61.29412}
+          style={(path === "facilityStorageArea4-restRoomTop4" || path === "restRoomTop4-facilityStorageArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="285.82353 61.11765 270.64706 61.11765 270.64706 120.64706 273.47059 120.64706"
+          style={(path === "facilityStorageArea4-room#406_4" || path === "room#406_4-facilityStorageArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="286.17647 60.35294 268.88235 60.35294 268.88235 181.88235 272.41176 181.88235"
+          style={(path === "facilityStorageArea4-room#405_4" || path === "room#405_4-facilityStorageArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="288.23529 59.52941 264.94118 59.52941 264.94118 293.05882 270.58824 293.05882"
+          style={(path === "facilityStorageArea4-room#404_4" || path === "room#404_4-facilityStorageArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="288.11765 58.17647 262.88235 58.17647 262.88235 369.64706 394.17647 369.64706 394.17647 363.47059"
+          style={(path === "facilityStorageArea4-restRoomDown4" || path === "restRoomDown4-facilityStorageArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="442.88235 362.94118 442.88235 371.05882 260.41176 371.05882 260.41176 57.11765 288.47059 57.11765"
+          style={(path === "facilityStorageArea4-room#402_4" || path === "room#402_4-facilityStorageArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="289 60.29412 375.47059 60.29412 375.47059 75.29412"
+          style={(path === "facilityStorageArea4-electricalArea4" || path === "electricalArea4-facilityStorageArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="288.58824 59.41176 394.11765 59.41176 394.11765 66.11765"
+          style={(path === "facilityStorageArea4-room#407_4" || path === "room#407_4-facilityStorageArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="289.05882 58.35294 443.41176 58.35294 443.41176 62.23529"
+          style={(path === "facilityStorageArea4-room#408_4" || path === "room#408_4-facilityStorageArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="289.41176 56.58824 508.35294 56.58824 508.35294 64.94118"
+          style={(path === "facilityStorageArea4-room#409_4" || path === "room#409_4-facilityStorageArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="289.29412 55.17647 553.76471 55.17647 553.76471 174.82353 549.29412 174.82353"
+          style={(path === "facilityStorageArea4-kitchen4" || path === "kitchen4-facilityStorageArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="289.41176 53.76471 554.82353 53.76471 554.82353 363.41176 519.52941 363.41176 519.52941 360.58824"
+          style={(path === "facilityStorageArea4-room#401_4" || path === "room#401_4-facilityStorageArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="289.35294 52 556 52 556 377.05882"
+          style={(path === "facilityStorageArea4-kitchenwareStorageRoom4" || path === "kitchenwareStorageRoom4-facilityStorageArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="289.17647 50.41176 557.05882 50.41176 557.05882 332.76471 562.35294 332.76471"
+          style={(path === "facilityStorageArea4-storageAreaRight4" || path === "storageAreaRight4-facilityStorageArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="289.52941 52.88235 557.94118 52.88235 557.94118 262.52941 579.64706 262.52941"
+          style={(path === "facilityStorageArea4-silverRoom4" || path === "silverRoom4-facilityStorageArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="289.29412 51.11765 559.52941 51.11765 559.52941 215.23529 567.58824 215.23529"
+          style={(path === "facilityStorageArea4-kitchenManagementOffices4" || path === "kitchenManagementOffices4-facilityStorageArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="289.35294 54.47059 561 54.47059 561 202.94118 567.41176 202.94118"
+          style={(path === "facilityStorageArea4-food&BeverageOffice4" || path === "food&BeverageOffice4-facilityStorageArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="289.17647 55.64706 562.47059 55.64706 562.47059 141.76471 566.35294 141.76471"
+          style={(path === "facilityStorageArea4-linenRoom4" || path === "linenRoom4-facilityStorageArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="289.17647 57.41176 562.94118 57.41176 562.94118 50.94118 568.58824 50.94118"
+          style={(path === "facilityStorageArea4-publicStairsDownTopRight4" || path === "publicStairsDownTopRight4-facilityStorageArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="289.88235 58.70588 255.64706 58.70588 255.64706 374.58824 290.41176 374.58824 290.41176 365.23529"
+          style={(path === "facilityStorageArea4-showManagerRoom4" || path === "showManagerRoom4-facilityStorageArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="287.29412 55.64706 258.11765 55.64706 258.11765 372.82353 405.88235 372.82353 405.88235 375.17647"
+          style={(path === "facilityStorageArea4-rainierVistaTerrace4" || path === "rainierVistaTerrace4-facilityStorageArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+      </G>
+      <G
+        id="uuid-c374f58c-8144-42e5-b468-483b4b1d0980"
+        data-name="Electrical Area"
+      >
+        <Polyline
+          points="512.10725 44.02823 512.10725 49.17647 374 49.17647 374 71.23529"
+          style={(path === "electricalArea4-roof4" || path === "roof4-electricalArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Line
+          x1={282.18382}
+          y1={62.21324}
+          x2={293.63235}
+          y2={62.05882}
+          style={{
+            fill: "#fff",
+            stroke: "#000",
+            strokeMiterlimit: 10,
+            strokeWidth: ".15px",
+          }}
+        />
+        <Polyline
+          points="180.23529 50 180.23529 52.47059 373.05882 51.76471 373.05882 70.05882"
+          style={(path === "electricalArea4-publicStairsDownTopLeft4" || path === "publicStairsDownTopLeft4-electricalArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="180.11765 53.52941 373.05882 52.70588 373.05882 69.52941"
+          style={(path === "electricalArea4-elevatorTopLeft4" || path === "elevatorTopLeft4-electricalArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="180.94118 69.05882 180.94118 54.70588 373.17647 53.52941 373.17647 70.70588"
+          style={(path === "electricalArea4-storageAreaLeft4" || path === "storageAreaLeft4-electricalArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="289 56.29412 301.17647 56.29412 370.79412 56.29412 370.29032 68.05882"
+          style={(path === "electricalArea4-facilityStorageArea4" || path === "facilityStorageArea4-electricalArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="273.47059 120.64706 270.64706 120.64706 270.64706 61.11765 371.82353 61.11765 371.82353 69.88235"
+          style={(path === "electricalArea4-room#406_4" || path === "room#406_4-electricalArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="372.17647 60.35294 268.88235 60.35294 268.88235 181.88235 272.41176 181.88235"
+          style={(path === "electricalArea4-room#405_4" || path === "room#405_4-electricalArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="270.58824 293.05882 264.94118 293.05882 264.94118 59.52941 374.23529 59.52941 374.23529 69.76471"
+          style={(path === "electricalArea4-room#404_4" || path === "room#404_4-electricalArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="394.17647 363.47059 394.17647 369.64706 262.88235 369.64706 262.88235 58.17647 374.11765 58.17647 374.11765 70.76471"
+          style={(path === "electricalArea4-restRoomDown4" || path === "restRoomDown4-electricalArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="442.88235 362.94118 442.88235 371.05882 260.41176 371.05882 260.41176 57.11765 374.47059 57.11765 374.47059 70.88235"
+          style={(path === "electricalArea4-room#402_4" || path === "room#402_4-electricalArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="289 60.29412 375.47059 60.29412 375.47059 75.29412"
+          style={(path === "electricalArea4-facilityStorageArea4" || path === "facilityStorageArea4-electricalArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="374.58824 59.41176 394.11765 59.41176 394.11765 66.11765"
+          style={(path === "electricalArea4-room#407_4" || path === "room#407_4-electricalArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="375.05882 58.35294 443.41176 58.35294 443.41176 65.07872"
+          style={(path === "electricalArea4-room#408_4" || path === "room#408_4-electricalArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="375.41176 56.58824 508.35294 56.58824 508.35294 65.36691"
+          style={(path === "electricalArea4-room#409_4" || path === "room#409_4-electricalArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="375.29412 55.17647 553.76471 55.17647 553.76471 174.82353 549.29412 174.82353"
+          style={(path === "electricalArea4-kitchen4" || path === "kitchen4-electricalArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="375.41176 53.76471 554.82353 53.76471 554.82353 363.41176 519.52941 363.41176 519.52941 360.58824"
+          style={(path === "electricalArea4-room#401_4" || path === "room#401_4-electricalArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="375.35294 52 556 52 556 377.05882"
+          style={(path === "electricalArea4-kitchenwareStorageRoom4" || path === "kitchenwareStorageRoom4-electricalArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="562.35294 332.76471 557.05882 332.76471 557.05882 50.41176 375.17647 50.41176 375.17647 73.29412"
+          style={(path === "electricalArea4-storageAreaRight4" || path === "storageAreaRight4-electricalArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="579.64706 262.52941 557.94118 262.52941 557.94118 52.88235 375.52941 52.88235 375.52941 71.70588"
+          style={(path === "electricalArea4-silverRoom4" || path === "silverRoom4-electricalArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="567.58824 215.23529 559.52941 215.23529 559.52941 51.11765 375.29412 51.11765 375.29412 52 375.29412 72.94118"
+          style={(path === "electricalArea4-kitchenManagementOffices4" || path === "kitchenManagementOffices4-electricalArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="375.35294 54.47059 561 54.47059 561 202.94118 567.41176 202.94118"
+          style={(path === "electricalArea4-food&BeverageOffice4" || path === "food&BeverageOffice4-electricalArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="375.17647 55.64706 562.47059 55.64706 562.47059 141.76471 566.35294 141.76471"
+          style={(path === "electricalArea4-linenRoom4" || path === "linenRoom4-electricalArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="568.58824 50.94118 562.94118 50.94118 562.94118 57.41176 375.17647 57.41176 375.17647 71.70588"
+          style={(path === "electricalArea4-publicStairsDownTopLeft4" || path === "publicStairsDownTopLeft4-electricalArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="289.88235 58.70588 255.64706 58.70588 255.64706 374.58824 290.41176 374.58824 290.41176 365.23529"
+          style={(path === "facilityStorageArea4-showManagerRoom4" || path === "showManagerRoom4-facilityStorageArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="405.88235 375.17647 405.88235 372.82353 258.11765 372.82353 258.11765 55.64706 373.29412 55.64706 373.29412 71.41176"
+          style={(path === "electricalArea4-rainierVistaTerrace4" || path === "rainierVistaTerrace4-electricalArea4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+      </G>
+      <G id="uuid-e476a740-9db9-41e4-b140-9dfa04b4bbf7" data-name="Red Room 408">
+        <Polyline
+          points="243.09657 367.06352 266.54839 367.06352 266.54839 56.09357 444.03226 56.09357 444.03226 65.07872"
+          style={(path === "room#408_4-publicStairsUpLeft4" || path === "publicStairsUpLeft4-room#408_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="444.84485 65.07872 444.84485 58.33468 365.18788 58.33468 365.18788 61.76471"
+          style={(path === "room#408_4-restRoomTop4" || path === "restRoomTop4-room#408_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="445.46774 65.07872 445.46774 59.93548 559.9315 59.93548 559.93145 369.68548 484.03226 369.68548 484.03226 376.3629"
+          style={(path === "room#408_4-rainierVistaTerrace4" || path === "rainierVistaTerrace4-room#408_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="446.49974 65.07872 446.49974 61.76471 502.69962 61.76471 502.69962 65.36691"
+          style={(path === "room#408_4-room#409_4" || path === "room#409_4-room#408_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="442.68719 65.07872 442.68719 61.76471 396.93663 61.76471 396.93663 66.39113"
+          style={(path === "room#408_4-room#407_4" || path === "room#407_4-room#408_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="441.62649 65.07872 441.62649 53.41176 264.145 53.41176 264.145 115.9232 276.14516 115.9232"
+          style={(path === "room#408_4-room#406_4" || path === "room#406_4-room#408_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="439.99819 65.07872 439.84687 51.76471 260.14903 51.76471 260.14903 179.68542 260.14903 237.92339 274.64516 237.92339"
+          style={(path === "room#408_4-room#405_4" || path === "room#405_4-room#408_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="447 65.07872 446.97319 49.7389 259.14903 50.35484 258.27823 293.17434 271.87903 293.17434"
+          style={(path === "room#408_4-room#404_4" || path === "room#404_4-room#408_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="448.73559 65.07872 448.73559 49.7389 557.91557 49.7389 557.91557 177.3261 551.22582 177.3261"
+          style={(path === "room#408_4-kitchen4" || path === "kitchen4-room#408_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="450.31229 65.07872 450.31229 51.76471 556.44606 51.76471 556.44606 200.98177 564.32258 200.98177"
+          style={(path === "room#408_4-food&BeverageOffice4" || path === "food&BeverageOffice4-room#408_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="451.01166 65.07872 451.01166 52.95965 555 52.95965 555 213.59274 567.96774 213.59274"
+          style={(path === "room#408_4-kitchenManagementOffices4" || path === "kitchenManagementOffices4-room#408_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="452.15872 65.07872 452.15872 54.01868 553.72003 54.01868 553.72003 250.54488 568.45161 250.54488"
+          style={(path === "room#408_4-elevatorBottomRight4" || path === "elevatorBottomRight4-room#408_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="452.95282 65.07872 452.95282 55.39516 552.57283 55.39516 552.57283 262.41248 579.46533 262.41248"
+          style={(path === "room#408_4-silverRoom4" || path === "silverRoom4-room#408_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="453.65872 65.07872 453.65872 56.56855 551.16073 56.56855 551.16073 277.23272 563.55893 277.23272"
+          style={(path === "room#408_4-restRoomRight4" || path === "restRoomRight4-room#408_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="454.80572 65.07872 454.80572 57.31468 549.92519 57.31468 549.92519 331.09666 564.72581 331.09666"
+          style={(path === "room#408_4-storageAreaRight4" || path === "storageAreaRight4-room#408_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="564.88917 344.1074 558.85 344.1074 558.85 48.11765 447 48.11765"
+          style={(path === "room#408_4-publicStairsDownRight4" || path === "publicStairsDownRight4-room#408_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="449.41176 65.07872 449.41176 51.05882 570.04839 51.05882"
+          style={(path === "room#408_4-publicStairsDownTopRight4" || path === "publicStairsDownTopRight4-room#408_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="332.22 360.78 332.22 370.91 394.9 370.91 394.9 360.39"
+          style={(path === "room#403_4-restRoomDown4" || path === "restRoomDown4-room#403_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+
+        <Polyline
+          points="456 66.67 456 58.52 564.53 58.52 564.53 373.02 395.5 373.02 395.5 360.32"
+          style={(path === "room#408_4-room#403_4" || path === "room#403_4-room#408_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="447.76471 65.07872 447.76471 49.05882 289.64706 49.05882 289.64706 58.23529"
+          style={(path === "room#408_4-facilityStorageArea4" || path === "facilityStorageArea4-room#408_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="442.07258 65.07872 442.07259 54.70588 261.41176 54.70588 261.41176 370 288.94118 370 288.94118 364.82353"
+          style={(path === "room#408_4-showManagerRoom4" || path === "showManagerRoom4-room#408_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="457.16015 65.07872 457.16015 60.95161 562.88235 60.95161 562.88235 371.14763 445.98041 371.14763 445.98041 360.3817"
+          style={(path === "room#408_4-room#402_4" || path === "room#402_4-room#408_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+      </G>
+      <G id="uuid-750f85ae-a2af-4f57-942b-8a29a921dd07" data-name="Stairs - Pink">
+        <Polyline
+          points="181.21143 49.74194 181.21143 57.40726 187.42742 57.40726 187.42742 68.63624 264.29839 68.63624 264.29839 365.28226 179.09657 365.28226"
+          style={(path === "publicStairsDownTopLeft4-guestElevators4" || path === "guestElevators4-publicStairsDownTopLeft4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="394.27783 360.77769 394.27783 365.0569 304.29032 365.05691 304.29032 368.16129 179.09657 368.16129"
+          style={(path === "room#403_4-guestElevators4" || path === "guestElevators4-room#403_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="442.55787 360.77769 442.55787 366.12907 304.78197 366.12903 304.78197 368.81591 179.09657 368.81591"
+          style={(path === "room#402_4-guestElevators4" || path === "guestElevators4-room#402_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="519.96371 360.77769 519.96371 365.6089 305.3871 365.6089 305.3871 369.3361 179.09657 369.33611"
+          style={(path === "room#401_4-guestElevators4" || path === "guestElevators4-room#401_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="179.09657 370.55561 306.68239 370.5556 306.68236 367.43548 444.3795 367.50436 444.37951 366.66591 556.82267 366.6659 556.79705 341.80207 566.68749 341.80207"
+          style={(path === "publicStairsDownRight4-guestElevators4" || path === "guestElevators4-publicStairsDownRight4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="567.74274 50.35484 560.53629 50.35484 560.53629 92.49172 556.1822 92.49172 556.18216 366.06431 443.76613 366.06432 443.7661 366.8871 306.08059 366.8871 306.08059 370.00607 179.09657 370.00611"
+          style={(path === "publicStairsDownTopRight4-guestElevators4" || path === "guestElevators4-publicStairsDownTopRight4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="568.06279 212.9981 557.3548 212.9981 557.35484 367.1583 444.96243 367.1583 444.96239 368.02821 307.27438 368.02823 307.27438 371.14763 179.09657 371.14761"
+          style={(path === "kitchenManagementOffices4-guestElevators4" || path === "guestElevators4-kitchenManagementOffices4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="179.09657 371.67591 307.90588 371.6759 307.90588 368.65199 445.5666 368.652 445.55445 367.72904 557.93093 367.729 557.9309 196.26596 569.09202 196.26596"
+          style={(path === "food&BeverageOffice4-guestElevators4" || path === "guestElevators4-food&BeverageOffice4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="179.09657 365.8871 265.05982 365.8871 265.05979 54.29115 559.91935 54.29115 559.91935 49.7389 567.74274 49.7389"
+          style={(path === "publicStairsDownTopRight4-guestElevators4" || path === "guestElevators4-publicStairsDownTopRight4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="564.32258 141.80645 553.33869 141.80645 553.33871 363.302 395.5 363.302 395.5 371.67591 331.36165 371.67591 331.36165 369.33611 308.53226 369.33611 308.53226 372.43548 179.09657 372.43551"
+          style={(path === "linenRoom4-guestElevators4" || path === "guestElevators4-linenRoom4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="549.21178 228.34444 554.3871 228.34444 554.3871 373.02421 179.09657 373.02419"
+          style={(path === "kitchen4-guestElevators4" || path === "guestElevators4-kitchen4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="179.09657 373.76471 407.76471 374.23125 407.76471 375.64762"
+          style={(path === "rainierVistaTerrace4-guestElevators4" || path === "guestElevators4-rainierVistaTerrace4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="179.09657 366.78227 266.10908 366.78227 266.10908 299.88235 270.94118 299.88235"
+          style={(path === "room#404_4-guestElevators4" || path === "guestElevators4-room#404_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="179.09657 364.16744 262.94118 364.16744 263.05882 236.96903 269.05882 236.96903"
+          style={(path === "room#405_4-guestElevators4" || path === "guestElevators4-room#405_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="179.09657 362.9519 261.76471 363.06452 261.76471 177.41176 272.35294 177.41176"
+          style={(path === "room#405_4-guestElevators4" || path === "guestElevators4-room#405_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="179.09657 361.75646 260.70588 361.75646 260.70588 121.60903 272.35294 121.60903"
+          style={(path === "room#406_4-guestElevators4" || path === "guestElevators4-room#406_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="396.61243 62.04151 396.61243 53.29412 261.41176 53.29412 261.41176 360.35294 179.09657 360.35294"
+          style={(path === "room#407_4-guestElevators4" || path === "guestElevators4-room#407_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="182.09657 358.03776 259.17647 358.03776 259.35294 51.82258 506.55701 51.82258 506.55701 58.14516"
+          style={(path === "room#409_4-guestElevators4" || path === "guestElevators4-room#409_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="189.09657 356.63764 257.43472 356.63764 257.43472 56.31452 442.68719 56.31452 442.68719 63.11181"
+          style={(path === "room#408_4-guestElevators4" || path === "guestElevators4-room#408_4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="179.09657 374.70616 318.90382 374.70616 318.90382 371.14763"
+          style={(path === "restRoomDown4-guestElevators4" || path === "guestElevators4-restRoomDown4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="196.09657 354.991 256.0777 354.991 256.0777 71.35516 183.3057 71.35516"
+          style={(path === "storageAreaLeft4-guestElevators4" || path === "guestElevators4-storageAreaLeft4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+        <Polyline
+          points="178.44118 367.34946 564.32258 367.34946 564.32258 328.70588"
+          style={(path === "storageAreaRight4-guestElevators4" || path === "guestElevators4-storageAreaRight4") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: ".25px",
+          } : {}}
+        />
+      </G>
     </Svg>
   )
 };
