@@ -340,6 +340,30 @@ export const destinations = [
         id:'escalatorLevel4',
         number: '2',
       },
+      {
+        label: "Cinema Hall Left      Level 2",
+        value: 99,
+        id: "cinemaLeft",
+        number: '2',
+      },
+      {
+        label: "Cinema Hall Mid Left  Level 2",
+        value: 100,
+        id: "cinemaMidLeft",
+        number: '2',
+      },
+      {
+        label: "Cinema Hall Mid Right  Level 2",
+        value: 101,
+        id: "cinemaMidRight",
+        number: '2',
+      },
+      {
+        label: "Cinema Hall Right    Level 2",
+        value: 102,
+        id: "cinemaRight",
+        number: '2',
+      },
   
       {
         label: "NW Emergency-                      Level 1",
@@ -484,30 +508,7 @@ export const destinations = [
       //   number: '2M',
       //   id:"hr_hall"
       // },
-      // {
-      //   label: "Cinema Hall",
-      //   value: 184,
-      //   id: "cinemaLeft",
-      //   number: '2',
-      // },
-      // {
-      //   label: "Cinema Hall",
-      //   value: 185,
-      //   id: "cinemaMidLeft",
-      //   number: '2',
-      // },
-      // {
-      //   label: "Cinema Hall",
-      //   value: 186,
-      //   id: "cinemaMidRight",
-      //   number: '2',
-      // },
-      // {
-      //   label: "Cinema Hall",
-      //   value: 187,
-      //   id: "cinemaRight",
-      //   number: '2',
-      // },
+    
   
       // End of Testing Object
       {

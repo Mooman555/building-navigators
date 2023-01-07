@@ -24,6 +24,9 @@ const DropDown = ({ itemsDataList, placeHolderText, navigateTo, location, setSta
         startProcess()
     }, [])
 
+  console.log("Dropdown RENDER")
+
+
     const startProcess = async () => {
         if ( location) {
             let connectedDevices = await initiateProcess(isScanning, setIsScanning)
@@ -36,10 +39,14 @@ const DropDown = ({ itemsDataList, placeHolderText, navigateTo, location, setSta
                     }
                 })
             });
+
+           //causing the Re-render of Parent and Child Components
             setBeaconDataSet(array);
-            console.log(sortedConnectedDevices,"sortedConnectedDevices")
-            findNearestDevice(connectedDevices[0])
-            itemsDataList = filterItems(itemsDataList)
+           
+            findNearestDevice(sortedConnectedDevices[0])
+
+            //This is Non-sense because Component Rendered Before it happened 
+            // itemsDataList = filterItems(itemsDataList)
         }
     }
 
@@ -56,12 +63,15 @@ const DropDown = ({ itemsDataList, placeHolderText, navigateTo, location, setSta
     }
 
     const findNearestDevice = (device) => {
-        console.log(device, "device")
         if (device) {
             destinations?.forEach(item => {
                 if (item.id === device?.location_id) {
-                    console.log("ffff", item)
+
+                    //causing the Re-render of Component
+
                     setStartingValue(item.value)
+
+                    //causing the Re-render of Parent and Child Components
                     setStartPosition(item)
                 }
             })
@@ -99,7 +109,6 @@ const DropDown = ({ itemsDataList, placeHolderText, navigateTo, location, setSta
                     style={{ paddingLeft: 30, borderRadius: 30, zIndex:1 }}
                     searchable={true}
                     onSelectItem={(item) => {
-                        console.log(item,"item")
                         location ? setStartPosition(item) : setDestinationPoint(item)
                     }}
                     arrowIconStyle={{

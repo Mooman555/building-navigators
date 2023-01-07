@@ -1,7 +1,4 @@
-import React, { useState, useEffect } from "react";
-import {
-  Alert
-} from "react-native";
+import React, { useState, useEffect,useCallback ,useRef } from "react";
 import Svg, {
   G,
   Path,
@@ -12,60 +9,286 @@ import Svg, {
   TSpan,
   Circle,
 } from "react-native-svg";
-// import { FontAwesome5 } from '@expo/vector-icons';
-// import Geolocation from '@react-native-community/geolocation';
-// import { Marker } from "react-native-maps";
 import locate from 'multilateration';
 import { multilaterate } from "../../Functions/multilaterate";
+import { initiateProcess } from '../../Functions/initiateProcess';
+import { beacons } from '../../data/beacons';
+import { useNavigation } from "@react-navigation/native";
+
+
+                                                                  /**
+                                                                   * BATCH STATE UPDATING HAPPENING IN THIS COMPONENT 
+                                                                   */
+
+
 const SVGComponent = (props) => {
 
   const [path, setPath] = useState("")
   const [coordinate, setCoordinate] = useState(null)
   const [showSvg, setShowSvg] = useState(false)
+  const [showStairsCircle, setShowStairsCircle] = useState(false)
+  const [showElevatorCircle, setShowElevatorCircle] = useState(false)
   let { startObject, destinationObject, beaconDataSet } = props
+  const [updatedBeacons, setUpdatedBeacons] = useState(beaconDataSet)
+  const navigation = useNavigation();
+  const [isScanning, setIsScanning] = useState(false);
+  const [isExecuting, setIsExecuting] = useState(false);
+  const isExecutingRef = useRef(isExecuting);
 
   useEffect(() => {
-    if (startObject !== null && destinationObject !== null && startObject?.id !== null && destinationObject?.id !== null) {
-      console.log(`${startObject?.id}-${destinationObject?.id}`, "aaaa")
-      setPath(`${startObject?.id}-${destinationObject?.id}`)
-      setShowSvg(true)
-      console.log(beaconDataSet, "beaconDataSet")
-      let result = null;
-      if (beaconDataSet?.length > 2) {
-        result = locate(beaconDataSet);
-        // var deviceLocation = multilaterate(beaconDataSet, beaconDataSet.map(p => p.distance));
-        // console.log(deviceLocation, "result")
-        setCoordinate(result)
-      } else if (beaconDataSet?.length < 2) {
-        result = locate([...beaconDataSet, { distance: 0, x: 0, y: 0 }, { distance: 0, x: 0, y: 0 }]);
-        // beaconDataSet =[...beaconDataSet, { distance: 0, x: 0, y: 0 }, { distance: 0, x: 0, y: 0 }]
-        // var deviceLocation = multilaterate(beaconDataSet, beaconDataSet.map(p => p.distance));
-        // console.log(deviceLocation, "result")
-        setCoordinate(result)
-      }
-      else if (beaconDataSet?.length === 2) {
-        result = locate([...beaconDataSet, { distance: 0, x: 0, y: 0 }]);
-        // beaconDataSet =[...beaconDataSet ,{ distance: 0, x: 0, y: 0 }]
-        // var deviceLocation = multilaterate(beaconDataSet, beaconDataSet.map(p => p.distance));
-        // console.log(deviceLocation, "result")
-        setCoordinate(result)
-      }
-      // Geolocation.getCurrentPosition(
-      //   position => {
-      //     const location = position;
-      //     // this.setState({ location });
-      //     console.log(location, "location")
-      //     console.log(location?.coords, "location")
-      //   },
-      //   error => console.log(error.message, "Error"),
-      //   { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 }
-      // );
 
+    /**
+     * BATCH STATE UPDATE
+     */
+
+    if (startObject !== null && destinationObject !== null && startObject?.id !== null && destinationObject?.id !== null) {
+      // let result = null;
+      // if (updatedBeacons?.length > 2) {
+      //   result = locate(updatedBeacons);
+      //   // var deviceLocation = multilaterate(updatedBeacons, updatedBeacons.map(p => p.distance));
+      //   // console.log(deviceLocation, "result")
+      //   setCoordinate(result)
+      // } else if (updatedBeacons?.length < 2) {
+      //   result = locate([...updatedBeacons, { distance: 0, x: 0, y: 0 }, { distance: 0, x: 0, y: 0 }]);
+      //   // updatedBeacons =[...updatedBeacons, { distance: 0, x: 0, y: 0 }, { distance: 0, x: 0, y: 0 }]
+      //   // var deviceLocation = multilaterate(updatedBeacons, updatedBeacons.map(p => p.distance));
+      //   // console.log(deviceLocation, "result")
+      //   setCoordinate(result)
+      // }
+      // else if (updatedBeacons?.length === 2) {
+      //   result = locate([...updatedBeacons, { distance: 0, x: 0, y: 0 }]);
+      //   // updatedBeacons =[...updatedBeacons ,{ distance: 0, x: 0, y: 0 }]
+      //   // var deviceLocation = multilaterate(updatedBeacons, updatedBeacons.map(p => p.distance));
+      //   // console.log(deviceLocation, "result")
+      //   setCoordinate(result)
+      // }
+      if (startObject?.number !== destinationObject?.number) {
+        if (destinationObject?.number === "2M") {
+          setPath(`cinemaMidRight-restRooms2`)
+          setShowStairsCircle(true)
+        } else {
+          setPath(`${startObject?.id}-elevator2`)
+          setShowElevatorCircle(true)
+        }
+      } else {
+        setPath(`${startObject?.id}-${destinationObject?.id}`)
+      }
+
+      console.log("calculated")
+      setShowSvg(true)
     }
   }, [startObject, destinationObject])
 
+
+
+
+  useEffect(() => {
+    isExecutingRef.current = isExecuting;
+  }, [isExecuting]);
+
+ useEffect(() => {
+    console.log("updatedBeacons useEffect")
+    let result = null;
+    if (updatedBeacons?.length > 2) {
+      result = locate(updatedBeacons);
+    } else if (updatedBeacons?.length < 2) {
+      result = locate([...updatedBeacons, { distance: 0, x: 0, y: 0 }, { distance: 0, x: 0, y: 0 }]);
+    } else if (updatedBeacons?.length === 2) {
+      result = locate([...updatedBeacons, { distance: 0, x: 0, y: 0 }]);
+    }
+    console.log(result,"result")
+    setCoordinate(result)
+  }, [updatedBeacons])
+
+  const updateCurrentPosition = async () => {     
+    console.log("updatePosition Called")
+    let connectedDevices = await initiateProcess(false, setIsScanning)
+    console.log("initiate Process Completed")
+    let array = [];
+    beacons?.forEach(beacon => {
+        connectedDevices?.forEach(device => {
+            if(beacon?.location_id === device?.location_id ){
+                array.push({...beacon,distance:device?.distance})
+            }
+        })
+    });
+    setUpdatedBeacons(array);        
+  }
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      console.log("set interval")
+      setIsExecuting(prev => !prev)
+    }, 20000);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    if (isExecutingRef.current) {
+      updateCurrentPosition().then(() => {
+        console.log("updatePosition completed")
+      })
+    }
+  }, [isExecuting])
+
+
+
+     /**
+      * Pretty Much Working Code
+      */
+
+
+  // useEffect(() => {
+  //   console.log("updatedBeacons useEffect")
+  //   let result = null;
+  //   if (updatedBeacons?.length > 2) {
+  //     result = locate(updatedBeacons);
+  //   } else if (updatedBeacons?.length < 2) {
+  //     result = locate([...updatedBeacons, { distance: 0, x: 0, y: 0 }, { distance: 0, x: 0, y: 0 }]);
+  //   } else if (updatedBeacons?.length === 2) {
+  //     result = locate([...updatedBeacons, { distance: 0, x: 0, y: 0 }]);
+  //   }
+  //   setCoordinate(result)
+  // }, [updatedBeacons])
+
+  // const updateCurrentPosition = async () => {     
+  //   console.log("updatePosition Called")
+  //   let connectedDevices = await initiateProcess(isScanning, setIsScanning)
+  //   console.log("initiate Process Completed")
+  //   let array = [];
+  //   beacons?.forEach(beacon => {
+  //       connectedDevices?.forEach(device => {
+  //           if(beacon?.location_id === device?.location_id ){
+  //               array.push({...beacon,distance:device?.distance})
+  //           }
+  //       })
+  //   });
+  //   setUpdatedBeacons(array);        
+  // }
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     console.log("set interval")
+  //     setIsExecuting(prev => !prev)
+  //   }, 20000);
+  //   return () => clearInterval(interval);
+  // }, []);
+
+  // useEffect(() => {
+  //   console.log(isExecuting,"isExecuting Value")
+  //   if (isExecuting) {
+  //     updateCurrentPosition().then(() => {
+  //       console.log("updatePosition completed")
+  //     })
+  //   }
+  // }, [isExecuting])
+
+  // console.log("Level 2 SVG Render")
+
+
+
+
+
+
+
+
+  /**
+   * MY NON-SENSE
+   */
+
+
+
+
+
+//   useEffect(() => {
+//     console.log("updatedBeacons useEffect")
+//     let result = null;
+//     if (updatedBeacons?.length > 2) {
+//       result = locate(updatedBeacons);
+//       setCoordinate(result)
+//     } else if (updatedBeacons?.length < 2) {
+//       result = locate([...updatedBeacons, { distance: 0, x: 0, y: 0 }, { distance: 0, x: 0, y: 0 }]);
+//       setCoordinate(result)
+//     } else if (updatedBeacons?.length === 2) {
+//       result = locate([...updatedBeacons, { distance: 0, x: 0, y: 0 }]);
+//       setCoordinate(result)
+//     }
+//   }, [updatedBeacons])
+
+
+
+//   const updateCurrentPosition = async () => {     
+//     console.log("updatePosition Called")
+//     let connectedDevices = await initiateProcess(isScanning, setIsScanning)
+//     console.log("initiate Process Completed")
+//     let array = [];
+//     beacons?.forEach(beacon => {
+//         connectedDevices?.forEach(device => {
+//             if(beacon?.location_id === device?.location_id ){
+//                 array.push({...beacon,distance:device?.distance})
+//             }
+//         })
+//     });
+//     setUpdatedBeacons(array);        
+// }
+
+
+//   useEffect(() => {
+//       updateCurrentPosition()
+//   }, [isExecuting])
+  
+  
+  
+
+//   console.log("Level 2 SVG Render")
+
+//   setInterval(() => {
+//        console.log("set interval")
+//        setIsExecuting(prev => prev = !prev)
+//   }, 20000);
+ 
+
+
+ 
+
+  // const performAction = useCallback(() => {
+  //   console.log("first")
+  //   console.log('|||||||||||||||||||||||||||||||||||||||')
+  //   let value = updateCurrentPosition();
+  //   if (value) {
+  //     setIsExecuting(!isExecuting)
+  //   }
+  //   console.log('????????????????????????????????????')
+  //   // Simulate an async action
+  //   // setTimeout(() => {
+  //   //   setIsExecuting(false);
+  //   // }, 1000);
+  // }, [updatedBeacons]);
+
+    
+  
+  
+  
+    
+
+      // performAction();
+
+ 
+ 
+  
+  const handleCirclePress = () => {
+    navigation.navigate('MapScreen', {
+      startObject: destinationObject?.number === "2M" ? { number: "2M", id: "stairs2M" } : `elevator${destinationObject?.number}`,
+      destinationObject: destinationObject,
+      beaconDataSet: updatedBeacons,
+      showCircle: true
+    })
+  }
+
+
+  
   return (
-    showSvg && 
+    showSvg &&
     <Svg
       id="uuid-1833b59a-0f30-4d33-98c8-df236828a589"
       data-name="Layer 1"
@@ -75,7 +298,6 @@ const SVGComponent = (props) => {
       preserveAspectRatio="xMidYMid meet"
       {...props}
     >
-      {console.log(path, "path")}
       <G id="uuid-03f4e98b-c3ae-4f42-b6ff-530bfb10badb" data-name="BG">
         <Path
           d="M72.40519,295.97851v.00995l-.53131,6.97003h-20.59857v-3.71002h-7c0-1.70996,.68994-3.26001,1.81006-4.38,1-.98999,2.33008-1.64996,3.81006-1.77997,.18994-.02002,.37988-.03003,.56982-.03003l.99661-.03427,.00894-4.0407,9.94465,2.38496v1.97003l10.98975,2.64001Z"
@@ -7616,7 +7838,7 @@ const SVGComponent = (props) => {
             fill: "none",
             stroke: "black",
             strokeMiterlimit: 10,
-            strokeWidth: ".25px",
+            strokeWidth: "1px",
           } : {}}
         />
         <Polyline
@@ -7625,7 +7847,7 @@ const SVGComponent = (props) => {
             fill: "none",
             stroke: "black",
             strokeMiterlimit: 10,
-            strokeWidth: ".25px",
+            strokeWidth: "1px",
           } : {}}
         />
         <Polyline
@@ -7634,7 +7856,7 @@ const SVGComponent = (props) => {
             fill: "none",
             stroke: "black",
             strokeMiterlimit: 10,
-            strokeWidth: ".25px",
+            strokeWidth: "1px",
           } : {}}
         />
         <Polyline
@@ -7643,7 +7865,7 @@ const SVGComponent = (props) => {
             fill: "none",
             stroke: "black",
             strokeMiterlimit: 10,
-            strokeWidth: ".25px",
+            strokeWidth: "1px",
           } : {}}
         />
         <Polyline
@@ -7652,7 +7874,7 @@ const SVGComponent = (props) => {
             fill: "none",
             stroke: "black",
             strokeMiterlimit: 10,
-            strokeWidth: ".25px",
+            strokeWidth: "1px",
           } : {}}
         />
         <Polyline
@@ -7661,7 +7883,7 @@ const SVGComponent = (props) => {
             fill: "none",
             stroke: "black",
             strokeMiterlimit: 10,
-            strokeWidth: ".25px",
+            strokeWidth: "1px",
           } : {}}
         />
         <Polyline
@@ -7670,7 +7892,7 @@ const SVGComponent = (props) => {
             fill: "none",
             stroke: "black",
             strokeMiterlimit: 10,
-            strokeWidth: ".25px",
+            strokeWidth: "1px",
           } : {}}
         />
         <Polyline
@@ -7679,7 +7901,7 @@ const SVGComponent = (props) => {
             fill: "none",
             stroke: "black",
             strokeMiterlimit: 10,
-            strokeWidth: ".25px",
+            strokeWidth: "1px",
           } : {}}
         />
         <Polyline
@@ -7688,7 +7910,7 @@ const SVGComponent = (props) => {
             fill: "none",
             stroke: "black",
             strokeMiterlimit: 10,
-            strokeWidth: ".25px",
+            strokeWidth: "1px",
           } : {}}
         />
         <Polyline
@@ -7697,7 +7919,7 @@ const SVGComponent = (props) => {
             fill: "none",
             stroke: "black",
             strokeMiterlimit: 10,
-            strokeWidth: ".25px",
+            strokeWidth: "1px",
           } : {}}
         />
         <Polyline
@@ -7706,7 +7928,7 @@ const SVGComponent = (props) => {
             fill: "none",
             stroke: "black",
             strokeMiterlimit: 10,
-            strokeWidth: ".25px",
+            strokeWidth: "1px",
           } : {}}
         />
         <Polyline
@@ -7715,127 +7937,114 @@ const SVGComponent = (props) => {
             fill: "none",
             stroke: "black",
             strokeMiterlimit: 10,
-            strokeWidth: ".25px",
+            strokeWidth: "1px",
           } : {}}
         />
-    <Polyline 
-    points="146.19616 305.9 164.8387 305.9 164.83871 333.91992 105.58065 333.91992 105.58065 412.12681 163.45984 412.12681 163.45984 423.97217" 
-    style={(path === "elevator2-theaterDoorsEnteranceRight2" || path === "theaterDoorsEnteranceRight2-elevator2") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-    />
-  
-  <Circle cx={61.92297} cy={289.81076} r={0.88254} style={{ fill: "red" }} />
-  <Circle cx={38.2342} cy={423.36704} r={0.88254} style={{ fill: "red" }} />
-  <Circle cx={170.3398} cy={339.29984} r={0.88254} style={{ fill: "red" }} />
-  <Circle cx={161.19079} cy={289.82103} r={0.88254} style={{ fill: "red" }} />
-  <Circle cx={184.6848} cy={270.61991} r={0.88254} style={{ fill: "red" }} />
-  <Circle cx={39.5688} cy={270.61991} r={0.88254} style={{ fill: "red" }} />
-  <Circle cx={88.53172} cy={196.6433} r={0.88254} style={{ fill: "red" }} />
-  <Circle cx={133.26984} cy={196.93359} r={0.88254} style={{ fill: "red" }} />
-  <G>
-    <Circle
-      cx={57.01104}
-      cy={199.52522}
-      r={0.88254}
-      style={{ fill: "red" }}
-    />
-    <Circle
-      cx={48.31942}
-      cy={222.57422}
-      r={0.88254}
-      style={{ fill: "red" }}
-    />
-    <Circle cx={39.38519} cy={247.3293} r={0.88254} style={{ fill: "red" }} />
-  </G>
-  <G>
-    <Circle
-      cx={166.48679}
-      cy={199.52522}
-      r={0.88254}
-      style={{ fill: "red" }}
-    />
-    <Circle
-      cx={173.71393}
-      cy={219.47841}
-      r={0.88254}
-      style={{ fill: "red" }}
-    />
-    <Circle
-      cx={181.47589}
-      cy={240.16336}
-      r={0.88254}
-      style={{ fill: "red" }}
-    />
-  </G>
-  <Polyline
-    points="74.79773 314.75977 66.51613 314.75977 66.51613 409.26823 162.26825 409.26823 162.26825 423.97217"
-    style={(path === "elevator2-theaterDoorsEnteranceLeft2" || path === "theaterDoorsEnteranceLeft2-elevator2") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-  />
-  <Polyline
-    points="50.12097 312.03027 60.19355 312.03027 60.19355 335.20996 78.03735 335.20996 78.03735 414.87344 160.90403 414.87344 160.90403 423.97217"
-    style={(path === "elevator2-theaterDoorsEnteranceLeft2" || path === "theaterDoorsEnteranceLeft2-elevator2") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-  />
-  <Polyline
-    points="171.06665 296.56982 162.36168 296.56982 162.36168 305.10986 166.36773 305.10986 166.36773 332.55957 104.00085 332.55957 104.00085 410.7998 164.66836 410.7998 164.66836 423.97217"
-    style={(path === "elevator2-theaterDoorsEnteranceRight2" || path === "theaterDoorsEnteranceRight2-elevator2") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-  />
-  <Polyline
-    points="86.8713 426.55957 86.8713 416.20996 159.45241 416.20996 159.45241 423.97217"
-    style={(path === "elevator2-mainEnterance2" || path === "mainEnterance2-elevator2") ? {
-      fill: "none",
-      stroke: "black",
-      strokeMiterlimit: 10,
-      strokeWidth: ".25px",
-    } : {}}
-  />
+        <Polyline
+          points="146.19616 305.9 164.8387 305.9 164.83871 333.91992 105.58065 333.91992 105.58065 412.12681 163.45984 412.12681 163.45984 423.97217"
+          style={(path === "elevator2-theaterDoorsEnteranceRight2" || path === "theaterDoorsEnteranceRight2-elevator2") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: "1px",
+          } : {}}
+        />
 
-
-
-      { 
-        coordinate !==null &&
-        <>
-         <Polygon points="50,0 55,10 50,20 45,10" fill="#FFA07A" stroke="black" stroke-width="2" x={coordinate?.x} y={coordinate?.y} />
-         {
-            Alert.alert(
-            "Location Found",
-            "Please Join The Path",
-              [
-                {
-                  text: "Cancel",
-                  onPress: () => console.log("Cancel Pressed"),
-                  style: "cancel"
-                },
-                { text: "OK", onPress: () => console.log("OK Pressed") }
-              ]
-            )
-          }
-        {/* <Circle xmlns="http://www.w3.org/2000/svg" cx={coordinate?.x} cy={coordinate?.y} r="3" stroke="black" stroke-width="1" fill="green"/> */}
-        </>
-
-      } 
+        <Circle cx={61.92297} cy={289.81076} r={0.88254} style={{ fill: "red" }} />
+        <Circle cx={38.2342} cy={423.36704} r={0.88254} style={{ fill: "red" }} />
+        <Circle cx={170.3398} cy={339.29984} r={0.88254} style={{ fill: "red" }} />
+        <Circle cx={161.19079} cy={289.82103} r={0.88254} style={{ fill: "red" }} />
+        <Circle cx={184.6848} cy={270.61991} r={0.88254} style={{ fill: "red" }} />
+        <Circle cx={39.5688} cy={270.61991} r={0.88254} style={{ fill: "red" }} />
+        <Circle cx={88.53172} cy={196.6433} r={0.88254} style={{ fill: "red" }} />
+        <Circle cx={133.26984} cy={196.93359} r={0.88254} style={{ fill: "red" }} />
+        <G>
+          <Circle
+            cx={57.01104}
+            cy={199.52522}
+            r={0.88254}
+            style={{ fill: "red" }}
+          />
+          <Circle
+            cx={48.31942}
+            cy={222.57422}
+            r={0.88254}
+            style={{ fill: "red" }}
+          />
+          <Circle cx={39.38519} cy={247.3293} r={0.88254} style={{ fill: "red" }} />
+        </G>
+        <G>
+          <Circle
+            cx={166.48679}
+            cy={199.52522}
+            r={0.88254}
+            style={{ fill: "red" }}
+          />
+          <Circle
+            cx={173.71393}
+            cy={219.47841}
+            r={0.88254}
+            style={{ fill: "red" }}
+          />
+          <Circle
+            cx={181.47589}
+            cy={240.16336}
+            r={0.88254}
+            style={{ fill: "red" }}
+          />
+        </G>
+        <Polyline
+          points="74.79773 314.75977 66.51613 314.75977 66.51613 409.26823 162.26825 409.26823 162.26825 423.97217"
+          style={(path === "elevator2-theaterDoorsEnteranceLeft2" || path === "theaterDoorsEnteranceLeft2-elevator2") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: "1px",
+          } : {}}
+        />
+        <Polyline
+          points="50.12097 312.03027 60.19355 312.03027 60.19355 335.20996 78.03735 335.20996 78.03735 414.87344 160.90403 414.87344 160.90403 423.97217"
+          style={(path === "elevator2-theaterDoorsEnteranceLeft2" || path === "theaterDoorsEnteranceLeft2-elevator2") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: "1px",
+          } : {}}
+        />
+        <Polyline
+          points="171.06665 296.56982 162.36168 296.56982 162.36168 305.10986 166.36773 305.10986 166.36773 332.55957 104.00085 332.55957 104.00085 410.7998 164.66836 410.7998 164.66836 423.97217"
+          style={(path === "elevator2-theaterDoorsEnteranceRight2" || path === "theaterDoorsEnteranceRight2-elevator2") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: "1px",
+          } : {}}
+        />
+        <Polyline
+          points="86.8713 426.55957 86.8713 416.20996 159.45241 416.20996 159.45241 423.97217"
+          style={(path === "elevator2-mainEnterance2" || path === "mainEnterance2-elevator2") ? {
+            fill: "none",
+            stroke: "black",
+            strokeMiterlimit: 10,
+            strokeWidth: "1px",
+          } : {}}
+        />
+        {
+          coordinate !== null &&
+          <>
+            <Polygon points="50,0 55,10 50,20 45,10" fill="#FFA07A" stroke="black" stroke-width="2" x={coordinate?.x} y={coordinate?.y} />
+          </>
+        }
+        {
+          showElevatorCircle && <Circle xmlns="http://www.w3.org/2000/svg" cx="172" cy="415" r="8" stroke="black" stroke-width="1" fill="green" onPress={handleCirclePress} />
+        }
+        {
+          showStairsCircle && <Circle xmlns="http://www.w3.org/2000/svg" cx="185" cy="332" r="8" stroke="black" stroke-width="1" fill="green" onPress={handleCirclePress} />
+        }
 
       </G>
     </Svg>
-    
+
   )
 };
 export default SVGComponent;

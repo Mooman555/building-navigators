@@ -45,6 +45,9 @@ const Home = () => {
 
   }, [startPosition, destinationPoint])
 
+
+  console.log("HOME RENDER")
+
   const startPositionHandler = (value) => {
     setStartPosition(value)
   }

@@ -20,18 +20,25 @@ import Mazanine from "../../Components/SVGS/Mazanine";
 
 
 
-export default function MapScreen({ route }) {
-  const { startObject,destinationObject,beaconDataSet } = route.params;
+export default function MapScreen(props) {
+
+ 
+  const { startObject,destinationObject,beaconDataSet } = props?.route?.params;
   const  {number}  = startObject;
   const darkMode = useSelector((state) => state.darkMode);
   const [renderSvg, setRenderSvg] = useState(number);
   
   var distances = []
 
+  // useEffect(() => {
+  //   setRenderSvg(number)
+  // }, [number])
+  
+  console.log("Mapscreen Render")
 
   //onPress
   const onPress = (name) => {
-    setRenderSvg(name)
+    setRenderSvg(name)  
   };
   let Levels = [
     {
@@ -63,14 +70,13 @@ export default function MapScreen({ route }) {
   ]
 
   const RenderSvg = (svgNumber) => {
-      console.log(svgNumber,"svgNumber")
       switch (svgNumber) {
         case "1":
          return <Level_1 destinationObject={destinationObject} startObject={startObject} beaconDataSet={beaconDataSet}/>;
         case "2":
-          return <Level_2 destinationObject={destinationObject} startObject={startObject} beaconDataSet={beaconDataSet}/>;
+          return <Level_2 destinationObject={destinationObject} startObject={startObject} beaconDataSet={beaconDataSet}/>;  
         case "2M":
-          return <Mazanine destinationObject={destinationObject} startObject={startObject} beaconDataSet={beaconDataSet} />;
+          return <Mazanine destinationObject={destinationObject} startObject={startObject} beaconDataSet={beaconDataSet} showCircle={props?.showCircle} />;
         case "3":
           return <Level_3 destinationObject={destinationObject} startObject={startObject} beaconDataSet={beaconDataSet}/>;
         case "4":
@@ -114,7 +120,8 @@ export default function MapScreen({ route }) {
             showsHorizontalScrollIndicator={false}
             contentContainerStyle={[styles.box]}
           >
-            {renderSvg ? RenderSvg(renderSvg) : RenderSvg(number || number?.toString())}
+            {/* {renderSvg ? RenderSvg(renderSvg) : RenderSvg(number || number?.toString())} */}
+            {renderSvg && RenderSvg(renderSvg)}
           </ScrollView>
         </ScrollView>
 

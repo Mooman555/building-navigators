@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useRef } from "react";
 import Svg, {
   G,
   Path,
@@ -9,19 +9,25 @@ import Svg, {
   Polyline,
   Circle,
 } from "react-native-svg";
+import { useNavigation } from "@react-navigation/native";
 
 const Mazanine = (props) => {
   const [path, setPath] = useState("")
+  const pathRef = useRef();
   let { startObject, destinationObject } = props
-
+  const navigation = useNavigation();
   useEffect(() => {
     if (startObject !== null && destinationObject !== null && startObject?.id !== null && destinationObject?.id !== null) {
       console.log(`${startObject?.id}-${destinationObject?.id}`, "aaaa")
-      setPath(`${startObject?.id}-${destinationObject?.id}`)
+      setPath(`${startObject?.id }-${destinationObject?.id}`)
     }
+    // console.log(pathRef?.current,"pathRef.current")
+    // const polylines = pathRef.current.getElementsByTagName('polyline');
+    // console.log(polylines,"polylines")
   }, [startObject, destinationObject])
 
   return <Svg
+    ref={pathRef}
     id="Layer_1"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 250.87407 354.11836"
@@ -5699,7 +5705,7 @@ const Mazanine = (props) => {
           fill: "none",
           stroke: "black",
           strokeMiterlimit: 10,
-          strokeWidth: ".25px",
+          strokeWidth: "1px",
         } : {}}
       />
       <Polyline
@@ -5708,7 +5714,7 @@ const Mazanine = (props) => {
           fill: "none",
           stroke: "black",
           strokeMiterlimit: 10,
-          strokeWidth: ".25px",
+          strokeWidth: "1px",
         } : {}}
       />
       <Polyline
@@ -5717,7 +5723,7 @@ const Mazanine = (props) => {
           fill: "none",
           stroke: "black",
           strokeMiterlimit: 10,
-          strokeWidth: ".25px",
+          strokeWidth: "1px",
         } : {}}
       />
       <Polyline
@@ -5726,7 +5732,7 @@ const Mazanine = (props) => {
           fill: "none",
           stroke: "black",
           strokeMiterlimit: 10,
-          strokeWidth: ".25px",
+          strokeWidth: "1px",
         } : {}}
       />
       <Polyline
@@ -5735,42 +5741,47 @@ const Mazanine = (props) => {
           fill: "none",
           stroke: "black",
           strokeMiterlimit: 10,
-          strokeWidth: ".25px",
+          strokeWidth: "1px",
         } : {}}
       />
       <Polyline
         points="175.64434 309.22585 43.98083 309.22585 43.98083 311.8438"
+        id="third"
+        // ref={pathRef} 
         style={
           (path === "stairs2M-restroom2M" || path === "restroom2M-stairs2M") ?
             {
               fill: "none",
               stroke: "black",
               strokeMiterlimit: 10,
-              strokeWidth: ".25px",
+              strokeWidth: "1px",
             } : {}}
       />
       <Polyline
         points="60.79032 302.35484 60.79032 307.03226 38.01139 307.03226 38.01139 287 28.51366 279.10346 28.51366 228.68145 21.40379 228.68145"
+        id="second"
+        // ref={pathRef} 
         style={
           (path === "emergencyExit2M-projectionRoom2M" || path === "projectionRoom2M-emergencyExit2M") ?
             {
               fill: "none",
               stroke: "black",
               strokeMiterlimit: 10,
-              strokeWidth: ".25px",
+              strokeWidth: "1px",
             } : {}}
       />
 
 
       <Polyline
         points="38.7904 311.8438 38.7904 291.18575 23.51404 278.21896 23.51404 227.94818 21.40379 227.94818"
+        id="first"
         style={
           (path === "emergencyExit2M-restroom2M" || path === "restroom2M-emergencyExit2M") ?
             {
               fill: "none",
               stroke: "black",
               strokeMiterlimit: 10,
-              strokeWidth: ".25px",
+              strokeWidth: "1px",
             } : {}}
       />
 
@@ -5851,6 +5862,9 @@ const Mazanine = (props) => {
         />
       </G>
     </G>
+    {
+      props?.showCircle && <Polygon points="50,0 55,10 50,20 45,10" fill="#FFA07A" stroke="black" stroke-width="2" x="21" y="306" />
+    }
   </Svg>
 
 };
