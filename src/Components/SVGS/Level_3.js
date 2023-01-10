@@ -1,18 +1,60 @@
-import * as React from "react";
-import Svg, {
-  Polygon,
-  Rect,
-  G,
-  Line,
-  Path,
-  Polyline,
-  Circle,
-  Ellipse,
-  Text,
-  TSpan,
-} from "react-native-svg";
-const SVGComponent = (props) => (
-  <Svg
+import React, { useState, useEffect } from "react";
+import Svg, { G, Path, Polyline, Polygon, Rect, Line } from "react-native-svg";
+
+const Level_3 = (props) => {
+
+  const [path, setPath] = useState("")
+  const [coordinate, setCoordinate] = useState(null)
+  const [showSvg, setShowSvg] = useState(false)
+  let { startObject, destinationObject, beaconDataSet } = props
+
+  useEffect(() => {
+    if (startObject !== null && destinationObject !== null && startObject?.id !== null && destinationObject?.id !== null) {
+      console.log(`${startObject?.id}-${destinationObject?.id}`, "aaaa")
+      setPath(`${startObject?.id}-${destinationObject?.id}`)
+      setShowSvg(true)
+      console.log(beaconDataSet, "beaconDataSet")
+      let result = null;
+      if (beaconDataSet?.length > 2) {
+        result = locate(beaconDataSet);
+        // var deviceLocation = multilaterate(beaconDataSet, beaconDataSet.map(p => p.distance));
+        // console.log(deviceLocation, "result")
+        setCoordinate(result)
+      } else if (beaconDataSet?.length < 2) {
+        result = locate([...beaconDataSet, { distance: 0, x: 0, y: 0 }, { distance: 0, x: 0, y: 0 }]);
+        // beaconDataSet =[...beaconDataSet, { distance: 0, x: 0, y: 0 }, { distance: 0, x: 0, y: 0 }]
+        // var deviceLocation = multilaterate(beaconDataSet, beaconDataSet.map(p => p.distance));
+        // console.log(deviceLocation, "result")
+        setCoordinate(result)
+      }
+      else if (beaconDataSet?.length === 2) {
+        result = locate([...beaconDataSet, { distance: 0, x: 0, y: 0 }]);
+        // beaconDataSet =[...beaconDataSet ,{ distance: 0, x: 0, y: 0 }]
+        // var deviceLocation = multilaterate(beaconDataSet, beaconDataSet.map(p => p.distance));
+        // console.log(deviceLocation, "result")
+        setCoordinate(result)
+      }
+      // Geolocation.getCurrentPosition(
+      //   position => {
+      //     const location = position;
+      //     // this.setState({ location });
+      //     console.log(location, "location")
+      //     console.log(location?.coords, "location")
+      //   },
+      //   error => console.log(error.message, "Error"),
+      //   { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 }
+      // );
+
+    }
+  }, [startObject, destinationObject])
+
+
+  const [ID, setID] = useState({
+    currentId: "Select"
+  })
+
+  return (
+    showSvg &&   <Svg
     id="Layer_1"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 735.87097 426.70968"
@@ -17941,890 +17983,890 @@ const SVGComponent = (props) => (
     <G id="Stair_Red">
       <Polyline
         points="175.11006 338.83011 247.48387 338.28318 247.54839 308.79795 252.51921 308.79795"
-        style={{
-          fill: "none",
-          stroke: "#00ff12",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "elevatorDownLeft3-catwalkStorage3" || path === "catwalkStorage3-elevatorDownLeft3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="175.11006 341.59165 266.135 342.0019 266.135 330.45779"
-        style={{
-          fill: "none",
-          stroke: "#00ff12",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "elevatorDownLeft3-reception3" || path === "reception3-elevatorDownLeft3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="175.11006 340 266.84 340 266.76471 346 341.05884 346.35294 341.05884 343.38552"
-        style={{
-          fill: "none",
-          stroke: "#00ff12",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "elevatorDownLeft3-conferenceRoom#303_3" || path === "conferenceRoom#303_3-elevatorDownLeft3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="175.11006 340.75 317.22749 340.75 317.27397 344.58824 440.48017 344.58824 440.19924 334.03963"
-        style={{
-          fill: "none",
-          stroke: "#00ff12",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "elevatorDownLeft3-serviceStore3" || path === "serviceStore3-elevatorDownLeft3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="175.11006 344.15104 267.22749 344.08871 267.27397 350.09064 371.39551 350.69531 371.39551 369.34349"
-        style={{
-          fill: "none",
-          stroke: "#00ff12",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "elevatorDownLeft3-conferenceRoom#302_3" || path === "conferenceRoom#302_3-elevatorDownLeft3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="175.11006 339.31393 281.09163 339.21023 280.97581 370.67669"
-        style={{
-          fill: "none",
-          stroke: "#00ff12",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "elevatorDownLeft3-conferenceRoom#301_3" || path === "conferenceRoom#301_3-elevatorDownLeft3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="189.02337 345.16187 472.45138 345.16187 472.45138 341.71953"
-        style={{
-          fill: "none",
-          stroke: "#00ff12",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "elevatorDownLeft3-staffKitchen3" || path === "staffKitchen3-elevatorDownLeft3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="175.11006 346.82232 495.16815 346.82232 495.16815 330.83789"
-        style={{
-          fill: "none",
-          stroke: "#00ff12",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "elevatorDownLeft3-administrationRoom6_3" || path === "administrationRoom6_3-elevatorDownLeft3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="175.11006 343.60455 516.45389 344.58824 516.45389 331.61483"
-        style={{
-          fill: "none",
-          stroke: "#00ff12",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "elevatorDownLeft3-administrationRoom5_3" || path === "administrationRoom5_3-elevatorDownLeft3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="175.11006 342.82125 526.86196 343.00193 526.86196 335.22054"
-        style={{
-          fill: "none",
-          stroke: "#00ff12",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "elevatorDownLeft3-administrationRoom4_3" || path === "administrationRoom4_3-elevatorDownLeft3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="175.11006 342.20161 557.59785 343.00193 557.59785 331.61483"
-        style={{
-          fill: "none",
-          stroke: "#00ff12",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "elevatorDownLeft3-administrationRoom3_3" || path === "administrationRoom3_3-elevatorDownLeft3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="175.11006 344.62467 568.63672 345.09064 568.63672 331.61483"
-        style={{
-          fill: "none",
-          stroke: "#00ff12",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "elevatorDownLeft3-administrationRoom2_3" || path === "administrationRoom2_3-elevatorDownLeft3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="175.11006 345.16187 586.5827 345.16187 585.97581 360.94887"
-        style={{
-          fill: "none",
-          stroke: "#00ff12",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "elevatorDownLeft3-executiveOffice3" || path === "executiveOffice3-elevatorDownLeft3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="175.11006 346.94346 675.14738 346.94346 675.14738 349.69531"
-        style={{
-          fill: "none",
-          stroke: "#00ff12",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "elevatorDownLeft3-staffLounge3" || path === "staffLounge3-elevatorDownLeft3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="175.11006 345.62729 474.6888 345.62729 474.6888 375.87138"
-        style={{
-          fill: "none",
-          stroke: "#00ff12",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "elevatorDownLeft3-ceoOffice3" || path === "ceoOffice3-elevatorDownLeft3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
     </G>
     <G id="Room-1">
       <Polyline
         points="585.5426 327.32258 585.36062 346.23529 625.74421 346.23529 625.74421 323.41099"
-        style={{
-          fill: "none",
-          stroke: "#32ff00",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom1_3-publicStairsDownRight3" || path === "publicStairsDownRight3-administrationRoom1_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="585.07504 327.88235 585.76471 346.86264 657.05611 347.13994 657.05611 343.81738"
-        style={{
-          fill: "none",
-          stroke: "#32ff00",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom1_3-restRoomRight3" || path === "restRoomRight3-administrationRoom1_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="583.7926 327.88235 583.94118 347.64706 672.58824 348.11765 672.58824 350.5454"
-        style={{
-          fill: "none",
-          stroke: "#32ff00",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom1_3-staffLounge3" || path === "staffLounge3-administrationRoom1_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="583.0505 328.35294 583.11765 348 631.99393 347.69531 631.99393 350.5454"
-        style={{
-          fill: "none",
-          stroke: "#32ff00",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom1_3-waitingArea3" || path === "waitingArea3-administrationRoom1_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="582.58824 329.37432 564 329.37432 564 327.88235"
-        style={{
-          fill: "none",
-          stroke: "#32ff00",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom1_3-administrationRoom2_3" || path === "administrationRoom2_3-administrationRoom1_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="583.0505 330.47059 555.64706 330.47059 555.64706 328.62834"
-        style={{
-          fill: "none",
-          stroke: "#32ff00",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom1_3-administrationRoom3_3" || path === "administrationRoom3_3-administrationRoom1_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="583.0505 331.61483 523.29412 331.61483 523.29412 329.37402"
-        style={{
-          fill: "none",
-          stroke: "#32ff00",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom1_3-administrationRoom4_3" || path === "administrationRoom4_3-administrationRoom1_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="583.0505 332.45161 513.58702 332.45161 513.58702 330.47059"
-        style={{
-          fill: "none",
-          stroke: "#32ff00",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom1_3-administrationRoom5_3" || path === "administrationRoom5_3-administrationRoom1_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="583.0505 333.3553 493.14361 333.3553 493.14361 330.83789"
-        style={{
-          fill: "none",
-          stroke: "#32ff00",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom1_3-administrationRoom6_3" || path === "administrationRoom6_3-administrationRoom1_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="478.11765 371.58824 478.11765 339.11765 583.0505 339.82314 583.0505 334"
-        style={{
-          fill: "none",
-          stroke: "#32ff00",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom1_3-ceoOffice3" || path === "ceoOffice3-administrationRoom1_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Line
         x1={586.32432}
         y1={335.64959}
         x2={586.5827}
         y2={360.94887}
-        style={{
-          fill: "none",
-          stroke: "#32ff00",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom1_3-executiveOffice3" || path === "executiveOffice3-administrationRoom1_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Line
         x1={582.58824}
         y1={334.03963}
         x2={478.70389}
         y2={334.03963}
-        style={{
-          fill: "none",
-          stroke: "#32ff00",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom1_3-staffKitchen3" || path === "staffKitchen3-administrationRoom1_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="438.45563 336.06417 438.25807 346.82232 582.58824 345.82314 582.58824 337"
-        style={{
-          fill: "none",
-          stroke: "#32ff00",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom1_3-serviceStore3" || path === "serviceStore3-administrationRoom1_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="584.95351 330.29412 584.95351 349.34454 430.4626 349.69531 430.4626 368.94118"
-        style={{
-          fill: "none",
-          stroke: "#32ff00",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom1_3-conferenceRoom#302_3" || path === "conferenceRoom#302_3-administrationRoom1_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="282.99939 373.01406 282.99939 353.23529 585.5426 351.27316 585.5426 337.76471"
-        style={{
-          fill: "none",
-          stroke: "#32ff00",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom1_3-conferenceRoom#301_3" || path === "conferenceRoom#301_3-administrationRoom1_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="288.47059 325.9577 288.35294 350.97039 584.95351 348.62505 584.95351 333.05882"
-        style={{
-          fill: "none",
-          stroke: "#32ff00",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom1_3-reception3" || path === "reception3-administrationRoom1_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
     </G>
     <G id="Room-2">
       <Polyline
         points="567.5426 330.32258 567.36062 346.23529 625.74421 346.23529 625.74421 323.41099"
-        style={{
-          fill: "none",
-          stroke: "#ff00cf",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom2_3-publicStairsDownRight3" || path === "publicStairsDownRight3-administrationRoom2_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="567.07504 330.88235 566.76471 346.86264 657.05611 347.13994 657.05611 343.81738"
-        style={{
-          fill: "none",
-          stroke: "#ff00cf",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom2_3-restRoomRight3" || path === "restRoomRight3-administrationRoom2_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="565.7926 330.88235 565.94118 347.64706 672.83224 347.94215 672.58824 350.5454"
-        style={{
-          fill: "none",
-          stroke: "#ff00cf",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom2_3-staffLounge3" || path === "staffLounge3-administrationRoom2_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="565.0505 331.35294 565.11765 348 631.99393 347.69531 631.99393 350.5454"
-        style={{
-          fill: "none",
-          stroke: "#ff00cf",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom2_3-waitingArea3" || path === "waitingArea3-administrationRoom2_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="564 327.88235 564 329.37432 582.58824 329.37432 582.58824 328.35294"
-        style={{
-          fill: "none",
-          stroke: "#ff00cf",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom2_3-administrationRoom1_3" || path === "waitingArea3-administrationRoom1_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="564.0505 330.47059 555.64706 330.47059 555.64706 328.62834"
-        style={{
-          fill: "none",
-          stroke: "#ff00cf",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom2_3-administrationRoom3_3" || path === "administrationRoom3_3-administrationRoom2_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="564.0505 331.61483 523.29412 331.61483 523.29412 329.37402"
-        style={{
-          fill: "none",
-          stroke: "#ff00cf",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom2_3-administrationRoom4_3" || path === "administrationRoom4_3-administrationRoom2_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="564.0505 332.45161 513.58702 332.45161 513.58702 330.47059"
-        style={{
-          fill: "none",
-          stroke: "#ff00cf",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom2_3-administrationRoom5_3" || path === "administrationRoom5_3-administrationRoom2_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="564.0505 333.3553 493.14361 333.3553 493.14361 330.83789"
-        style={{
-          fill: "none",
-          stroke: "#ff00cf",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom2_3-administrationRoom6_3" || path === "administrationRoom6_3-administrationRoom2_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="478.11765 373.70588 478.11765 340.11765 564.0505 339.82314 564.0505 331.35294"
-        style={{
-          fill: "none",
-          stroke: "#ff00cf",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom2_3-ceoOffice3" || path === "ceoOffice3-administrationRoom2_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="565.32432 332.64959 586.5827 332.94118 586.38937 360.94887"
-        style={{
-          fill: "none",
-          stroke: "#ff00cf",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom2_3-executiveOffice3" || path === "executiveOffice3-administrationRoom2_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Line
         x1={563.58824}
         y1={334.03963}
         x2={478.70389}
         y2={334.03963}
-        style={{
-          fill: "none",
-          stroke: "#ff00cf",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom2_3-staffKitchen3" || path === "staffKitchen3-administrationRoom2_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="438.45563 336.06417 438.25807 346.82232 563.58824 346.82314 563.58824 332.23529"
-        style={{
-          fill: "none",
-          stroke: "#ff00cf",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom2_3-serviceStore3" || path === "serviceStore3-administrationRoom2_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="430.4626 366.34349 430.4626 349.69531 562.95351 349.34454 562.95351 330.47059"
-        style={{
-          fill: "none",
-          stroke: "#ff00cf",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom2_3-conferenceRoom#302_3" || path === "conferenceRoom#302_3-administrationRoom2_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="282.99939 373.01406 282.99939 353.23529 563.5426 352.27316 563.5426 330.94118"
-        style={{
-          fill: "none",
-          stroke: "#ff00cf",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom2_3-conferenceRoom#301_3" || path === "conferenceRoom#301_3-administrationRoom2_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="288.47059 325.9577 288.35294 348.97039 562.95351 348.62505 562.95351 330.47059"
-        style={{
-          fill: "none",
-          stroke: "#ff00cf",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom2_3-reception3" || path === "reception3-administrationRoom2_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
     </G>
     <G id="Room-4">
       <Polyline
         points="514.5426 332.32258 515.36062 346.23529 625.74421 346.23529 625.74421 323.41099"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom4_3-publicStairsDownRight3" || path === "publicStairsDownRight3-administrationRoom4_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="514.07504 332.88235 513.76471 346.86264 657.05611 347.13994 657.05611 343.81738"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom4_3-restRoomRight3" || path === "restRoomRight3-administrationRoom4_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="512.7926 332.88235 512.94118 347.64706 672.83224 346.94215 672.58824 350.5454"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom4_3-staffLounge3" || path === "staffLounge3-administrationRoom4_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="512.0505 333.35294 512.11765 348 631.99393 347.69531 631.99393 350.5454"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom4_3-waitingArea3" || path === "waitingArea3-administrationRoom4_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="524 327.88235 524 329.37432 582.58824 329.37432 582.58824 328.35294"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom4_3-administrationRoom1_3" || path === "administrationRoom1_3-administrationRoom4_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="513.58702 328.47059 513.58702 330.45161 514.0505 330.45161 554.05882 330.45161"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom4_3-administrationRoom3_3" || path === "administrationRoom3_3-administrationRoom4_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="514.0505 333.3553 493.14361 333.3553 493.14361 330.83789"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom4_3-administrationRoom5_3" || path === "administrationRoom5_3-administrationRoom4_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="513.58824 334.03963 480.11765 334.11765 480.11765 375.17647"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom4_3-ceoOffice3" || path === "ceoOffice3-administrationRoom4_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="512.0505 333.35294 586.5827 333.94118 586.91935 360.94887"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom4_3-executiveOffice3" || path === "executiveOffice3-administrationRoom4_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Line
         x1={513.58824}
         y1={334.03963}
         x2={478.70389}
         y2={334.03963}
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom4_3-staffKitchen3" || path === "staffKitchen3-administrationRoom4_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="438.45563 334.03963 438.25807 346.82232 513.58824 347.03963 513.58824 330.94118"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom4_3-serviceStore3" || path === "serviceStore3-administrationRoom4_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="430.4626 370.34349 430.4626 349.69531 513.58824 350.03963 513.58824 329.52941"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom4_3-conferenceRoom#302_3" || path === "conferenceRoom#302_3-administrationRoom4_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Path
         d="M282.99939,373.01407c.04422-1.92795,.08847-22.8559,.13269-24.78384,14.09973-.05826,213.5738,.35801,230.45618-.19058v-17.56905"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom4_3-conferenceRoom#301_3" || path === "conferenceRoom#301_3-administrationRoom4_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Path
         d="M288.47058,325.9577l-.11765,21.0127,117.04489,1.61783c22.60217-.23529,93.4257,.45142,108.19043,.45142v-16.922"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom4_3-reception3" || path === "reception3-administrationRoom4_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="525.05882 327.32258 525.05882 328.62834 565.32432 328.62834 565.32432 327.32258"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom4_3-administrationRoom2_3" || path === "administrationRoom2_3-administrationRoom4_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
     </G>
     <G id="room-5">
       <Polyline
         points="493.14361 348.31364 429.37097 348.31364 429.37097 350.1372"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom5_3-conferenceRoom#302_3" || path === "conferenceRoom#302_3-administrationRoom5_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="493.14361 337.77764 493.14361 339.45779 585.07504 339.45779 585.07504 337.77764"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom5_3-administrationRoom1_3" || path === "administrationRoom1_3-administrationRoom5_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="493.70588 337.77764 493.70588 338.65264 565.52941 338.65264 565.52941 337.77764"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom5_3-administrationRoom2_3" || path === "administrationRoom2_3-administrationRoom5_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="494.41176 337.58135 494.41176 338.21514 555.73529 338.21514 555.73529 336.52262"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom5_3-administrationRoom3_3" || path === "administrationRoom3_3-administrationRoom5_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="495.16815 336.52262 495.16815 337.58135 525.07353 337.58135 525.07353 336.32258"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom5_3-administrationRoom4_3" || path === "administrationRoom4_3-administrationRoom5_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="496 336.32258 496 336.95197 513.20588 336.95197 513.20588 335.77313"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom5_3-administrationRoom6_3" || path === "administrationRoom6_3-administrationRoom5_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Line
         x1={496}
         y1={343.81738}
         x2={662.72106}
         y2={344.8381}
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom5_3-restRoomRight3" || path === "restRoomRight3-administrationRoom5_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="496 342 627.84856 343.81738 627.93638 321.79059"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom5_3-publicStairsDownRight3" || path === "publicStairsDownRight3-administrationRoom5_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="496 345.41176 674 345.41176 674 350.5454"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom5_3-staffLounge3" || path === "staffLounge3-administrationRoom5_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="496 346.86264 632.58824 346.86264 632.58824 349.76465"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom5_3-waitingArea3" || path === "waitingArea3-administrationRoom5_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="496 347.97858 588.20198 347.97858 588.20198 360.41176"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom5_3-executiveOffice3" || path === "executiveOffice3-administrationRoom5_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="492.47059 342.12945 472.45138 342.12945 472.45138 339.76471"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom5_3-staffKitchen3" || path === "staffKitchen3-administrationRoom5_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="492.47059 343.81738 443.67236 343.81738 443.67236 334.03963"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom5_3-serviceStore3" || path === "serviceStore3-administrationRoom5_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="492.47059 345.41176 291.29412 345.41176 291.29412 311.92697"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom5_3-reception3" || path === "reception3-administrationRoom5_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="493.14361 349.76465 476.05882 349.76465 476.05882 373.41176"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom5_3-ceoOffice3" || path === "ceoOffice3-administrationRoom5_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="492.47059 346.86264 280.97581 346.86264 280.97581 373.41176"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom5_3-conferenceRoom#301_3" || path === "conferenceRoom#301_3-administrationRoom5_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
     </G>
     <G id="room-6">
       <Polyline
         points="514.14361 348.31364 429.37097 348.31364 429.37097 370.1372"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom6_3-conferenceRoom#302_3" || path === "conferenceRoom#302_3-administrationRoom6_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="514.14361 337.77764 514.14361 339.45779 585.07504 339.45779 585.07504 337.77764"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom6_3-administrationRoom1_3" || path === "administrationRoom1_3-administrationRoom6_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="514.70588 337.77764 514.70588 338.65264 565.52941 338.65264 565.52941 337.77764"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom6_3-administrationRoom2_3" || path === "administrationRoom2_3-administrationRoom6_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="515.41176 337.58135 515.41176 338.21514 555.73529 338.21514 555.73529 336.52262"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom6_3-administrationRoom3_3" || path === "administrationRoom3_3-administrationRoom6_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="516.16815 336.52262 516.16815 337.58135 525.07353 337.58135 525.07353 336.32258"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom6_3-administrationRoom4_3" || path === "administrationRoom4_3-administrationRoom6_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="496 338.32258 496 338.95197 513.20588 338.95197 513.20588 337.77313"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom6_3-administrationRoom5_3" || path === "administrationRoom5_3-administrationRoom6_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Line
         x1={516}
         y1={343.81738}
         x2={662.72106}
         y2={344.8381}
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom6_3-restRoomRight3" || path === "restRoomRight3-administrationRoom6_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="516 342 627.84856 343.81738 627.93638 321.79059"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom6_3-publicStairsDownRight3" || path === "publicStairsDownRight3-administrationRoom6_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="516 345.41176 674 345.41176 674 350.5454"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom6_3-staffLounge3" || path === "staffLounge3-administrationRoom6_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="516 346.86264 632.58824 346.86264 632.58824 349.76465"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom6_3-waitingArea3" || path === "waitingArea3-administrationRoom6_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="516 347.97858 588.20198 347.97858 588.20198 360.94887"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom6_3-executiveOffice3" || path === "executiveOffice3-administrationRoom6_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="513.47059 342.12945 472.45138 342.12945 472.45138 339.15821"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom6_3-staffKitchen3" || path === "staffKitchen3-administrationRoom6_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="513.47059 343.81738 443.67236 343.81738 443.67236 334.03963"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom6_3-serviceStore3" || path === "serviceStore3-administrationRoom6_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="513.47059 345.41176 291.29412 345.41176 291.29412 311.92697"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom6_3-reception3" || path === "reception3-administrationRoom6_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="514.14361 349.76465 476.05882 349.76465 476.05882 373.41176"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom6_3-ceoOffice3" || path === "ceoOffice3-administrationRoom6_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="513.47059 346.86264 280.97581 346.86264 280.97581 373.41176"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom6_3-conferenceRoom#301_3" || path === "conferenceRoom#301_3-administrationRoom6_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
     </G>
     <G id="Conference_Rom_301">
       <Polyline
         points="280.97581 353.41176 341.27397 353.41176 341.27397 351.92511"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#301_3-conferenceRoom#303_3" || path === "conferenceRoom#303_3-conferenceRoom#301_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
-      <Line
+      {/* <Line
         x1={280.97581}
         y1={349.69531}
         x2={372.53214}
@@ -18835,98 +18877,98 @@ const SVGComponent = (props) => (
           strokeMiterlimit: 10,
           strokeWidth: ".25px",
         }}
-      />
+      /> */}
       <Polyline
         points="280.97581 348.29412 476.58824 348.29412 476.58824 351.11765"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#301_3-ceoOffice3" || path === "ceoOffice3-conferenceRoom#301_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="279.97581 346.82232 673.35294 346.82232 673.35294 348.88718"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#301_3-staffLounge3" || path === "staffLounge3-conferenceRoom#301_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="280.97581 344.76471 594.5426 344.76471 594.5426 348.88718"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#301_3-executiveOffice3" || path === "executiveOffice3-conferenceRoom#301_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="280.97581 343.76471 588.20198 343.76471 588.20198 340.35294"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#301_3-administrationRoom1_3" || path === "administrationRoom1_3-conferenceRoom#301_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="281.47059 345.64706 566 345.64706 566 340.94118"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#301_3-administrationRoom2_3" || path === "administrationRoom2_3-conferenceRoom#301_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="280.47059 348.88718 553.29412 348.88718 553.29412 340.35294"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#301_3-administrationRoom3_3" || path === "administrationRoom3_3-conferenceRoom#301_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="279.97581 347.47059 525.84498 347.47059 525.84498 339.55882"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#301_3-administrationRoom4_3" || path === "administrationRoom4_3-conferenceRoom#301_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="281.47059 346.26471 516.47059 346.26471 516.47059 339.91176"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#301_3-administrationRoom5_3" || path === "administrationRoom5_3-conferenceRoom#301_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="280.64706 344.14706 497.16895 344.14706 497.16895 339.91176"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#301_3-administrationRoom6_3" || path === "administrationRoom6_3-conferenceRoom#301_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="280.97581 350.58824 472.45138 350.58824 472.45138 340.94118"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#301_3-staffKitchen3" || path === "staffKitchen3-conferenceRoom#301_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
-      <Line
+      {/* <Line
         x1={278.95223}
         y1={352.26471}
         x2={278.95223}
@@ -18937,37 +18979,37 @@ const SVGComponent = (props) => (
           strokeMiterlimit: 10,
           strokeWidth: ".25px",
         }}
-      />
+      /> */}
       <Polyline
         points="280.97581 343.08824 442.50471 343.08824 442.50471 334.58824"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#301_3-serviceStore3" || path === "serviceStore3-conferenceRoom#301_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="280.97581 351.34349 627.05882 351.34349 627.05882 340.35294"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#301_3-publicStairsDownRight3" || path === "publicStairsDownRight3-conferenceRoom#301_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
     </G>
     <G id="Conference_Rom_302">
       <Polyline
         points="368.97581 350.58682 281.27397 350.58682 281.27397 352.10016"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#302_3-conferenceRoom#301_3" || path === "conferenceRoom#301_3-conferenceRoom#302_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
-      <Line
+      {/* <Line
         x1={280.97581}
         y1={349.69531}
         x2={372.53214}
@@ -18978,62 +19020,62 @@ const SVGComponent = (props) => (
           strokeMiterlimit: 10,
           strokeWidth: ".25px",
         }}
-      />
+      /> */}
       <Polyline
         points="369.97581 348.29412 476.58824 348.29412 476.58824 351.11765"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#302_3-ceoOffice3" || path === "ceoOffice3-conferenceRoom#302_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="368.97581 346.82232 673.35294 346.82232 673.35294 348.88718"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#302_3-staffLounge3" || path === "staffLounge3-conferenceRoom#302_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="369.97581 344.76471 594.5426 344.76471 594.5426 348.88718"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#302_3-executiveOffice3" || path === "executiveOffice3-conferenceRoom#302_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="369.97581 343.76471 588.20198 343.76471 588.20198 340.35294"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#302_3-administrationRoom1_3" || path === "administrationRoom1_3-conferenceRoom#302_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="370.47059 345.64706 566 345.64706 566 340.94118"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#302_3-administrationRoom2_3" || path === "administrationRoom2_3-conferenceRoom#302_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="369.47059 348.88718 553.29412 348.88718 553.29412 340.35294"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#302_3-administrationRoom3_3" || path === "administrationRoom3_3-conferenceRoom#302_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
-      <Line
+      {/* <Line
         x1={368.97581}
         y1={347.47059}
         x2={614.84498}
@@ -19044,91 +19086,91 @@ const SVGComponent = (props) => (
           strokeMiterlimit: 10,
           strokeWidth: ".25px",
         }}
-      />
+      /> */}
       <Polyline
         points="370.47059 346.26471 516.47059 346.26471 516.47059 339.91176"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#302_3-administrationRoom5_3" || path === "administrationRoom5_3-conferenceRoom#302_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="369.64706 344.14706 497.16895 344.14706 497.16895 339.91176"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#302_3-administrationRoom6_3" || path === "administrationRoom6_3-conferenceRoom#302_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="369.97581 350.58824 472.45138 350.58824 472.45138 340.94118"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#302_3-staffKitchen3" || path === "staffKitchen3-conferenceRoom#302_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="369.97581 343.08824 442.50471 343.08824 442.50471 334.58824"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#302_3-serviceStore3" || path === "serviceStore3-conferenceRoom#302_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="369.97581 351.34349 627.05882 351.34349 627.05882 340.35294"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#302_3-publicStairsDownRight3" || path === "publicStairsDownRight3-conferenceRoom#302_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="367.93548 347.85475 281.27397 347.85475 281.27397 332.60038"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#302_3-reception3" || path === "reception3-conferenceRoom#302_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="369.15414 345.84822 340.35294 345.84822 340.35294 343.76471"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#302_3-conferenceRoom#303_3" || path === "conferenceRoom#303_3-conferenceRoom#302_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="367.93548 348.88718 527.45389 348.88718 527.45389 340.35294"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#302_3-administrationRoom4_3" || path === "administrationRoom4_3-conferenceRoom#302_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
     </G>
     <G id="Conference_Rom_303">
       <Polyline
         points="339.97581 350.58682 281.27397 350.58682 281.27397 352.10016"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#303_3-conferenceRoom#301_3" || path === "conferenceRoom#301_3-conferenceRoom#303_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
-      <Line
+      {/* <Line
         x1={280.97581}
         y1={349.69531}
         x2={340.53214}
@@ -19139,62 +19181,62 @@ const SVGComponent = (props) => (
           strokeMiterlimit: 10,
           strokeWidth: ".25px",
         }}
-      />
+      /> */}
       <Polyline
         points="341.97581 348.29412 476.58824 348.29412 476.58824 351.11765"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#303_3-ceoOffice3" || path === "ceoOffice3-conferenceRoom#303_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="340.97581 346.82232 673.35294 346.82232 673.35294 348.88718"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#303_3-staffLounge3" || path === "staffLounge3-conferenceRoom#303_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="341.97581 344.76471 594.5426 344.76471 594.5426 348.88718"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#303_3-executiveOffice3" || path === "executiveOffice3-conferenceRoom#303_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="341.97581 343.76471 588.20198 343.76471 588.20198 340.35294"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#303_3-administrationRoom1_3" || path === "administrationRoom1_3-conferenceRoom#303_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="342.47059 345.64706 566 345.64706 566 340.94118"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#303_3-administrationRoom2_3" || path === "administrationRoom2_3-conferenceRoom#303_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="341.47059 348.88718 553.29412 348.88718 553.29412 340.35294"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#303_3-administrationRoom3_3" || path === "administrationRoom3_3-conferenceRoom#303_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
-      <Line
+      {/* <Line
         x1={340.97581}
         y1={347.47059}
         x2={614.84498}
@@ -19205,525 +19247,525 @@ const SVGComponent = (props) => (
           strokeMiterlimit: 10,
           strokeWidth: ".25px",
         }}
-      />
+      /> */}
       <Polyline
         points="342.47059 346.26471 516.47059 346.26471 516.47059 339.91176"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#303_3-administrationRoom5_3" || path === "administrationRoom5_3-conferenceRoom#303_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="341.64706 344.14706 497.16895 344.14706 497.16895 339.91176"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#303_3-administrationRoom6_3" || path === "administrationRoom6_3-conferenceRoom#303_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="341.97581 350.58824 472.45138 350.58824 472.45138 340.94118"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#303_3-staffKitchen3" || path === "staffKitchen3-conferenceRoom#303_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="341.97581 343.08824 442.50471 343.08824 442.50471 334.03963"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#303_3-serviceStore3" || path === "serviceStore3-conferenceRoom#303_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="341.97581 351.34349 627.05882 351.34349 627.05882 340.35294"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#303_3-publicStairsDownRight3" || path === "publicStairsDownRight3-conferenceRoom#303_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="340.93548 347.85475 281.27397 347.85475 281.27397 332.60038"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#303_3-reception3" || path === "reception3-conferenceRoom#303_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="340.35294 343.76471 340.35294 345.84822 369.15414 345.84822 369.15414 349.69531"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#303_3-conferenceRoom#302_3" || path === "conferenceRoom#302_3-conferenceRoom#303_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="339.93548 348.88718 527.45389 348.88718 527.45389 340.35294"
-        style={{
-          fill: "none",
-          stroke: "#5700ff",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#303_3-administrationRoom4_3" || path === "administrationRoom4_3-conferenceRoom#303_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
     </G>
     <G id="Services_Stare">
       <Polyline
         points="446.25806 342.58824 470.82353 342.58824 470.82353 339.17647"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "serviceStore3-staffKitchen3" || path === "staffKitchen3-serviceStore3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="437.44647 334.03963 437.44647 343.52941 276.29412 343.52941 276.29412 334.03963"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "serviceStore3-reception3" || path === "reception3-serviceStore3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="438.17647 334.03963 438.17647 344.47059 278.95223 344.47059 278.95223 347.76471"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "serviceStore3-conferenceRoom#301_3" || path === "conferenceRoom#301_3-serviceStore3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="439.19924 334.03963 439.19924 345.41176 340.58824 345.41176"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "serviceStore3-conferenceRoom#303_3" || path === "conferenceRoom#303_3-serviceStore3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="440.29412 334.03963 440.29412 346.82232 429.64706 346.82232 429.64706 347.76471"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "serviceStore3-conferenceRoom#302_3" || path === "conferenceRoom#302_3-serviceStore3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="441 334.03963 441 350.35294 476.35294 350.35294 476.35294 353.29412"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "serviceStore3-ceoOffice3" || path === "ceoOffice3-serviceStore3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="441.50471 334.03963 441.50471 349.76465 585.07504 349.76465 585.07504 353.14706"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "serviceStore3-executiveOffice3" || path === "executiveOffice3-serviceStore3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="441.94118 334.03963 441.94118 349.17647 628.52626 349.17647 628.52626 350.5454"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "serviceStore3-waitingArea3" || path === "waitingArea3-serviceStore3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="442.67236 334.03963 442.67236 348.38235 673.08824 348.38235 673.08824 350.5454"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "serviceStore3-staffLounge3" || path === "staffLounge3-serviceStore3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="443.47059 334.03963 443.47059 347.76471 663.29412 347.76471 663.29412 345.13994"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "serviceStore3-restRoomRight3" || path === "restRoomRight3-serviceStore3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="444.05882 334.03963 444.05882 346.82232 628.79901 346.82232 628.79901 329.37432"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "serviceStore3-publicStairsDownRight3" || path === "publicStairsDownRight3-serviceStore3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="444.41176 334.03963 444.41176 346.35294 585.94118 346.35294 585.94118 334.76471"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "serviceStore3-administrationRoom1_3" || path === "administrationRoom1_3-serviceStore3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="444.88235 334.03963 444.88235 345.70588 564.60715 345.70588 564.60715 338.93548"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "serviceStore3-administrationRoom2_3" || path === "administrationRoom2_3-serviceStore3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="445.23529 334.03963 445.23529 345.17647 556.82353 345.17647 556.82353 339.29412"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "serviceStore3-administrationRoom3_3" || path === "administrationRoom3_3-serviceStore3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="445.64706 334.03963 445.64706 344.82353 525.41176 344.82353 525.41176 340.19628"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "serviceStore3-administrationRoom4_3" || path === "administrationRoom4_3-serviceStore3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="445.97059 344.11765 514.82353 344.11765 514.82353 341.71953"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "serviceStore3-administrationRoom5_3" || path === "administrationRoom5_3-serviceStore3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="446.25806 343.23529 493.47059 343.23529 493.47059 340.90217"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "serviceStore3-administrationRoom6_3" || path === "administrationRoom6_3-serviceStore3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
     </G>
     <G id="IT_Department">
       <Polyline
         points="672.94118 344.35294 586.11765 344.35294 586.11765 334.70588"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "staffLounge3-administrationRoom1_3" || path === "administrationRoom1_3-staffLounge3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="673.76471 350.5454 673.76471 343.81738 630.40285 343.81738 630.40285 331.39898"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "staffLounge3-publicStairsDownRight3" || path === "publicStairsDownRight3-staffLounge3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="672.94118 345.13994 563.91797 345.13994 563.91797 333.17647"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "staffLounge3-administrationRoom2_3" || path === "administrationRoom2_3-staffLounge3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="672.94118 346.11765 555.88235 347.11765 555.88235 339.52941"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "staffLounge3-administrationRoom3_3" || path === "administrationRoom3_3-staffLounge3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="672.94118 346.94215 524.29297 346.94215 524.29297 334.03963"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "staffLounge3-administrationRoom4_3" || path === "administrationRoom4_3-staffLounge3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="672.94118 348 516.45389 349 516.45389 334.70588"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "staffLounge3-administrationRoom5_3" || path === "administrationRoom5_3-staffLounge3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="672.94118 348.88718 493.14361 348.88718 493.14361 332.11765"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "staffLounge3-administrationRoom6_3" || path === "administrationRoom6_3-staffLounge3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="672.94118 349.69531 472.94118 349.69531 472.94118 339.15821"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "staffLounge3-staffKitchen3" || path === "staffKitchen3-staffLounge3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="672.94118 350.5454 585.07504 350.5454 585.07504 354.59719"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "staffLounge3-executiveOffice3" || path === "executiveOffice3-staffLounge3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="672.94118 346.94215 438.94118 347.94215 438.94118 334.03963"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "staffLounge3-serviceStore3" || path === "serviceStore3-staffLounge3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="672.94118 348.88718 474.6888 348.88718 474.6888 375.11765"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "staffLounge3-ceoOffice3" || path === "ceoOffice3-staffLounge3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="672.94118 346.94215 428.43806 348.94215 428.43806 370.69531"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "staffLounge3-conferenceRoom#302_3" || path === "conferenceRoom#302_3-staffLounge3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="672.94118 347.52941 341.27397 349.52941 341.27397 347.05882"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "staffLounge3-conferenceRoom#303_3" || path === "conferenceRoom#303_3-staffLounge3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="672.94118 349.69531 280.35294 351.69531 280.35294 374.05882"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "staffLounge3-conferenceRoom#301_3" || path === "conferenceRoom#301_3-staffLounge3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="672.94118 346.11765 273.37579 346.11765 273.37579 332.23529"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "staffLounge3-reception3" || path === "reception3-staffLounge3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
     </G>
     <G id="CEO_Office">
       <Polyline
         points="581.24997 350.11534 473.73802 350.11534 473.73802 373.23529"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "ceoOffice3-executiveOffice3" || path === "executiveOffice3-ceoOffice3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="585.5426 360.94887 585.5426 348.88718 674.41176 348.88718 674.41176 351.22138"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "staffLounge3-executiveOffice3" || path === "executiveOffice3-staffLounge3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="584.35294 360.94887 584.35294 347.64706 661.3871 347.64706 661.3871 344.8381"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "restRoomRight3-executiveOffice3" || path === "executiveOffice3-restRoomRight3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="583.0505 360.94887 583.0505 346.94215 627.84856 346.94215 627.84856 324.94118"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "publicStairsDownRight3-executiveOffice3" || path === "executiveOffice3-publicStairsDownRight3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Line
         x1={585.07504}
         y1={360.94887}
         x2={585.07504}
         y2={330}
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom1_3-executiveOffice3" || path === "executiveOffice3-administrationRoom1_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="567.52941 328 582 328.59719 582 360.94887"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom2_3-executiveOffice3" || path === "executiveOffice3-administrationRoom2_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="555.88235 328 581.22602 328.59719 581.22602 360.94887"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom3_3-executiveOffice3" || path === "executiveOffice3-administrationRoom3_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="526.23529 327.32258 582.62479 327.47442 582.62479 360.94887"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom4_3-executiveOffice3" || path === "executiveOffice3-administrationRoom4_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="515.05882 332.52262 584.62479 332.47442 584.62479 360.94887"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom5_3-executiveOffice3" || path === "executiveOffice3-administrationRoom5_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Line
         x1={584.87498}
         y1={327.94887}
         x2={494.73554}
         y2={328}
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "administrationRoom6_3-administrationRoom1_3" || path === "administrationRoom1_3-administrationRoom6_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Line
         x1={581.69355}
         y1={340.8985}
         x2={472.45138}
         y2={340.8985}
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "staffKitchen3-executiveOffice3" || path === "executiveOffice3-staffKitchen3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="581.69355 342.53991 443.36941 342.53991 443.36941 334.03963"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "serviceStore3-executiveOffice3" || path === "executiveOffice3-serviceStore3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="581.24997 343.81738 339.82353 343.81738 339.82353 342.53991"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#303_3-executiveOffice3" || path === "executiveOffice3-conferenceRoom#303_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="581.22602 345.64706 280.97581 345.64706 280.97581 332.90116"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "reception3-executiveOffice3" || path === "executiveOffice3-reception3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="581.24997 347.58824 280.97581 347.58824 280.97581 371.92511"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#301_3-executiveOffice3" || path === "executiveOffice3-conferenceRoom#301_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
       <Polyline
         points="581.24997 348.88718 371.39551 348.88718 371.39551 369.34349"
-        style={{
-          fill: "none",
-          stroke: "#ff7900",
-          strokeMiterlimit: 10,
-          strokeWidth: ".25px",
-        }}
+        style={(path === "conferenceRoom#302_3-executiveOffice3" || path === "executiveOffice3-conferenceRoom#302_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
       />
     </G>
     <Text
@@ -21034,13 +21076,14 @@ const SVGComponent = (props) => (
       y1={327.72923}
       x2={584.51834}
       y2={360.94887}
-      style={{
-        fill: "none",
-        stroke: "#ff7900",
-        strokeMiterlimit: 10,
-        strokeWidth: ".25px",
-      }}
+      style={(path === "administrationRoom1_3-executiveOffice3" || path === "executiveOffice3-administrationRoom1_3") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
     />
   </Svg>
-);
-export default SVGComponent;
+  )
+};
+export default Level_3;

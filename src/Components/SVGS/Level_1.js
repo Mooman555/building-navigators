@@ -17,15 +17,55 @@ export default function Level_1(props) {
   const [isScanning, setIsScanning] = useState(false);
   // const [id, setID] = useState("found")
 
+  const [path, setPath] = useState("")
+  const [coordinate, setCoordinate] = useState(null)
+  const [showSvg, setShowSvg] = useState(false)
+  let { startObject, destinationObject, beaconDataSet } = props
+
   useEffect(() => {
-    // initiateProcess(isScanning, setIsScanning)
-  }, [])
+    if (startObject !== null && destinationObject !== null && startObject?.id !== null && destinationObject?.id !== null) {
+      console.log(`${startObject?.id}-${destinationObject?.id}`, "aaaa")
+      setPath(`${startObject?.id}-${destinationObject?.id}`)
+      setShowSvg(true)
+      console.log(beaconDataSet, "beaconDataSet")
+      let result = null;
+      if (beaconDataSet?.length > 2) {
+        result = locate(beaconDataSet);
+        // var deviceLocation = multilaterate(beaconDataSet, beaconDataSet.map(p => p.distance));
+        // console.log(deviceLocation, "result")
+        setCoordinate(result)
+      } else if (beaconDataSet?.length < 2) {
+        result = locate([...beaconDataSet, { distance: 0, x: 0, y: 0 }, { distance: 0, x: 0, y: 0 }]);
+        // beaconDataSet =[...beaconDataSet, { distance: 0, x: 0, y: 0 }, { distance: 0, x: 0, y: 0 }]
+        // var deviceLocation = multilaterate(beaconDataSet, beaconDataSet.map(p => p.distance));
+        // console.log(deviceLocation, "result")
+        setCoordinate(result)
+      }
+      else if (beaconDataSet?.length === 2) {
+        result = locate([...beaconDataSet, { distance: 0, x: 0, y: 0 }]);
+        // beaconDataSet =[...beaconDataSet ,{ distance: 0, x: 0, y: 0 }]
+        // var deviceLocation = multilaterate(beaconDataSet, beaconDataSet.map(p => p.distance));
+        // console.log(deviceLocation, "result")
+        setCoordinate(result)
+      }
+      // Geolocation.getCurrentPosition(
+      //   position => {
+      //     const location = position;
+      //     // this.setState({ location });
+      //     console.log(location, "location")
+      //     console.log(location?.coords, "location")
+      //   },
+      //   error => console.log(error.message, "Error"),
+      //   { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 }
+      // );
+
+    }
+  }, [startObject, destinationObject])
 
 
 
   return (
-
-    <Svg
+    showSvg && <Svg
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 710.45203 440.452"
@@ -3971,7 +4011,12 @@ export default function Level_1(props) {
         </G>
         <Polygon
           points="185.64111 56.61719 159.91992 56.61719 159.91992 56.36719 185.39111 56.36719 185.39111 39.04199 127.25977 39.04199 127.25977 38.79199 185.64111 38.79199 185.64111 56.61719"
-          style={{ fill: "#eaae73" }}
+          style={(path === "swHallLobbyElevator1-mechanicalRoom1" || path === "mechanicalRoom1-swHallLobbyElevator1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Path
           d="M563.08594,419.88477h-.125c-2.91406,0-5.35352-2.07227-5.92188-4.82031-.56836,2.74805-3.00781,4.82031-5.92188,4.82031h-.125v-10.09375h.25v9.84277c3.13867-.06738,5.67188-2.6416,5.67188-5.7959v-2.04492h.25v2.04492c0,3.1543,2.5332,5.72852,5.67188,5.7959v-7.84082h.25v8.0918Z"
@@ -4093,382 +4138,385 @@ export default function Level_1(props) {
       <G id="Paths">
         <Polyline
           points="194.80646 431.16187 194.80646 409.18475 213.70161 409.16168 213.70161 358.41766 199.06451 358.41766 199.0645 160.40038 224.68549 160.40038"
-          style={id === "found" ? {
-            fill: "none",
-            stroke: "#ff35bd",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          } : {}}
+          style={(path === "mainEnterance1-enteranceHallB1" || path === "enteranceHallB1-mainEnterance1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="188.9677 430.9657 188.96774 372.83908 97.43132 372.83905 97.43132 354.74197"
-          style={id === "not-found" ? {
-            fill: "none",
-            stroke: "#386ae8",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          } : {}}
+          style={(path === "mainEnterance1-theaterStorageSw1" || path === "theaterStorageSw1-mainEnterance1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
-        {/* <Polyline
+        <Polyline
           points="187.9669 430.9657 187.96693 373.86319 101.67742 373.86316 101.67742 403.77383"
-          style={{
-            fill: "none",
-            stroke: "#0e8b9b",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "mainEnterance1-mechanicalRoomSw1" || path === "mechanicalRoomSw1-mainEnterance1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="187.01613 430.9657 187.0161 371.87134 110.6307 371.87131 110.6307 314.41653 126.96774 314.41653 126.96774 306.90359"
-          style={{
-            fill: "none",
-            stroke: "#2d1d09",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "mainEnterance1-theaterStorage1" || path === "theaterStorage1-mainEnterance1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="185.09679 430.9657 185.09676 377.99289 148.17339 377.99289 148.1734 382.61841"
-          style={{
-            fill: "none",
-            stroke: "#336d0d",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "mainEnterance1-elevator1" || path === "elevator1-mainEnterance1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="214.96774 430.9657 214.96774 278.96893 237.10548 278.96893"
-          style={{
-            fill: "none",
-            stroke: "#eaae73",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "mainEnterance1-enteranceHallA1" || path === "enteranceHallA1-mainEnterance1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="186.01025 430.9657 186.01022 370.51651 117.6129 370.3678 117.6129 351.452"
-          style={{
-            fill: "none",
-            stroke: "#a5620a",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "mainEnterance1-electricalStairs1" || path === "electricalStairs1-mainEnterance1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="216.06451 430.9657 216.06451 357.16168 200.54839 357.16168 200.5484 279.98511 201.65323 279.98511 201.6532 167.19023 203.48849 167.19025 203.48853 83.91196 185.03226 83.91196 185.03226 64.39881"
-          style={{
-            fill: "none",
-            stroke: "#a5620a",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "mainEnterance1-restRoomLeft1" || path === "restRoomLeft1-mainEnterance1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="237.10548 276.58182 197.95734 276.58182 197.95731 358.41766 118.90323 358.41766 118.90323 351.452"
-          style={{
-            fill: "none",
-            stroke: "#707f18",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "electricalStairs1-enteranceHallA1" || path === "enteranceHallA1-electricalStairs1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="224.34679 162.01651 196.7961 162.01651 196.79605 357.25845 120.24194 357.25839 120.24194 351.452"
-          style={{
-            fill: "none",
-            stroke: "#f74319",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "electricalStairs1-enteranceHallB1" || path === "enteranceHallB1-electricalStairs1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="217.12903 430.85971 217.12903 163.9389 198.03226 163.9389 198.0323 88.71006 181 88.71006 181 64.39881"
-          style={{
-            fill: "none",
-            stroke: "#74ed6e",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "mainEnterance1-restRoomLeft1" || path === "restRoomLeft1-mainEnterance1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="218.3548 430.85971 218.3548 159.01651 205.1613 159.01651 205.16129 82.62364 186.48387 82.62364 186.55646 43.45466 127.25 43.45466"
-          style={{
-            fill: "none",
-            stroke: "#95ebf4",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "mainEnterance1-mechanicalRoom1" || path === "mechanicalRoom1-mainEnterance1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="226.3773 247.76157 221.7097 247.76157 221.70969 156.35635 207.9194 156.35635 207.91936 80.62942 189.14516 80.62942 189.14516 40.4314 127.26001 40.4314"
-          style={{
-            fill: "none",
-            stroke: "#ff994d",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "enteranceHallA1-mechanicalRoom1" || path === "mechanicalRoom1-enteranceHallA1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="99.12032 403.72919 99.12032 368.14447 194.47346 368.14447 194.61362 275.54193 237.10548 275.54193"
-          style={{
-            fill: "none",
-            stroke: "#58a572",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "enteranceHallA1-mechanicalRoomSw1" || path === "mechanicalRoomSw1-enteranceHallA1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="244.57906 284.022 244.57906 405.34201 259.54758 405.34201 259.54758 416.11835"
-          style={{
-            fill: "none",
-            stroke: "#4fa3aa",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "enteranceHallA1-publicStairsDownBottom1" || 
+          path ==="publicStairsDownBottom1-enteranceHallA1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="246.17583 284.022 246.17583 403.87943 310.18356 403.87943 310.18356 416.11835"
-          style={{
-            fill: "none",
-            stroke: "#4fa3aa",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "enteranceHallA1-publicStairsDownBottom1" || 
+          path ==="publicStairsDownBottom1-enteranceHallA1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="247.6113 284.022 247.6113 402.32297 311.64517 402.32297 311.64517 406.53601 553.96771 406.53598 553.96771 412.29565"
-          style={{
-            fill: "none",
-            stroke: "#4fa3aa",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "enteranceHallA1-electricalRoomBottom1" || path ==="electricalRoomBottom1-enteranceHallA1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="248.87903 284.022 248.87903 400.86816 313.25806 400.86816 313.25806 405.09717 561.12903 405.09717 561.12903 376.96811 593.25806 376.96811 593.25806 407.03265 591.32007 407.03265"
-          style={{
-            fill: "none",
-            stroke: "#4fa3aa",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "enteranceHallA1-publicStairsDownRight1" || 
+          path ==="publicStairsDownRight1-enteranceHallA1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="250.52419 284.022 250.52419 399.23914 314.90323 399.23914 314.90323 403.46811 559.38708 403.46811 559.38708 409.2262 570.48389 409.2262 570.48389 398.74466"
-          style={{
-            fill: "none",
-            stroke: "#4fa3aa",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "enteranceHallA1-storage1" || path ==="storage1-enteranceHallA1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="252.06332 284.022 252.80653 397.052 317.25012 396.953 317.25012 401.18198 557.70966 401.18198 557.70966 378.9993 577.64514 378.9993 577.64514 372.09717"
-          style={{
-            fill: "none",
-            stroke: "#4fa3aa",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "enteranceHallA1-restRoomRight1" || path ==="restRoomRight1-enteranceHallA1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="97.83871 340.06317 97.83871 319.57755 192.96774 319.57755 192.96774 248.8373 226.54018 248.83727"
-          style={{
-            fill: "none",
-            stroke: "#ff994d",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "enteranceHallA1-theaterStorageSw1" || path ==="theaterStorageSw1-enteranceHallA1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="96.31452 340.06317 96.31452 318.0748 191.44354 318.0748 191.44354 167.0619 226.45874 167.0619"
-          style={{
-            fill: "none",
-            stroke: "#ff994d",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "enteranceHallB1-theaterStorageSw1" || path ==="theaterStorageSw1-enteranceHallB1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="237.10548 277.77081 200.27608 277.77081 200.27608 87.05757 182.45505 87.05757 182.45505 64.39881"
-          style={{
-            fill: "none",
-            stroke: "#707f18",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "enteranceHallA1-restRoomLeft1" || path ==="restRoomLeft1-enteranceHallA1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="248.87903 268.802 248.87903 228.46419 555.51611 228.4642 555.51611 263.48425 577.06451 263.48425"
-          style={{
-            fill: "none",
-            stroke: "#4fa3aa",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "enteranceHallA1-restRoomRight1" || path ==="restRoomRight1-enteranceHallA1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="224.68549 165.54877 202.08871 165.54877 202.08871 85.15361 183.87097 85.15361 183.87097 64.39881"
-          style={{
-            fill: "none",
-            stroke: "#707f18",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "enteranceHallB1-restRoomLeft1" || path ==="restRoomLeft1-enteranceHallB1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="127.25 41.91974 187.64516 41.91974 187.64516 81.50191 206.8548 81.50191 206.85484 157.6133 220.3564 157.61258 220.3564 172.75513 229.12903 172.75513"
-          style={{
-            fill: "none",
-            stroke: "#ffd44a",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "enteranceHallB1-mechanicalRoom1" || path ==="mechanicalRoom1-enteranceHallB1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="243.94478 158.32561 243.94478 24.73295 496.74127 24.73295 496.74127 20.68198"
-          style={{
-            fill: "none",
-            stroke: "#9e7e23",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "enteranceHallB1-loading/UnloadingDoors1" || path ==="loading/UnloadingDoors1-enteranceHallB1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="246.59254 158.30795 246.59254 27.50438 526.16132 27.50438"
-          style={{
-            fill: "none",
-            stroke: "#ff3210",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "enteranceHallB1-mainLoadingDock1" || path === "mainLoadingDock1-enteranceHallB1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="249.45161 158.30795 249.45161 31.44467 519.07996 31.44467 519.07996 55.27658 540.30505 55.27658 540.30505 50.0649"
-          style={{
-            fill: "none",
-            stroke: "#ff3210",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "enteranceHallB1-electricalRoomTop1" || path === "electricalRoomTop1-enteranceHallB1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Line
           x1={251.12903}
           y1={168.22491}
           x2={556.125}
           y2={168.22491}
-          style={{
-            fill: "none",
-            stroke: "#257f6e",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "enteranceHallB1-restRoomRight1" || path === "restRoomRight1-enteranceHallB1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="251.12903 165.54877 549.77417 165.54877 549.77417 122.58103 576.94995 122.58103"
-          style={{
-            fill: "none",
-            stroke: "#ff3210",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "enteranceHallB1-restRoomRight1" || path === "restRoomRight1-enteranceHallB1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Line
           x1={241.55994}
           y1={173.43587}
           x2={241.55994}
           y2={183.53207}
-          style={{
-            fill: "none",
-            stroke: "#ffd44a",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "enteranceHallB1-electricalRoomRight1" || path === "electricalRoomRight1-enteranceHallB1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="593.10565 74.77458 593.10565 197.41682 408.6759 197.41682"
-          style={{
-            fill: "none",
-            stroke: "#ff3210",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "enteranceHallB1-exitStairs1" || path === "exitStairs1-enteranceHallB1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="591.97803 74.77458 591.97803 119.87135 549.96771 119.87135"
-          style={{
-            fill: "none",
-            stroke: "#ff3210",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "enteranceHallB1-exitStairs1" || path === "exitStairs1-enteranceHallB1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="627.27008 193.51169 627.27008 259.74307 605.59613 259.74307 605.59613 353.74231 612.22345 353.74231"
-          style={{
-            fill: "none",
-            stroke: "#4fa3aa",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "mainLoadingDock1-equipmentRoom1" || path === "equipmentRoom1-mainLoadingDock1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="628.47235 193.51169 628.47235 279.98877 679.47852 279.98877"
-          style={{
-            fill: "none",
-            stroke: "#4fa3aa",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "mainLoadingDock1-security/Receiving1" || path === "security/Receiving1-mainLoadingDock1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="629.64514 193.51169 629.64514 342.11957 648.29034 342.11957 648.29034 396.83908 608.80646 396.83908 608.80646 410.19418"
-          style={{
-            fill: "none",
-            stroke: "#4fa3aa",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "mainLoadingDock1-storageRoom1" || path === "storageRoom1-mainLoadingDock1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="626.08997 193.51169 626.09003 345.08414 602.87097 345.08414 602.87097 378.65161 601.58063 378.65161 601.58063 413.43198"
-          style={{
-            fill: "none",
-            stroke: "#4fa3aa",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "mainLoadingDock1-telephoneRoom1" || path === "telephoneRoom1-mainLoadingDock1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="324.70969 35.40361 241.87097 35.40361 241.87097 27.66167 220.70969 27.66167"
-          style={{
-            fill: "none",
-            stroke: "#ff3210",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "enteranceHallB1-nwEmergency1" || path === "nwEmergency1-enteranceHallB1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Polyline
           points="251.12903 161.5313 546.19995 161.5313 546.19995 54.42197"
-          style={{
-            fill: "none",
-            stroke: "#154084",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
+          style={(path === "enteranceHallB1-electricalRoomTop1" || path === "electricalRoomTop1-enteranceHallB1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
         />
         <Line
           x1={655.03052}
           y1={40.07608}
           x2={698.08063}
           y2={40.07608}
-          style={{
-            fill: "none",
-            stroke: "#a5620a",
-            strokeMiterlimit: 10,
-            strokeWidth: ".25px",
-          }}
-        />  */}
+          style={(path === "mainLoadingDock1-exitRight2" || path === "exitRight2-mainLoadingDock1") ? {
+      fill: "none",
+      stroke: "black",
+      strokeMiterlimit: 10,
+      strokeWidth: ".25px",
+    } : {}}
+        /> 
       </G>
       <G>
         <G>
