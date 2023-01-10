@@ -16,7 +16,6 @@ let subscription ;
 let handleStopSubscription;
 
 export const initiateProcess = (isScanning,setIsScanning) => {
-
   return new Promise((resolve, reject) => {
     BleManager.start({ showAlert: false })
      subscription = bleManagerEmitter.addListener('BleManagerDiscoverPeripheral', handleDiscoverPeripheral);
@@ -68,13 +67,13 @@ const handleDiscoverPeripheral = (peripheral) => {
 const handleStopScan = async (resolve) => {
   console.log("scan stop")
   subscription.remove();
+  handleStopSubscription.remove();
   var uniqueArray = removeDuplicates(array, "id");
   for (let index = 0; index < uniqueArray.length; index++) {
    await connectDevice(uniqueArray[index])
   }
   // setIsScanning(false)
   resolve(distances)
-  handleStopSubscription.remove();
 
 }
 

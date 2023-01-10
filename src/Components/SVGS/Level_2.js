@@ -9,8 +9,9 @@ import Svg, {
   TSpan,
   Circle,
 } from "react-native-svg";
+// import {Image } from "react-native";
 import locate from 'multilateration';
-import { multilaterate } from "../../Functions/multilaterate";
+// import { multilaterate } from "../../Functions/multilaterate";
 import { initiateProcess } from '../../Functions/initiateProcess';
 import { beacons } from '../../data/beacons';
 import { useNavigation } from "@react-navigation/native";
@@ -35,6 +36,7 @@ const SVGComponent = (props) => {
   const [isExecuting, setIsExecuting] = useState(false);
   const isExecutingRef = useRef(isExecuting);
 
+
   useEffect(() => {
 
     /**
@@ -42,26 +44,6 @@ const SVGComponent = (props) => {
      */
 
     if (startObject !== null && destinationObject !== null && startObject?.id !== null && destinationObject?.id !== null) {
-      // let result = null;
-      // if (updatedBeacons?.length > 2) {
-      //   result = locate(updatedBeacons);
-      //   // var deviceLocation = multilaterate(updatedBeacons, updatedBeacons.map(p => p.distance));
-      //   // console.log(deviceLocation, "result")
-      //   setCoordinate(result)
-      // } else if (updatedBeacons?.length < 2) {
-      //   result = locate([...updatedBeacons, { distance: 0, x: 0, y: 0 }, { distance: 0, x: 0, y: 0 }]);
-      //   // updatedBeacons =[...updatedBeacons, { distance: 0, x: 0, y: 0 }, { distance: 0, x: 0, y: 0 }]
-      //   // var deviceLocation = multilaterate(updatedBeacons, updatedBeacons.map(p => p.distance));
-      //   // console.log(deviceLocation, "result")
-      //   setCoordinate(result)
-      // }
-      // else if (updatedBeacons?.length === 2) {
-      //   result = locate([...updatedBeacons, { distance: 0, x: 0, y: 0 }]);
-      //   // updatedBeacons =[...updatedBeacons ,{ distance: 0, x: 0, y: 0 }]
-      //   // var deviceLocation = multilaterate(updatedBeacons, updatedBeacons.map(p => p.distance));
-      //   // console.log(deviceLocation, "result")
-      //   setCoordinate(result)
-      // }
       if (startObject?.number !== destinationObject?.number) {
         if (destinationObject?.number === "2M") {
           setPath(`cinemaMidRight-restRooms2`)
@@ -93,6 +75,7 @@ const SVGComponent = (props) => {
       result = locate(updatedBeacons);
     } else if (updatedBeacons?.length < 2) {
       result = locate([...updatedBeacons, { distance: 0, x: 0, y: 0 }, { distance: 0, x: 0, y: 0 }]);
+      // var deviceLocation = multilaterate(updatedBeacons, updatedBeacons.map(p => p.distance));
     } else if (updatedBeacons?.length === 2) {
       result = locate([...updatedBeacons, { distance: 0, x: 0, y: 0 }]);
     }
@@ -119,7 +102,7 @@ const SVGComponent = (props) => {
     const interval = setInterval(() => {
       console.log("set interval")
       setIsExecuting(prev => !prev)
-    }, 20000);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
@@ -131,150 +114,6 @@ const SVGComponent = (props) => {
     }
   }, [isExecuting])
 
-
-
-     /**
-      * Pretty Much Working Code
-      */
-
-
-  // useEffect(() => {
-  //   console.log("updatedBeacons useEffect")
-  //   let result = null;
-  //   if (updatedBeacons?.length > 2) {
-  //     result = locate(updatedBeacons);
-  //   } else if (updatedBeacons?.length < 2) {
-  //     result = locate([...updatedBeacons, { distance: 0, x: 0, y: 0 }, { distance: 0, x: 0, y: 0 }]);
-  //   } else if (updatedBeacons?.length === 2) {
-  //     result = locate([...updatedBeacons, { distance: 0, x: 0, y: 0 }]);
-  //   }
-  //   setCoordinate(result)
-  // }, [updatedBeacons])
-
-  // const updateCurrentPosition = async () => {     
-  //   console.log("updatePosition Called")
-  //   let connectedDevices = await initiateProcess(isScanning, setIsScanning)
-  //   console.log("initiate Process Completed")
-  //   let array = [];
-  //   beacons?.forEach(beacon => {
-  //       connectedDevices?.forEach(device => {
-  //           if(beacon?.location_id === device?.location_id ){
-  //               array.push({...beacon,distance:device?.distance})
-  //           }
-  //       })
-  //   });
-  //   setUpdatedBeacons(array);        
-  // }
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     console.log("set interval")
-  //     setIsExecuting(prev => !prev)
-  //   }, 20000);
-  //   return () => clearInterval(interval);
-  // }, []);
-
-  // useEffect(() => {
-  //   console.log(isExecuting,"isExecuting Value")
-  //   if (isExecuting) {
-  //     updateCurrentPosition().then(() => {
-  //       console.log("updatePosition completed")
-  //     })
-  //   }
-  // }, [isExecuting])
-
-  // console.log("Level 2 SVG Render")
-
-
-
-
-
-
-
-
-  /**
-   * MY NON-SENSE
-   */
-
-
-
-
-
-//   useEffect(() => {
-//     console.log("updatedBeacons useEffect")
-//     let result = null;
-//     if (updatedBeacons?.length > 2) {
-//       result = locate(updatedBeacons);
-//       setCoordinate(result)
-//     } else if (updatedBeacons?.length < 2) {
-//       result = locate([...updatedBeacons, { distance: 0, x: 0, y: 0 }, { distance: 0, x: 0, y: 0 }]);
-//       setCoordinate(result)
-//     } else if (updatedBeacons?.length === 2) {
-//       result = locate([...updatedBeacons, { distance: 0, x: 0, y: 0 }]);
-//       setCoordinate(result)
-//     }
-//   }, [updatedBeacons])
-
-
-
-//   const updateCurrentPosition = async () => {     
-//     console.log("updatePosition Called")
-//     let connectedDevices = await initiateProcess(isScanning, setIsScanning)
-//     console.log("initiate Process Completed")
-//     let array = [];
-//     beacons?.forEach(beacon => {
-//         connectedDevices?.forEach(device => {
-//             if(beacon?.location_id === device?.location_id ){
-//                 array.push({...beacon,distance:device?.distance})
-//             }
-//         })
-//     });
-//     setUpdatedBeacons(array);        
-// }
-
-
-//   useEffect(() => {
-//       updateCurrentPosition()
-//   }, [isExecuting])
-  
-  
-  
-
-//   console.log("Level 2 SVG Render")
-
-//   setInterval(() => {
-//        console.log("set interval")
-//        setIsExecuting(prev => prev = !prev)
-//   }, 20000);
- 
-
-
- 
-
-  // const performAction = useCallback(() => {
-  //   console.log("first")
-  //   console.log('|||||||||||||||||||||||||||||||||||||||')
-  //   let value = updateCurrentPosition();
-  //   if (value) {
-  //     setIsExecuting(!isExecuting)
-  //   }
-  //   console.log('????????????????????????????????????')
-  //   // Simulate an async action
-  //   // setTimeout(() => {
-  //   //   setIsExecuting(false);
-  //   // }, 1000);
-  // }, [updatedBeacons]);
-
-    
-  
-  
-  
-    
-
-      // performAction();
-
- 
- 
   
   const handleCirclePress = () => {
     navigation.navigate('MapScreen', {
@@ -285,16 +124,14 @@ const SVGComponent = (props) => {
     })
   }
 
-
   
   return (
-    showSvg &&
     <Svg
       id="uuid-1833b59a-0f30-4d33-98c8-df236828a589"
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 745.16129 488.07661"
-      // viewBox="0 0 100 100" 
+      // viewBox="0 0 100 100"
       preserveAspectRatio="xMidYMid meet"
       {...props}
     >
@@ -7825,7 +7662,6 @@ const SVGComponent = (props) => {
         </G>
       </G>
       <G id="uuid-9a06a5bc-e918-4cee-ab32-73a45b07a6f4" data-name="Paths">
-
         {/* <Circle xmlns="http://www.w3.org/2000/svg" cx="55" cy="193" r="3" stroke="black" stroke-width="1" fill="red" />
 
         <Circle xmlns="http://www.w3.org/2000/svg" cx="85" cy="210" r="3" stroke="black" stroke-width="1" fill="red" />
@@ -7834,130 +7670,234 @@ const SVGComponent = (props) => {
         <Circle xmlns="http://www.w3.org/2000/svg" cx="160" cy="200" r="3" stroke="black" stroke-width="1" fill="red" /> */}
         <Polyline
           points="82.03924 426.75806 82.03924 338.06494 41.42841 338.06494 41.42841 342.07283"
-          style={(path === "mainEnterance2-TheaterBooth2" || path === "TheaterBooth2-mainEnterance2") ? {
-            fill: "none",
-            stroke: "black",
-            strokeMiterlimit: 10,
-            strokeWidth: "1px",
-          } : {}}
+          style={
+            path === "mainEnterance2-TheaterBooth2" ||
+            path === "TheaterBooth2-mainEnterance2"
+              ? {
+                  fill: "none",
+                  stroke: "black",
+                  strokeMiterlimit: 10,
+                  strokeWidth: "1px",
+                }
+              : {}
+          }
         />
         <Polyline
           points="79.2522 426.75806 79.2522 336.83571 58.65738 336.83571 58.65738 314.1568"
-          style={(path === "mainEnterance2-theaterDoorsEnteranceLeft2" || path === "theaterDoorsEnteranceLeft2-mainEnterance2") ? {
-            fill: "none",
-            stroke: "black",
-            strokeMiterlimit: 10,
-            strokeWidth: "1px",
-          } : {}}
+          style={
+            path === "mainEnterance2-theaterDoorsEnteranceLeft2" ||
+            path === "theaterDoorsEnteranceLeft2-mainEnterance2"
+              ? {
+                  fill: "none",
+                  stroke: "black",
+                  strokeMiterlimit: 10,
+                  strokeWidth: "1px",
+                }
+              : {}
+          }
         />
         <Polyline
           points="83.5 426.75806 83.5 336.06334 162.09882 336.06334 162.09882 316.05203 154.96774 316.05203"
-          style={(path === "mainEnterance2-projectionRoom2" || path === "projectionRoom2-mainEnterance2") ? {
-            fill: "none",
-            stroke: "black",
-            strokeMiterlimit: 10,
-            strokeWidth: "1px",
-          } : {}}
+          style={
+            path === "mainEnterance2-projectionRoom2" ||
+            path === "projectionRoom2-mainEnterance2"
+              ? {
+                  fill: "none",
+                  stroke: "black",
+                  strokeMiterlimit: 10,
+                  strokeWidth: "1px",
+                }
+              : {}
+          }
         />
         <Polyline
           points="84.72581 426.75806 84.72581 413.60689 221.05356 413.60689 221.05356 423.33138"
-          style={(path === "mainEnterance2-publicStairs2" || path === "publicStairs2-mainEnterance2") ? {
-            fill: "none",
-            stroke: "black",
-            strokeMiterlimit: 10,
-            strokeWidth: "1px",
-          } : {}}
+          style={
+            path === "mainEnterance2-publicStairs2" ||
+            path === "publicStairs2-mainEnterance2"
+              ? {
+                  fill: "none",
+                  stroke: "black",
+                  strokeMiterlimit: 10,
+                  strokeWidth: "1px",
+                }
+              : {}
+          }
         />
         <Polyline
           points="85.98387 426.75806 85.98387 375.4194 135.64516 375.41935"
-          style={(path === "mainEnterance2-escalatorLevel4" || path === "escalatorLevel4-mainEnterance2") ? {
-            fill: "none",
-            stroke: "black",
-            strokeMiterlimit: 10,
-            strokeWidth: "1px",
-          } : {}}
+          style={
+            path === "mainEnterance2-escalatorLevel4" ||
+            path === "escalatorLevel4-mainEnterance2"
+              ? {
+                  fill: "none",
+                  stroke: "black",
+                  strokeMiterlimit: 10,
+                  strokeWidth: "1px",
+                }
+              : {}
+          }
         />
         <Polyline
           points="80.51958 426.75806 80.51958 336.83569 174.86222 336.8357 187.9087 330.898"
-          style={(path === "mainEnterance2-restRooms2" || path === "restRooms2-mainEnterance2") ? {
-            fill: "none",
-            stroke: "black",
-            strokeMiterlimit: 10,
-            strokeWidth: "1px",
-          } : {}}
+          style={
+            path === "mainEnterance2-restRooms2" ||
+            path === "restRooms2-mainEnterance2"
+              ? {
+                  fill: "none",
+                  stroke: "black",
+                  strokeMiterlimit: 10,
+                  strokeWidth: "1px",
+                }
+              : {}
+          }
         />
         <Polyline
           points="84.40036 227.2984 83.38427 248.98047 83.50041 284.91158 83.50041 292.98654 141.48387 292.98654 141.48387 303.48654 144.72581 307.67745 162.9734 307.67742 162.97341 336.06331 174.64113 336.06331 187.57258 330.34677"
-          style={(path === "cinemaMidLeft-restRooms2" || path === "restRooms2-cinemaMidLeft") ? {
-            fill: "none",
-            stroke: "black",
-            strokeMiterlimit: 10,
-            strokeWidth: "1px",
-          } : {}}
+          style={
+            path === "cinemaMidLeft-restRooms2" ||
+            path === "restRooms2-cinemaMidLeft"
+              ? {
+                  fill: "none",
+                  stroke: "black",
+                  strokeMiterlimit: 10,
+                  strokeWidth: "1px",
+                }
+              : {}
+          }
         />
         <Polyline
           points="137.49756 226.77964 139.48387 248.46171 138.43503 284.39282 138.43503 292.19351 142.37529 292.19355 142.37529 302.96778 145.37725 306.84846 163.86482 306.84851 163.86482 335.22581 174.54839 335.22581 187.22581 329.70968"
-          style={(path === "cinemaMidRight-restRooms2" || path === "restRooms2-cinemaMidRight") ? {
-            fill: "none",
-            stroke: "black",
-            strokeMiterlimit: 10,
-            strokeWidth: "1px",
-          } : {}}
+          style={
+            path === "cinemaMidRight-restRooms2" ||
+            path === "restRooms2-cinemaMidRight"
+              ? {
+                  fill: "none",
+                  stroke: "black",
+                  strokeMiterlimit: 10,
+                  strokeWidth: "1px",
+                }
+              : {}
+          }
         />
         <Polyline
           points="55.69355 193 60.49011 195.13181 40.3931 248.99703 40.3931 260.55247"
-          style={(path === "cinemaLeft-exitLeft2" || path === "exitLeft2-cinemaLeft") ? {
-            fill: "none",
-            stroke: "black",
-            strokeMiterlimit: 10,
-            strokeWidth: "1px",
-          } : {}}
+          style={
+            path === "cinemaLeft-exitLeft2" || path === "exitLeft2-cinemaLeft"
+              ? {
+                  fill: "none",
+                  stroke: "black",
+                  strokeMiterlimit: 10,
+                  strokeWidth: "1px",
+                }
+              : {}
+          }
         />
         <Polyline
           points="84.77419 284.06452 84.77419 253.25115 86.6129 205.44332 56.085 192.22206"
-          style={(path === "cinemaMidLeft-exitLeft2" || path === "exitLeft2-cinemaMidLeft") ? {
-            fill: "none",
-            stroke: "black",
-            strokeMiterlimit: 10,
-            strokeWidth: "1px",
-          } : {}}
+          style={
+            path === "cinemaMidLeft-exitLeft2" ||
+            path === "exitLeft2-cinemaMidLeft"
+              ? {
+                  fill: "none",
+                  stroke: "black",
+                  strokeMiterlimit: 10,
+                  strokeWidth: "1px",
+                }
+              : {}
+          }
         />
         <Polyline
           points="184.64162 262.33712 180.52875 244.03831 162.78624 195.13184 167.41935 193.56172"
-          style={(path === "cinemaRight-exitRight2" || path === "exitRight2-cinemaRight") ? {
-            fill: "none",
-            stroke: "black",
-            strokeMiterlimit: 10,
-            strokeWidth: "1px",
-          } : {}}
+          style={
+            path === "cinemaRight-exitRight2" ||
+            path === "exitRight2-cinemaRight"
+              ? {
+                  fill: "none",
+                  stroke: "black",
+                  strokeMiterlimit: 10,
+                  strokeWidth: "1px",
+                }
+              : {}
+          }
         />
         <Polyline
           points="136.72246 286.23686 137.49756 248.70968 133.87501 203.77962 167.01975 192.70968"
-          style={(path === "cinemaMidRight-exitRight2" || path === "exitRight2-cinemaMidRight") ? {
-            fill: "none",
-            stroke: "black",
-            strokeMiterlimit: 10,
-            strokeWidth: "1px",
-          } : {}}
+          style={
+            path === "cinemaMidRight-exitRight2" ||
+            path === "exitRight2-cinemaMidRight"
+              ? {
+                  fill: "none",
+                  stroke: "black",
+                  strokeMiterlimit: 10,
+                  strokeWidth: "1px",
+                }
+              : {}
+          }
         />
         <Polyline
           points="146.19616 305.9 164.8387 305.9 164.83871 333.91992 105.58065 333.91992 105.58065 412.12681 163.45984 412.12681 163.45984 423.97217"
-          style={(path === "elevator2-theaterDoorsEnteranceRight2" || path === "theaterDoorsEnteranceRight2-elevator2") ? {
-            fill: "none",
-            stroke: "black",
-            strokeMiterlimit: 10,
-            strokeWidth: "1px",
-          } : {}}
+          style={
+            path === "elevator2-theaterDoorsEnteranceRight2" ||
+            path === "theaterDoorsEnteranceRight2-elevator2"
+              ? {
+                  fill: "none",
+                  stroke: "black",
+                  strokeMiterlimit: 10,
+                  strokeWidth: "1px",
+                }
+              : {}
+          }
         />
 
-        <Circle cx={61.92297} cy={289.81076} r={0.88254} style={{ fill: "red" }} />
-        <Circle cx={38.2342} cy={423.36704} r={0.88254} style={{ fill: "red" }} />
-        <Circle cx={170.3398} cy={339.29984} r={0.88254} style={{ fill: "red" }} />
-        <Circle cx={161.19079} cy={289.82103} r={0.88254} style={{ fill: "red" }} />
-        <Circle cx={184.6848} cy={270.61991} r={0.88254} style={{ fill: "red" }} />
-        <Circle cx={39.5688} cy={270.61991} r={0.88254} style={{ fill: "red" }} />
-        <Circle cx={88.53172} cy={196.6433} r={0.88254} style={{ fill: "red" }} />
-        <Circle cx={133.26984} cy={196.93359} r={0.88254} style={{ fill: "red" }} />
+        <Circle
+          cx={61.92297}
+          cy={289.81076}
+          r={0.88254}
+          style={{ fill: "red" }}
+        />
+        <Circle
+          cx={38.2342}
+          cy={423.36704}
+          r={0.88254}
+          style={{ fill: "red" }}
+        />
+        <Circle
+          cx={170.3398}
+          cy={339.29984}
+          r={0.88254}
+          style={{ fill: "red" }}
+        />
+        <Circle
+          cx={161.19079}
+          cy={289.82103}
+          r={0.88254}
+          style={{ fill: "red" }}
+        />
+        <Circle
+          cx={184.6848}
+          cy={270.61991}
+          r={0.88254}
+          style={{ fill: "red" }}
+        />
+        <Circle
+          cx={39.5688}
+          cy={270.61991}
+          r={0.88254}
+          style={{ fill: "red" }}
+        />
+        <Circle
+          cx={88.53172}
+          cy={196.6433}
+          r={0.88254}
+          style={{ fill: "red" }}
+        />
+        <Circle
+          cx={133.26984}
+          cy={196.93359}
+          r={0.88254}
+          style={{ fill: "red" }}
+        />
         <G>
           <Circle
             cx={57.01104}
@@ -7971,7 +7911,12 @@ const SVGComponent = (props) => {
             r={0.88254}
             style={{ fill: "red" }}
           />
-          <Circle cx={39.38519} cy={247.3293} r={0.88254} style={{ fill: "red" }} />
+          <Circle
+            cx={39.38519}
+            cy={247.3293}
+            r={0.88254}
+            style={{ fill: "red" }}
+          />
         </G>
         <G>
           <Circle
@@ -7995,56 +7940,127 @@ const SVGComponent = (props) => {
         </G>
         <Polyline
           points="74.79773 314.75977 66.51613 314.75977 66.51613 409.26823 162.26825 409.26823 162.26825 423.97217"
-          style={(path === "elevator2-theaterDoorsEnteranceLeft2" || path === "theaterDoorsEnteranceLeft2-elevator2") ? {
-            fill: "none",
-            stroke: "black",
-            strokeMiterlimit: 10,
-            strokeWidth: "1px",
-          } : {}}
+          style={
+            path === "elevator2-theaterDoorsEnteranceLeft2" ||
+            path === "theaterDoorsEnteranceLeft2-elevator2"
+              ? {
+                  fill: "none",
+                  stroke: "black",
+                  strokeMiterlimit: 10,
+                  strokeWidth: "1px",
+                }
+              : {}
+          }
         />
         <Polyline
           points="50.12097 312.03027 60.19355 312.03027 60.19355 335.20996 78.03735 335.20996 78.03735 414.87344 160.90403 414.87344 160.90403 423.97217"
-          style={(path === "elevator2-theaterDoorsEnteranceLeft2" || path === "theaterDoorsEnteranceLeft2-elevator2") ? {
-            fill: "none",
-            stroke: "black",
-            strokeMiterlimit: 10,
-            strokeWidth: "1px",
-          } : {}}
+          style={
+            path === "elevator2-theaterDoorsEnteranceLeft2" ||
+            path === "theaterDoorsEnteranceLeft2-elevator2"
+              ? {
+                  fill: "none",
+                  stroke: "black",
+                  strokeMiterlimit: 10,
+                  strokeWidth: "1px",
+                }
+              : {}
+          }
         />
         <Polyline
           points="171.06665 296.56982 162.36168 296.56982 162.36168 305.10986 166.36773 305.10986 166.36773 332.55957 104.00085 332.55957 104.00085 410.7998 164.66836 410.7998 164.66836 423.97217"
-          style={(path === "elevator2-theaterDoorsEnteranceRight2" || path === "theaterDoorsEnteranceRight2-elevator2") ? {
-            fill: "none",
-            stroke: "black",
-            strokeMiterlimit: 10,
-            strokeWidth: "1px",
-          } : {}}
+          style={
+            path === "elevator2-theaterDoorsEnteranceRight2" ||
+            path === "theaterDoorsEnteranceRight2-elevator2"
+              ? {
+                  fill: "none",
+                  stroke: "black",
+                  strokeMiterlimit: 10,
+                  strokeWidth: "1px",
+                }
+              : {}
+          }
         />
         <Polyline
           points="86.8713 426.55957 86.8713 416.20996 159.45241 416.20996 159.45241 423.97217"
-          style={(path === "elevator2-mainEnterance2" || path === "mainEnterance2-elevator2") ? {
-            fill: "none",
-            stroke: "black",
-            strokeMiterlimit: 10,
-            strokeWidth: "1px",
-          } : {}}
+          style={
+            path === "elevator2-mainEnterance2" ||
+            path === "mainEnterance2-elevator2"
+              ? {
+                  fill: "none",
+                  stroke: "black",
+                  strokeMiterlimit: 10,
+                  strokeWidth: "1px",
+                }
+              : {}
+          }
         />
-        {
-          coordinate !== null &&
+        {coordinate !== null && (
           <>
-            <Polygon points="50,0 55,10 50,20 45,10" fill="#FFA07A" stroke="black" stroke-width="2" x={coordinate?.x} y={coordinate?.y} />
-          </>
-        }
-        {
-          showElevatorCircle && <Circle xmlns="http://www.w3.org/2000/svg" cx="172" cy="415" r="8" stroke="black" stroke-width="1" fill="green" onPress={handleCirclePress} />
-        }
-        {
-          showStairsCircle && <Circle xmlns="http://www.w3.org/2000/svg" cx="185" cy="332" r="8" stroke="black" stroke-width="1" fill="green" onPress={handleCirclePress} />
-        }
+            <Path
+              d="m13.5,1.2051C12.10999.3951,10.54999-.00492,9-.00492s-3.10999.40002-4.5,1.21002c-1.39001.79999-2.51001,1.95001-3.28998,3.28998-.78003,1.35004-1.21002,2.90002-1.21002,4.5,0,1.69.26001,3.35999.76001,4.95001.51001,1.59998,1.25,3.10999,2.22998,4.5l6.01001,8.56,6.01001-8.56c1.95001-2.77002,2.98999-6.07001,2.98999-9.45001,0-3.20996-1.71997-6.19-4.5-7.78998Zm-.12,16.08997l-4.38,6.23004-4.38-6.23004c-1.71002-2.44-2.62-5.31-2.62-8.29999,0-2.48999,1.34003-4.82001,3.5-6.06,1.06-.60999,2.27002-.94,3.5-.94s2.44.33002,3.5.94c2.15997,1.23999,3.5,3.57001,3.5,6.06,0,2.98999-.90997,5.85999-2.62,8.29999Z"
+            x={coordinate?.x}
+            y={coordinate?.y}
+              style={{
+                position: "absolute",
+                width: 5,
+                height: 5,
+                fill: "red" 
+              }}
+            />
+            <Path
+              d="m9,5.20076c-1.7357,0-3.14257,1.43267-3.14257,3.20022s1.40687,3.2007,3.14257,3.2007,3.14257-1.43316,3.14257-3.2007-1.40687-3.20022-3.14257-3.20022Z"
+              x={coordinate?.x}
+              y={coordinate?.y}
+              style={{
+                position: "absolute",
+                width: 5,
+                height: 5,
+                fill: "red" 
+              }}
+            />
+            {/* <Polygon points="50,0 55,10 50,20 45,10" fill="#FFA07A" stroke="black" stroke-width="2" x={coordinate?.x} y={coordinate?.y} /> */}
+            {/* <Image x={coordinate?.x} y={coordinate?.x} width="25" height="25" href="path/to/google-maps-pin.png"/> */}
 
+            {/* <Image
+                preserveAspectRatio="xMidYMid meet"
+                style={{
+                  position: "absolute",
+                  left: coordinate?.x,
+                  top: coordinate?.y,
+                  width: 25,
+                  height: 25,
+                }}
+                source={require("../../../assets/images/marker.png")}
+              /> */}
+            {/* <Image source={require('')}/> */}
+          </>
+        )}
+        {showElevatorCircle && (
+          <Circle
+            xmlns="http://www.w3.org/2000/svg"
+            cx="172"
+            cy="415"
+            r="8"
+            stroke="black"
+            stroke-width="1"
+            fill="green"
+            onPress={handleCirclePress}
+          />
+        )}
+        {showStairsCircle && (
+          <Circle
+            xmlns="http://www.w3.org/2000/svg"
+            cx="185"
+            cy="332"
+            r="8"
+            stroke="black"
+            stroke-width="1"
+            fill="green"
+            onPress={handleCirclePress}
+          />
+        )}
       </G>
     </Svg>
-
-  )
+  );
 };
 export default SVGComponent;
