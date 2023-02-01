@@ -8,10 +8,12 @@ import { initiateProcess } from '../../Functions/initiateProcess';
 import { filterItems } from '../../Functions/filterItems';
 import { destinations } from './DropDownValues';
 import { beacons } from '../../data/beacons';
+import LoaderModal from '../../Screens/Modal/Modal';
 
-const DropDown = ({ itemsDataList, placeHolderText, navigateTo, location, setStartPosition, setDestinationPoint,setBeaconDataSet }) => {
+const DropDown = ({ itemsDataList, placeHolderText, navigateTo, location, setStartPosition, setDestinationPoint,setBeaconDataSet,handleLoader }) => {
 
     const [isScanning, setIsScanning] = useState(false);
+    const [showModal, setShowModal] = useState(false);
     const [showCurrentLocation, setShowCurrentLocation] = useState(false);
     const navigation = useNavigation();
     const darkMode = useSelector((state) => state.darkMode);
@@ -20,35 +22,72 @@ const DropDown = ({ itemsDataList, placeHolderText, navigateTo, location, setSta
     const [startingValue, setStartingValue] = useState(null);
     const [destinationValue, setDestinationValue] = useState(null);
 
-    useEffect(() => {
-        startProcess()
-    }, [])
+//     useEffect(() => {
+//         startProcess()
+//     }, [])
 
-  console.log("Dropdown RENDER")
+//   console.log("Dropdown RENDER")
 
 
-    const startProcess = async () => {
-        if ( location) {
-            let connectedDevices = await initiateProcess(isScanning, setIsScanning)
-            let sortedConnectedDevices = connectedDevices?.sort(dynamicSort("distance"));
-            let array =[];
-            beacons?.forEach(beacon => {
-                connectedDevices?.forEach(device => {
-                    if(beacon?.location_id === device?.location_id ){
-                        array.push({...beacon,distance:device?.distance})
-                    }
-                })
-            });
+//     const startProcess = async () => {
+//         if ( location) {
+//             handleLoader(true);
+//             let connectedDevices = await initiateProcess(isScanning, setIsScanning)
+//             let sortedConnectedDevices = connectedDevices?.sort(dynamicSort("distance"));
+//             let array =[];
+//             beacons?.forEach(beacon => {
+//                 connectedDevices?.forEach(device => {
+//                     if(beacon?.location_id === device?.location_id ){
+//                         array.push({...beacon,distance:device?.distance})
+//                     }
+//                 })
+//             });
 
-           //causing the Re-render of Parent and Child Components
-            setBeaconDataSet(array);
+//            //causing the Re-render of Parent and Child Components
+//             setBeaconDataSet(array);
            
-            findNearestDevice(sortedConnectedDevices[0])
+//             findNearestDevice(sortedConnectedDevices[0])
 
-            //This is Non-sense because Component Rendered Before it happened 
-            // itemsDataList = filterItems(itemsDataList)
-        }
+//             handleLoader(false);
+//             //This is Non-sense because Component Rendered Before it happened 
+//             // itemsDataList = filterItems(itemsDataList)
+//         }
+//     }
+
+useEffect(() => {
+    startProcess()
+}, [])
+
+
+
+const startProcess = async () => {
+    if ( location && startingValue === null) {
+        handleLoader(true);
+        let connectedDevices = await initiateProcess(isScanning, setIsScanning)
+        console.log(connectedDevices,"connectedDevices")
+        if (!connectedDevices || connectedDevices.length === 0) {
+            console.log("aaa")
+           handleLoader(false);
+           setShowModal(true);
+           return;
+        } 
+        let sortedConnectedDevices = connectedDevices.sort(dynamicSort("distance"));
+        let array =[];
+        beacons?.forEach(beacon => {
+            connectedDevices?.forEach(device => {
+                if(beacon?.location_id === device?.location_id ){
+                    array.push({...beacon,distance:device?.distance})
+                }
+            })
+        });
+
+        setBeaconDataSet(array);
+        findNearestDevice(sortedConnectedDevices[0])
+        setShowCurrentLocation(true)
+        handleLoader(false);
     }
+}
+
 
     function dynamicSort(property) {
         var sortOrder = 1;
@@ -136,6 +175,9 @@ const DropDown = ({ itemsDataList, placeHolderText, navigateTo, location, setSta
                 // }}
 
                 />
+                {
+                   showModal && <LoaderModal content={"Location Not Found! No Beacon Was Connected"} loader={false} />
+                }
            
 
             {
@@ -146,7 +188,7 @@ const DropDown = ({ itemsDataList, placeHolderText, navigateTo, location, setSta
                     style={{ alignSelf: 'center', position: "absolute", marginLeft: 75,  top: 27, right: 15,zIndex:2 }}
                     onPress={() => {
                         console.log("click Live Location")
-                        setShowCurrentLocation(!showCurrentLocation)
+                        setShowCurrentLocation(true)
                     }}
                 />
             }

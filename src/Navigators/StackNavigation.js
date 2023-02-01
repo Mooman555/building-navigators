@@ -29,7 +29,8 @@ const windowWidth = Dimensions.get("window").width;
 
 const Stack = createStackNavigator();
 
-export const MainStack = () => {
+export const MainStack = (props) => {
+  let {enableBluetooth,enableLocation} = props
   const [loaded] = useFonts({
     AktivBlack: require("../../assets/fonts/AktivGrotesk-Black.ttf"),
     AktivBold: require("../../assets/fonts/AktivGrotesk-Bold.ttf"),
@@ -63,6 +64,7 @@ export const MainStack = () => {
         }}
         name="OnBoarding"
         component={OnBoarding}
+        initialParams={{ enableBluetooth: enableBluetooth,enableLocation :enableLocation}}
       />
       <Stack.Screen
         options={{

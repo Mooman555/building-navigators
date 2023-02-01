@@ -1,57 +1,116 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useRef } from "react";
 import Svg, { G, Path, Polyline, Polygon, Rect, Line } from "react-native-svg";
+import locate from 'multilateration';
+// import { multilaterate } from "../../Functions/multilaterate";
+import { initiateProcess } from '../../Functions/initiateProcess';
+import { beacons } from '../../data/beacons';
+import { useNavigation } from "@react-navigation/native";
+
 
 const Level_4 = (props) => {
+
 
   const [path, setPath] = useState("")
   const [coordinate, setCoordinate] = useState(null)
   const [showSvg, setShowSvg] = useState(false)
+  const [showStairsCircle, setShowStairsCircle] = useState(false)
+  const [showElevatorCircle, setShowElevatorCircle] = useState(false)
   let { startObject, destinationObject, beaconDataSet } = props
+  const [updatedBeacons, setUpdatedBeacons] = useState(beaconDataSet)
+  const navigation = useNavigation();
+  const [isScanning, setIsScanning] = useState(false);
+  const [isExecuting, setIsExecuting] = useState(false);
+  const isExecutingRef = useRef(isExecuting);
+
 
   useEffect(() => {
-    if (startObject !== null && destinationObject !== null && startObject?.id !== null && destinationObject?.id !== null) {
-      console.log(`${startObject?.id}-${destinationObject?.id}`, "aaaa")
-      setPath(`${startObject?.id}-${destinationObject?.id}`)
-      setShowSvg(true)
-      console.log(beaconDataSet, "beaconDataSet")
-      let result = null;
-      if (beaconDataSet?.length > 2) {
-        result = locate(beaconDataSet);
-        // var deviceLocation = multilaterate(beaconDataSet, beaconDataSet.map(p => p.distance));
-        // console.log(deviceLocation, "result")
-        setCoordinate(result)
-      } else if (beaconDataSet?.length < 2) {
-        result = locate([...beaconDataSet, { distance: 0, x: 0, y: 0 }, { distance: 0, x: 0, y: 0 }]);
-        // beaconDataSet =[...beaconDataSet, { distance: 0, x: 0, y: 0 }, { distance: 0, x: 0, y: 0 }]
-        // var deviceLocation = multilaterate(beaconDataSet, beaconDataSet.map(p => p.distance));
-        // console.log(deviceLocation, "result")
-        setCoordinate(result)
-      }
-      else if (beaconDataSet?.length === 2) {
-        result = locate([...beaconDataSet, { distance: 0, x: 0, y: 0 }]);
-        // beaconDataSet =[...beaconDataSet ,{ distance: 0, x: 0, y: 0 }]
-        // var deviceLocation = multilaterate(beaconDataSet, beaconDataSet.map(p => p.distance));
-        // console.log(deviceLocation, "result")
-        setCoordinate(result)
-      }
-      // Geolocation.getCurrentPosition(
-      //   position => {
-      //     const location = position;
-      //     // this.setState({ location });
-      //     console.log(location, "location")
-      //     console.log(location?.coords, "location")
-      //   },
-      //   error => console.log(error.message, "Error"),
-      //   { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 }
-      // );
 
+    /**
+     * BATCH STATE UPDATE
+     */
+
+    if (startObject !== null && destinationObject !== null && startObject?.id !== null && destinationObject?.id !== null) {
+      if (startObject?.number !== destinationObject?.number) {
+        if (destinationObject?.number === "2M") {
+          setPath(`cinemaMidRight-restRooms2`)
+          setShowStairsCircle(true)
+        } else {
+          setPath(`${startObject?.id}-elevator2`)
+          setShowElevatorCircle(true)
+        }
+      } else {
+        setPath(`${startObject?.id}-${destinationObject?.id}`)
+      }
+      console.log("calculated")
+      setShowSvg(true)
     }
   }, [startObject, destinationObject])
 
 
-  const [ID, setID] = useState({
-    currentId: "Select"
-  })
+
+
+  useEffect(() => {
+    isExecutingRef.current = isExecuting;
+  }, [isExecuting]);
+
+ useEffect(() => {
+    console.log("updatedBeacons useEffect")
+    let result = null;
+    if (updatedBeacons?.length > 2) {
+      result = locate(updatedBeacons);
+    } else if (updatedBeacons?.length < 2) {
+      result = locate([...updatedBeacons, { distance: 0, x: 0, y: 0 }, { distance: 0, x: 0, y: 0 }]);
+      // var deviceLocation = multilaterate(updatedBeacons, updatedBeacons.map(p => p.distance));
+    } else if (updatedBeacons?.length === 2) {
+      result = locate([...updatedBeacons, { distance: 0, x: 0, y: 0 }]);
+    }
+    console.log(result,"result")
+    setCoordinate(result)
+  }, [updatedBeacons])
+
+  const updateCurrentPosition = async () => {     
+    console.log("updatePosition Called")
+    let connectedDevices = await initiateProcess(false, setIsScanning)
+    console.log("initiate Process Completed")
+    let array = [];
+    beacons?.forEach(beacon => {
+        connectedDevices?.forEach(device => {
+            if(beacon?.location_id === device?.location_id ){
+                array.push({...beacon,distance:device?.distance})
+            }
+        })
+    });
+    setUpdatedBeacons(array);        
+  }
+
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      console.log("set interval")
+      setIsExecuting(prev => !prev)
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    if (isExecutingRef.current) {
+      updateCurrentPosition().then(() => {
+        console.log("updatePosition completed")
+      })
+    }
+  }, [isExecuting])
+
+  
+  const handleCirclePress = () => {
+    navigation.navigate('MapScreen', {
+      startObject: destinationObject?.number === "2M" ? { number: "2M", id: "stairs2M" } : `elevator${destinationObject?.number}`,
+      destinationObject: destinationObject,
+      beaconDataSet: updatedBeacons,
+      showCircle: true
+    })
+  }
+
+
 
   return (
     showSvg && <Svg
@@ -8265,11 +8324,11 @@ const Level_4 = (props) => {
           />
           <Polygon
             points="572.03223 244.6792 562.93945 244.6792 562.93945 229.47998 549.21191 229.47998 549.21191 229.22998 563.18945 229.22998 563.18945 244.4292 572.03223 244.4292 572.03223 244.6792"
-            style={{ fill: "#1f6cdd" }}
+            style={{ fill: "none" }}
           />
           <Polygon
             points="579.46484 261.30225 562.21387 261.30225 562.21387 230.396 549.21191 230.396 549.21191 230.146 562.46387 230.146 562.46387 261.05225 579.46484 261.05225 579.46484 261.30225"
-            style={{ fill: "#796bc1" }}
+            style={{ fill: "none" }}
           />
           <Polygon
             points="405.12695 376.58789 404.87695 376.58789 404.87695 373.79297 267.95361 373.79297 267.95361 295.44922 274.23584 295.44922 274.23584 295.69922 268.20361 295.69922 268.20361 373.54297 405.12695 373.54297 405.12695 376.58789"
@@ -8282,7 +8341,7 @@ const Level_4 = (props) => {
           />
           <Polygon
             points="404.52246 376.58789 404.27246 376.58789 404.27246 374.36914 268.61914 374.36914 268.61914 294.53809 267.49414 294.53857 267.49414 237.8042 274.87695 237.8042 274.87695 238.0542 267.74414 238.0542 267.74414 294.28857 268.86914 294.28809 268.86914 374.11914 404.52246 374.11914 404.52246 376.58789"
-            style={{ fill: "#1e2a4f" }}
+            style={{ fill: "none" }}
           />
           <G>
             <Path
@@ -8410,6 +8469,7 @@ const Level_4 = (props) => {
               />
             </G>
           </G>
+          {/* THIS */}
           <Polygon
             points="403.03027 284.35205 402.81543 267.90967 427.7627 267.90967 427.7627 268.15967 403.06934 268.15967 403.28027 284.34912 403.03027 284.35205"
             style={{ fill: "#3c3f42" }}
@@ -8529,6 +8589,7 @@ const Level_4 = (props) => {
               />
             </G>
           </G>
+          {/* THIS */}
           <Polygon
             points="293.63235 62.05882 293.63235 77.65441 296.96324 77.65441 296.94118 91.97059 281.76471 91.90441 281.72059 72.95588 282.55882 72.38235 282.18382 62.21324 293.63235 62.05882"
             style={{ fill: "#e2c79f" }}
@@ -10701,7 +10762,7 @@ const Level_4 = (props) => {
           x2={293.63235}
           y2={62.05882}
           style={{
-            fill: "#fff",
+            fill: "none",
             stroke: "#000",
             strokeMiterlimit: 10,
             strokeWidth: ".15px",
@@ -11573,6 +11634,80 @@ const Level_4 = (props) => {
           } : {}}
         />
       </G>
+
+      {coordinate !== null && (
+          <>
+            {/* <Path
+              d="m13.5,1.2051C12.10999.3951,10.54999-.00492,9-.00492s-3.10999.40002-4.5,1.21002c-1.39001.79999-2.51001,1.95001-3.28998,3.28998-.78003,1.35004-1.21002,2.90002-1.21002,4.5,0,1.69.26001,3.35999.76001,4.95001.51001,1.59998,1.25,3.10999,2.22998,4.5l6.01001,8.56,6.01001-8.56c1.95001-2.77002,2.98999-6.07001,2.98999-9.45001,0-3.20996-1.71997-6.19-4.5-7.78998Zm-.12,16.08997l-4.38,6.23004-4.38-6.23004c-1.71002-2.44-2.62-5.31-2.62-8.29999,0-2.48999,1.34003-4.82001,3.5-6.06,1.06-.60999,2.27002-.94,3.5-.94s2.44.33002,3.5.94c2.15997,1.23999,3.5,3.57001,3.5,6.06,0,2.98999-.90997,5.85999-2.62,8.29999Z"
+            x={coordinate?.x}
+            y={coordinate?.y}
+              style={{
+                position: "absolute",
+                width: 5,
+                height: 5,
+                fill: "red" 
+              }}
+            />
+            <Path
+              d="m9,5.20076c-1.7357,0-3.14257,1.43267-3.14257,3.20022s1.40687,3.2007,3.14257,3.2007,3.14257-1.43316,3.14257-3.2007-1.40687-3.20022-3.14257-3.20022Z"
+              x={coordinate?.x}
+              y={coordinate?.y}
+              style={{
+                position: "absolute",
+                width: 5,
+                height: 5,
+                fill: "red" 
+              }}
+            /> */}
+             <Path 
+               d="m7,0C3.56802,0,0,2.56489,0,6.68685c0,4.12159,7,13.31315,7,13.31315,0,0,7-9.19156,7-13.31315C14,2.56489,10.43153,0,7,0ZM1.49365,6.68685C1.49365,3.54475,4.35199,1.59992,7.00023,1.59992s5.50658,1.94483,5.50658,5.08693c0,2.22462-3.02148,7.21682-5.50612,10.72318C4.51559,13.9022,1.49365,8.90854,1.49365,6.68685Z"
+               x={coordinate?.x}
+               y={coordinate?.y}
+               style={{
+                 position: "absolute",
+                 width: 5,
+                 height: 5,
+                 fill: "red",
+               }}
+             />
+             <Path 
+              d="m7,4.24685c-1.45208,0-2.62906,1.17689-2.62906,2.62886s1.17698,2.62926,2.62906,2.62926,2.62906-1.17729,2.62906-2.62926-1.17698-2.62886-2.62906-2.62886Z" 
+              x={coordinate?.x}
+              y={coordinate?.y}
+              style={{
+                position: "absolute",
+                width: 5,
+                height: 5,
+                fill: "red",
+              }}
+              />
+         
+          </>
+        )}
+        {showElevatorCircle && (
+          <Circle
+            xmlns="http://www.w3.org/2000/svg"
+            cx="172"
+            cy="415"
+            r="8"
+            stroke="black"
+            stroke-width="1"
+            fill="green"
+            onPress={handleCirclePress}
+          />
+        )}
+        {showStairsCircle && (
+          <Circle
+            xmlns="http://www.w3.org/2000/svg"
+            cx="185"
+            cy="332"
+            r="8"
+            stroke="black"
+            stroke-width="1"
+            fill="green"
+            onPress={handleCirclePress}
+          />
+        )}
     </Svg>
   )
 };

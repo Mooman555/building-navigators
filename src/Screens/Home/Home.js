@@ -4,6 +4,7 @@ import {
   ImageBackground,
   Text,
   ScrollView,
+  ActivityIndicator,
 } from "react-native";
 import React, { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
@@ -17,10 +18,11 @@ import Assets from "../../UI/Assets";
 import Colors from "../../UI/Colors";
 import DropDown from "../../Components/SearchableDropDown/SearchableDropDown";
 import { destinations as Destinations } from "../../Components/SearchableDropDown/DropDownValues";
+import LoaderModal from "../Modal/Modal";
 
 const Home = () => {
-
   const [startPosition, setStartPosition] = useState(null);
+  const [loader, setLoader] = useState(false);
   const [destinationPoint, setDestinationPoint] = useState(null);
   const [beaconDataSet, setBeaconDataSet] = useState([]);
   const navigation = useNavigation();
@@ -34,28 +36,30 @@ const Home = () => {
   ]);
 
   useEffect(() => {
-
-    if (startPosition !== null && destinationPoint !== null && startPosition?.value !== null && destinationPoint?.value !== null  && beaconDataSet  ) {
-      navigation.navigate('MapScreen', {
+    if (
+      startPosition !== null &&
+      destinationPoint !== null &&
+      startPosition?.value !== null &&
+      destinationPoint?.value !== null &&
+      beaconDataSet
+    ) {
+      navigation.navigate("MapScreen", {
         startObject: startPosition,
         destinationObject: destinationPoint,
-        beaconDataSet : beaconDataSet
-      })
+        beaconDataSet: beaconDataSet,
+      });
     }
+  }, [startPosition, destinationPoint]);
 
-  }, [startPosition, destinationPoint])
-
-
-  console.log("HOME RENDER")
+  console.log("HOME RENDER");
 
   const startPositionHandler = (value) => {
-    setStartPosition(value)
-  }
+    setStartPosition(value);
+  };
 
   const destinationHandler = (value) => {
-    setDestinationPoint(value)
-  }
-
+    setDestinationPoint(value);
+  };
 
   var SearchableDropdownItems = Destinations;
   // Modal Visibility
@@ -63,11 +67,15 @@ const Home = () => {
     setRatingVisible(visible);
   };
 
+  const handleLoader = (value) => {
+    setLoader(value);
+  };
+
   const handleBeaconDataSet = (array) => {
-    setBeaconDataSet(array)
-  }
+    setBeaconDataSet(array);
+  };
   return (
-    // <KeyboardAvoidingView 
+    // <KeyboardAvoidingView
     //   enableOnAndroid= {true}
     //   enableAutomaticScroll= {true}
     //   extraHeight={200}
@@ -111,19 +119,21 @@ const Home = () => {
                   <DropDown
                     itemsDataList={SearchableDropdownItems}
                     placeHolderText="Search Starting Position"
-                    // navigateTo="MapScreen" 
+                    // navigateTo="MapScreen"
                     setStartPosition={(value) => startPositionHandler(value)}
                     location={true}
+                    handleLoader={(value) => handleLoader(value)}
                     setBeaconDataSet={(array) => handleBeaconDataSet(array)}
                   />
                   <DropDown
                     itemsDataList={SearchableDropdownItems}
                     placeHolderText="Search Location"
-                    // navigateTo="MapScreen" 
+                    // navigateTo="MapScreen"
                     setDestinationPoint={(value) => destinationHandler(value)}
                     setBeaconDataSet={(array) => handleBeaconDataSet(array)}
                   />
                 </View>
+
                 <ScrollView horizontal>
                   <View style={styles.cardsWrapper}>
                     {dataArr.map((item, index) => (
@@ -132,7 +142,7 @@ const Home = () => {
                         item={item}
                         onPress={() => {
                           // navigation.navigate("Buildings");
-                          alert("Please Select Location Above")
+                          alert("Please Select Location Above");
                           //  setModalVisible(true)
                         }}
                       />
@@ -147,9 +157,12 @@ const Home = () => {
           setModalVisible={() => setModalVisible(false)}
           modalVisible={ratingVisible}
         />
+        {loader && (
+          <LoaderModal content={"Finding Current Location"} loader={true} />
+        )}
       </ImageBackground>
     </Wrapper>
     //  </KeyboardAvoidingView>
   );
-}
-export default Home
+};
+export default Home;

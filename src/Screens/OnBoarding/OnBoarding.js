@@ -43,6 +43,8 @@ class OnBoarding extends React.Component {
     };
   }
 
+
+
   renderItem = ({ item, index }) => {
     return (
       <View style={styles.slider} key={index}>
@@ -63,6 +65,10 @@ class OnBoarding extends React.Component {
     );
   };
   render() {
+    let enableBluetooth = this?.props?.route?.params?.enableBluetooth
+    let enableLocation = this?.props?.route?.params?.enableLocation
+    console.log(enableBluetooth,"enableBluetooth")
+    console.log(enableLocation,"enableLocation")
     return (
       <Wrapper wrapperNP={true}>
         <Header
